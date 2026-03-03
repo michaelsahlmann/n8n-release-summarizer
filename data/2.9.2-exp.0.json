@@ -1,0 +1,238 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/289816950",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/289816950/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/289816950/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.9.2-exp.0",
+    "id": 289816950,
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4RRkF2",
+    "tag_name": "n8n@2.9.2-exp.0",
+    "target_commitish": "release/2.9.2-exp.0",
+    "name": "n8n@2.9.2-exp.0",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-02-24T11:04:05Z",
+    "updated_at": "2026-02-24T11:36:12Z",
+    "published_at": "2026-02-24T11:34:23Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/361418156",
+        "id": 361418156,
+        "node_id": "RA_kwDOC4Q8Qs4Vis2s",
+        "name": "sbom-source.cdx.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 4434732,
+        "digest": "sha256:8535b199ae5a34325716639150e73853734582247e346c719127b49e75088251",
+        "download_count": 10,
+        "created_at": "2026-02-24T11:36:12Z",
+        "updated_at": "2026-02-24T11:36:12Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.9.2-exp.0/sbom-source.cdx.json"
+      },
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/361418158",
+        "id": 361418158,
+        "node_id": "RA_kwDOC4Q8Qs4Vis2u",
+        "name": "vex.openvex.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 2708,
+        "digest": "sha256:233030428397f983c5ed5fb084a613fc16ed5315ec7a4b007a0611da0394bef4",
+        "download_count": 9,
+        "created_at": "2026-02-24T11:36:12Z",
+        "updated_at": "2026-02-24T11:36:12Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.9.2-exp.0/vex.openvex.json"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.9.2-exp.0",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.9.2-exp.0",
+    "body": "## [2.9.2-exp.0](https://github.com/n8n-io/n8n/compare/n8n@2.9.2...n8n@2.9.2-exp.0) (2026-02-24)\n\n\n### Bug Fixes\n\n* **editor:** Selectively apply credentials for http request nodes ([#26003](https://github.com/n8n-io/n8n/issues/26003)) ([b51d2b3](https://github.com/n8n-io/n8n/commit/b51d2b3513f6ec1e989773205872c988d3ed509e))\n* **editor:** Show existing credentials in template setup modal ([#25598](https://github.com/n8n-io/n8n/issues/25598)) ([f5571c0](https://github.com/n8n-io/n8n/commit/f5571c0c4937c8ef042c9b68a352dc8ec20535fe))\n\n\n### Features\n\n* **editor:** Highlight nodes in canvas on card hover in setup panel ([#25862](https://github.com/n8n-io/n8n/issues/25862)) ([1c903dd](https://github.com/n8n-io/n8n/commit/1c903dd1e7e9dffe003c3968b0dc1e492f30afaa))\n* **editor:** In setup panel only mark credentials as completed if they are tested ([#25658](https://github.com/n8n-io/n8n/issues/25658)) ([4368f08](https://github.com/n8n-io/n8n/commit/4368f085c248d2535c0bbecdc4bcbaf9f32c4798))",
+    "reactions": {
+      "url": "https://api.github.com/repos/n8n-io/n8n/releases/289816950/reactions",
+      "total_count": 5,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 5
+    },
+    "previousTagName": "n8n@2.9.2"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.9.2-exp.0](https://github.com/n8n-io/n8n/compare/n8n@2.9.2...n8n@2.9.2-exp.0) (2026-02-24)",
+        "items": []
+      },
+      {
+        "title": "Bug Fixes",
+        "items": [
+          {
+            "prNumber": 26003,
+            "commitSha": "b51d2b3",
+            "rawText": "**editor:** Selectively apply credentials for http request nodes ([#26003](https://github.com/n8n-io/n8n/issues/26003)) ([b51d2b3](https://github.com/n8n-io/n8n/commit/b51d2b3513f6ec1e989773205872c988d3ed509e))"
+          },
+          {
+            "prNumber": 25598,
+            "commitSha": "f5571c0",
+            "rawText": "**editor:** Show existing credentials in template setup modal ([#25598](https://github.com/n8n-io/n8n/issues/25598)) ([f5571c0](https://github.com/n8n-io/n8n/commit/f5571c0c4937c8ef042c9b68a352dc8ec20535fe))"
+          }
+        ]
+      },
+      {
+        "title": "Features",
+        "items": [
+          {
+            "prNumber": 25862,
+            "commitSha": "1c903dd",
+            "rawText": "**editor:** Highlight nodes in canvas on card hover in setup panel ([#25862](https://github.com/n8n-io/n8n/issues/25862)) ([1c903dd](https://github.com/n8n-io/n8n/commit/1c903dd1e7e9dffe003c3968b0dc1e492f30afaa))"
+          },
+          {
+            "prNumber": 25658,
+            "commitSha": "4368f08",
+            "rawText": "**editor:** In setup panel only mark credentials as completed if they are tested ([#25658](https://github.com/n8n-io/n8n/issues/25658)) ([4368f08](https://github.com/n8n-io/n8n/commit/4368f085c248d2535c0bbecdc4bcbaf9f32c4798))"
+          }
+        ]
+      }
+    ],
+    "allPRs": [
+      26003,
+      25598,
+      25862,
+      25658
+    ],
+    "allSHAs": [
+      "b51d2b3",
+      "f5571c0",
+      "1c903dd",
+      "4368f08"
+    ]
+  },
+  "commits": [
+    {
+      "sha": "782f53c177c8a9dad212a9e1d70a5484e6f64a25",
+      "shortSha": "782f53c",
+      "message": "feat(editor): Sort setup panel nodes by execution order (no-changelog) (#25741)",
+      "author": "Svetoslav Dekov",
+      "html_url": "https://github.com/n8n-io/n8n/commit/782f53c177c8a9dad212a9e1d70a5484e6f64a25"
+    },
+    {
+      "sha": "f5571c0c4937c8ef042c9b68a352dc8ec20535fe",
+      "shortSha": "f5571c0",
+      "message": "fix(editor): Show existing credentials in template setup modal (#25598)",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f5571c0c4937c8ef042c9b68a352dc8ec20535fe"
+    },
+    {
+      "sha": "1c903dd1e7e9dffe003c3968b0dc1e492f30afaa",
+      "shortSha": "1c903dd",
+      "message": "feat(editor): Highlight nodes in canvas on card hover in setup panel (#25862)",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1c903dd1e7e9dffe003c3968b0dc1e492f30afaa"
+    },
+    {
+      "sha": "4368f085c248d2535c0bbecdc4bcbaf9f32c4798",
+      "shortSha": "4368f08",
+      "message": "feat(editor): In setup panel only mark credentials as completed if they are tested (#25658)",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4368f085c248d2535c0bbecdc4bcbaf9f32c4798"
+    },
+    {
+      "sha": "a7e6af727dfc72622dc8ac4ddded1f6e87020899",
+      "shortSha": "a7e6af7",
+      "message": "feat(editor): Address setup panel P0 feedback (no-changelog) (#25943)\n\nCo-authored-by: Ricardo Espinoza <ricardo@n8n.io>",
+      "author": "Milorad FIlipović",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a7e6af727dfc72622dc8ac4ddded1f6e87020899"
+    },
+    {
+      "sha": "b51d2b3513f6ec1e989773205872c988d3ed509e",
+      "shortSha": "b51d2b3",
+      "message": "fix(editor): Selectively apply credentials for http request nodes (#26003)\n\nCo-authored-by: Milorad FIlipović <milorad@n8n.io>",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b51d2b3513f6ec1e989773205872c988d3ed509e"
+    },
+    {
+      "sha": "87e1918234ecec0914990bebabbb67edd99cba9d",
+      "shortSha": "87e1918",
+      "message": "feat(editor): Apply final setup panel feedback (no-changelog) (#26035)",
+      "author": "Milorad FIlipović",
+      "html_url": "https://github.com/n8n-io/n8n/commit/87e1918234ecec0914990bebabbb67edd99cba9d"
+    },
+    {
+      "sha": "43bad4343383a869801f34270c23d706fa4007e8",
+      "shortSha": "43bad43",
+      "message": ":rocket: Release 2.9.2-exp.0 (#26182)\n\nCo-authored-by: MiloradFilipovic <2598782+MiloradFilipovic@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/43bad4343383a869801f34270c23d706fa4007e8"
+    }
+  ]
+}

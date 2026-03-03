@@ -1,0 +1,2357 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/282187685",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/282187685/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/282187685/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.7.0",
+    "id": 282187685,
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4Q0del",
+    "tag_name": "n8n@2.7.0",
+    "target_commitish": "release/2.7.0",
+    "name": "n8n@2.7.0",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-02-02T13:30:26Z",
+    "updated_at": "2026-02-02T13:53:27Z",
+    "published_at": "2026-02-02T13:52:00Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/349568015",
+        "id": 349568015,
+        "node_id": "RA_kwDOC4Q8Qs4U1fwP",
+        "name": "sbom-source.cdx.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 4470122,
+        "digest": "sha256:bbacbae0ed3a4d7920e97e35f3ce67e0cecfa1aba99ebcc01439c795e31ae7bf",
+        "download_count": 10,
+        "created_at": "2026-02-02T13:53:26Z",
+        "updated_at": "2026-02-02T13:53:27Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.7.0/sbom-source.cdx.json"
+      },
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/349568014",
+        "id": 349568014,
+        "node_id": "RA_kwDOC4Q8Qs4U1fwO",
+        "name": "vex.openvex.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 328,
+        "digest": "sha256:14824a4d666f067f09a7cefeae09130853f90dafa52a54f11b4e2fabd454f28d",
+        "download_count": 8,
+        "created_at": "2026-02-02T13:53:26Z",
+        "updated_at": "2026-02-02T13:53:27Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.7.0/vex.openvex.json"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.7.0",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.7.0",
+    "body": "# [2.7.0](https://github.com/n8n-io/n8n/compare/n8n@2.6.0...n8n@2.7.0) (2026-02-02)\n\n\n### Bug Fixes\n\n* **AI Agent Node:** Fix gemini thought signatures for parallel tool calls ([#24982](https://github.com/n8n-io/n8n/issues/24982)) ([3dbca3e](https://github.com/n8n-io/n8n/commit/3dbca3e0dfc4c482420af72c5ff932c88526872c))\n* **ai-builder:** Detect placeholder values inside larger parameters generated by workflow builder ([#24950](https://github.com/n8n-io/n8n/issues/24950)) ([2b0f13d](https://github.com/n8n-io/n8n/commit/2b0f13d760de4cc19dc214ef070edd2817dd7ad2))\n* **ai-builder:** Fixing padding in WFB chat when message feedback is showing ([#25079](https://github.com/n8n-io/n8n/issues/25079)) ([fb7e5d5](https://github.com/n8n-io/n8n/commit/fb7e5d5a2052ca4882360e826a4d80fae889becc))\n* **AMQP Trigger Node:** Save failed executions ([#21878](https://github.com/n8n-io/n8n/issues/21878)) ([89f8fb0](https://github.com/n8n-io/n8n/commit/89f8fb04ca401517500b6b6100a95ed7578ca0f5))\n* **Chat Node:** Output structure for Send and Wait operation ([#24898](https://github.com/n8n-io/n8n/issues/24898)) ([36afab0](https://github.com/n8n-io/n8n/commit/36afab0ec0e5a2e27b91d38bb6eb086637888290))\n* **core:** Add Redis TCP Keep-Alive Configuration for Queue Mode ([#23902](https://github.com/n8n-io/n8n/issues/23902)) ([e7c5c17](https://github.com/n8n-io/n8n/commit/e7c5c174029e44db9fe0bda3605e71d6be90ddc5))\n* **core:** Do not send an undefined location header on form redirects ([#24989](https://github.com/n8n-io/n8n/issues/24989)) ([a8d75f7](https://github.com/n8n-io/n8n/commit/a8d75f74337d9fd23e0b9a6cd2775a302f8c5da2))\n* **core:** Ensure execution ID is available at runtime in Webhook response ([#24876](https://github.com/n8n-io/n8n/issues/24876)) ([ad7571f](https://github.com/n8n-io/n8n/commit/ad7571fdb2ed1da26f7caabca56cf14e4cd826af))\n* **core:** Ensure workflows with response promises respect graceful shutdown ([#24879](https://github.com/n8n-io/n8n/issues/24879)) ([b006ecf](https://github.com/n8n-io/n8n/commit/b006ecfb96986aa2a2e90be68385f7df46c39f33))\n* **core:** Fix missing early return on Bull error ([#25084](https://github.com/n8n-io/n8n/issues/25084)) ([ea4d2d2](https://github.com/n8n-io/n8n/commit/ea4d2d217a7339bc0f842a696a9d6a6f8714cb7d))\n* **core:** Fix orchestration init modules ([#23360](https://github.com/n8n-io/n8n/issues/23360)) ([9958eed](https://github.com/n8n-io/n8n/commit/9958eed92cacf766314b5f6e7478365dd86c4623))\n* **core:** Log warning where file values contain white space at the start or end (e.g. new lines) ([#24442](https://github.com/n8n-io/n8n/issues/24442)) ([ae17e8e](https://github.com/n8n-io/n8n/commit/ae17e8ec618db2dc7668aa178eee6e193d131150))\n* **core:** Replace deprecated 'application' actor value with 'app' in Linear OAuth ([#20985](https://github.com/n8n-io/n8n/issues/20985)) ([1edb600](https://github.com/n8n-io/n8n/commit/1edb600151d95319368ae055ec13113603b1e96a))\n* **core:** Revert ensuring execution ID in webhook response ([#25146](https://github.com/n8n-io/n8n/issues/25146)) ([a7408fa](https://github.com/n8n-io/n8n/commit/a7408fa0828f17ee48d83837514fca936784c199))\n* **core:** Small optimizations on users api to reduce db calls ([#24882](https://github.com/n8n-io/n8n/issues/24882)) ([dce4871](https://github.com/n8n-io/n8n/commit/dce48711cefad2d124942370c7da6f17340b75a9))\n* **core:** Support reconnecting on Redis failover ([#25038](https://github.com/n8n-io/n8n/issues/25038)) ([7e580ea](https://github.com/n8n-io/n8n/commit/7e580ea8cf81ee28c328756de11177f13983af6e))\n* **core:** Update AI Builder node types after community package changes ([#24883](https://github.com/n8n-io/n8n/issues/24883)) ([0faada7](https://github.com/n8n-io/n8n/commit/0faada7f365f6e14f6b182e87c8ae38aac944b13))\n* **core:** Update ownership cache update on folder transfer ([#24974](https://github.com/n8n-io/n8n/issues/24974)) ([40f6705](https://github.com/n8n-io/n8n/commit/40f670562e45752cad30ead3319ffa18ceacf832))\n* **core:** Use proxy for all npm commands ([#24909](https://github.com/n8n-io/n8n/issues/24909)) ([e1dd077](https://github.com/n8n-io/n8n/commit/e1dd07777dea6c24bc136d66083cc67b2a9f2b9b))\n* **core:** Use stricter flags when starting python runner ([#24983](https://github.com/n8n-io/n8n/issues/24983)) ([21421f5](https://github.com/n8n-io/n8n/commit/21421f5c39e94b4b8c4bf99cc0186261edfdc7e5))\n* **editor:** Allow '-' and '_' in subworkflow caller IDs ([#24849](https://github.com/n8n-io/n8n/issues/24849)) ([35583ad](https://github.com/n8n-io/n8n/commit/35583ad80b88c3144781a9052a86ce0ca28c1704))\n* **editor:** Disable hover effects on non-drop-targets during drag ([#24948](https://github.com/n8n-io/n8n/issues/24948)) ([8983bd5](https://github.com/n8n-io/n8n/commit/8983bd563f98433926429a394044343a1ae26696))\n* **editor:** Disable WF history button when autosave is not complete ([#24904](https://github.com/n8n-io/n8n/issues/24904)) ([567ae92](https://github.com/n8n-io/n8n/commit/567ae92756e7bd8cf556fe6b4f5f9cfc32ab78f3))\n* **editor:** Fix layout of insights tab ([#24994](https://github.com/n8n-io/n8n/issues/24994)) ([526a239](https://github.com/n8n-io/n8n/commit/526a2394df5105e9dccb87af6cdfad5d89cd2e40))\n* **editor:** Improve checkbox and lock icon alignment ([#24575](https://github.com/n8n-io/n8n/issues/24575)) ([7129c88](https://github.com/n8n-io/n8n/commit/7129c88fd918a8b7c2c761b8d5bb074bd2def4f0))\n* **editor:** Move version store init after authentication ([#25081](https://github.com/n8n-io/n8n/issues/25081)) ([326869e](https://github.com/n8n-io/n8n/commit/326869e7945d8fd1bc14340c0d4f35a1f560022d))\n* **editor:** Prevent connection lines from overlapping plus handle buttons ([#24631](https://github.com/n8n-io/n8n/issues/24631)) ([5c025c1](https://github.com/n8n-io/n8n/commit/5c025c1684595bdacb5f42db59e4fa9b1b702961))\n* **editor:** Prevent executions date picker popover from being clipped ([#24896](https://github.com/n8n-io/n8n/issues/24896)) ([1e777cf](https://github.com/n8n-io/n8n/commit/1e777cf8e0d65ca4895d06b817533488af351883))\n* **editor:** Truncate long project names with ellipsis in breadcrumb ([#24853](https://github.com/n8n-io/n8n/issues/24853)) ([b384e8c](https://github.com/n8n-io/n8n/commit/b384e8c9ece826353544f04f2024e84a883cdf3d))\n* Fix issue with workflowId not being correctly validated ([#24866](https://github.com/n8n-io/n8n/issues/24866)) ([f9e230e](https://github.com/n8n-io/n8n/commit/f9e230e2d0b98290931f350f6d7f96e1687f44db))\n* **MySQL Node:** Support \"Continue on Error\" for connection-related errors ([#25032](https://github.com/n8n-io/n8n/issues/25032)) ([f3e2930](https://github.com/n8n-io/n8n/commit/f3e2930f0e7d2cc2e41374b46c210f53943ec562))\n* Update stack cleanup command message to work from any directory ([#25034](https://github.com/n8n-io/n8n/issues/25034)) ([01f000b](https://github.com/n8n-io/n8n/commit/01f000b4c8a809463dd038cf18b5933349eeb73a))\n* Validate OpenAI urls ([#24922](https://github.com/n8n-io/n8n/issues/24922)) ([8b7ba6f](https://github.com/n8n-io/n8n/commit/8b7ba6f53b933fd21b3a8e44a6783cae5937790c))\n* **VectorStoreAzureAISearch Node:** Clear Azure AI Search index once per batch ([#25069](https://github.com/n8n-io/n8n/issues/25069)) ([a5cde70](https://github.com/n8n-io/n8n/commit/a5cde70330e158de03a8589ff92a07b1fc02a0b1))\n* **Wait Node:** Reject wait execution when workflow is canceled ([#15924](https://github.com/n8n-io/n8n/issues/15924)) ([e3110d1](https://github.com/n8n-io/n8n/commit/e3110d1f24354b32502c5def5383321ad7b27bbb))\n\n\n### Features\n\n* Add Currents.dev node ([#24566](https://github.com/n8n-io/n8n/issues/24566)) ([356e3e6](https://github.com/n8n-io/n8n/commit/356e3e69bca44fea866a195fac167901744e8dd9))\n* Add option to select eval suite on manual workflow dispatch ([#24998](https://github.com/n8n-io/n8n/issues/24998)) ([784ab19](https://github.com/n8n-io/n8n/commit/784ab19e40556a4cb415c1d1fd9a3293c59bb62f))\n* **ai-builder:** Moving feedback buttons in workflow builder chat ([#24732](https://github.com/n8n-io/n8n/issues/24732)) ([18c903d](https://github.com/n8n-io/n8n/commit/18c903d78251106fc417873f70ce99a44848c2c5))\n* **ai-builder:** Workflow builder \"respond to webhook\" understanding ([#24641](https://github.com/n8n-io/n8n/issues/24641)) ([d12e931](https://github.com/n8n-io/n8n/commit/d12e9318d0bd03eb4c6ba6be134ff7f0b0dd5f8f))\n* **core:** Add auto-publish on Environments Feature Pull ([#24701](https://github.com/n8n-io/n8n/issues/24701)) ([18487d0](https://github.com/n8n-io/n8n/commit/18487d04591a1fce9a6738a2c2e919a6438fc8bc))\n* **core:** Add data table resources to the public API ([#23610](https://github.com/n8n-io/n8n/issues/23610)) ([6b474e4](https://github.com/n8n-io/n8n/commit/6b474e414146586cdf21ecd62ec43248bb4af0ac))\n* **core:** Add default Postgres query timeout ([#25041](https://github.com/n8n-io/n8n/issues/25041)) ([daba1e2](https://github.com/n8n-io/n8n/commit/daba1e2846528151e1fba914c78977cdc473cafd))\n* **core:** Add profiling support via sentry ([#25049](https://github.com/n8n-io/n8n/issues/25049)) ([659de94](https://github.com/n8n-io/n8n/commit/659de949cbd9fee3eec88cfab8349a819f97012b))\n* **core:** Allow changing the oauth token data for oauth2 credentials on public API PATCH ([#25042](https://github.com/n8n-io/n8n/issues/25042)) ([252c5a6](https://github.com/n8n-io/n8n/commit/252c5a6c3c9830ecd0d9f5c5da755cc7a7eb53d2))\n* **core:** Fill out external secret provider endpoints for CRUD operations ([#24862](https://github.com/n8n-io/n8n/issues/24862)) ([386979a](https://github.com/n8n-io/n8n/commit/386979a27cfe0b22657d3da947b37c0f040ca931))\n* **core:** Index both latest published and draft workflow versions ([#24861](https://github.com/n8n-io/n8n/issues/24861)) ([0e1b2a8](https://github.com/n8n-io/n8n/commit/0e1b2a870eaac2103a6aeb7212bbb1d456cb8a5d))\n* **core:** Make database ping timeout configurable ([#24985](https://github.com/n8n-io/n8n/issues/24985)) ([308429c](https://github.com/n8n-io/n8n/commit/308429c871af59ad602529aed154b9c830bde633))\n* **Crypto Node:** Add credentials for Hmac and Sign operations ([#24798](https://github.com/n8n-io/n8n/issues/24798)) ([25f5199](https://github.com/n8n-io/n8n/commit/25f5199b462098075aa5bef6e6866f18d66e75e5))\n* **editor:** Add AI Usage settings page ([#20926](https://github.com/n8n-io/n8n/issues/20926)) ([ff68b7b](https://github.com/n8n-io/n8n/commit/ff68b7bd2c2e07517782b17de77b9eeac6936fc4))\n* **editor:** Add Dialog component to design system ([#24591](https://github.com/n8n-io/n8n/issues/24591)) ([a19ae52](https://github.com/n8n-io/n8n/commit/a19ae52e7b0f0d4c38b09ae630773a556635fbfe))\n* **editor:** Add secrets provider connections dashboard ([#24654](https://github.com/n8n-io/n8n/issues/24654)) ([6dd4cc8](https://github.com/n8n-io/n8n/commit/6dd4cc81b496acbb90658bd55d8e3063376fdd13))\n* **editor:** Pause autosave on connection failures ([#24456](https://github.com/n8n-io/n8n/issues/24456)) ([769e781](https://github.com/n8n-io/n8n/commit/769e7819a6dd6e285b9faeeb749f101bee67c361))\n* **editor:** Secret Store connection modal for multiple providers ([#25004](https://github.com/n8n-io/n8n/issues/25004)) ([768bf7f](https://github.com/n8n-io/n8n/commit/768bf7f7f1947b6d6e6bcb1980508a9abcec6779))\n* **editor:** Show ChatHub action buttons on hover ([#24923](https://github.com/n8n-io/n8n/issues/24923)) ([779a04f](https://github.com/n8n-io/n8n/commit/779a04f4712bf66498167fbed935e52f1c15fc43))\n* **FormTrigger Node:** Support ip filtering for the FormTrigger node ([#24644](https://github.com/n8n-io/n8n/issues/24644)) ([44650b1](https://github.com/n8n-io/n8n/commit/44650b1bb3b88363ae698a1743c0d29fdec0e0ac))\n* **Kafka Trigger Node:** Add option to keep binary data for downstream processing ([#21843](https://github.com/n8n-io/n8n/issues/21843)) ([b110a9e](https://github.com/n8n-io/n8n/commit/b110a9e46764fb0a7df90ebca711186d9c5a7262))\n* **Microsoft Agent 365 Trigger Node:** Integration for Microsoft Agents 365 ([#25145](https://github.com/n8n-io/n8n/issues/25145)) ([805b222](https://github.com/n8n-io/n8n/commit/805b2223a87b2a0e9d1bcd5fe35085ea78b39c87))\n* Remove success toasts on workflow creation ([#24979](https://github.com/n8n-io/n8n/issues/24979)) ([36355f8](https://github.com/n8n-io/n8n/commit/36355f8c589d38cc2ced600c332009f6bd089f8a))\n* **Zendesk Trigger Node:** Add webhook signature verification ([#24881](https://github.com/n8n-io/n8n/issues/24881)) ([4622aca](https://github.com/n8n-io/n8n/commit/4622acaccc69afb9720390e8e0011f490208fd1a))\n\n\n### Performance Improvements\n\n* **core:** Continue reducing baseline memory usage ([#24981](https://github.com/n8n-io/n8n/issues/24981)) ([a5117a3](https://github.com/n8n-io/n8n/commit/a5117a30fca20795f45650a99e7902e3a03f7143))\n* **core:** Lazyload Swagger, PSL and MCP libs ([#24902](https://github.com/n8n-io/n8n/issues/24902)) ([012ce09](https://github.com/n8n-io/n8n/commit/012ce09846dfea82860742f8ca435fe22dcbbe39))\n* **core:** Make MCP module exclusive to main ([#24899](https://github.com/n8n-io/n8n/issues/24899)) ([b75347b](https://github.com/n8n-io/n8n/commit/b75347b3a1f88ac73a70b14aadf355d3414d86fb))\n* **core:** Minimize execution data fetching ([#25073](https://github.com/n8n-io/n8n/issues/25073)) ([efd741f](https://github.com/n8n-io/n8n/commit/efd741f529a71416897619a31de31688569f9e5b))\n* **core:** Optimize saving execution progress ([#25089](https://github.com/n8n-io/n8n/issues/25089)) ([075ffd0](https://github.com/n8n-io/n8n/commit/075ffd05f1c3172b512f9d5f52373ffb3af40319))",
+    "reactions": {
+      "url": "https://api.github.com/repos/n8n-io/n8n/releases/282187685/reactions",
+      "total_count": 22,
+      "+1": 15,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 5,
+      "rocket": 2,
+      "eyes": 0
+    },
+    "previousTagName": "n8n@2.4.8"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.7.0](https://github.com/n8n-io/n8n/compare/n8n@2.6.0...n8n@2.7.0) (2026-02-02)",
+        "items": []
+      },
+      {
+        "title": "Bug Fixes",
+        "items": [
+          {
+            "prNumber": 24982,
+            "commitSha": "3dbca3e",
+            "rawText": "**AI Agent Node:** Fix gemini thought signatures for parallel tool calls ([#24982](https://github.com/n8n-io/n8n/issues/24982)) ([3dbca3e](https://github.com/n8n-io/n8n/commit/3dbca3e0dfc4c482420af72c5ff932c88526872c))"
+          },
+          {
+            "prNumber": 24950,
+            "commitSha": "2b0f13d",
+            "rawText": "**ai-builder:** Detect placeholder values inside larger parameters generated by workflow builder ([#24950](https://github.com/n8n-io/n8n/issues/24950)) ([2b0f13d](https://github.com/n8n-io/n8n/commit/2b0f13d760de4cc19dc214ef070edd2817dd7ad2))"
+          },
+          {
+            "prNumber": 25079,
+            "commitSha": "fb7e5d5",
+            "rawText": "**ai-builder:** Fixing padding in WFB chat when message feedback is showing ([#25079](https://github.com/n8n-io/n8n/issues/25079)) ([fb7e5d5](https://github.com/n8n-io/n8n/commit/fb7e5d5a2052ca4882360e826a4d80fae889becc))"
+          },
+          {
+            "prNumber": 21878,
+            "commitSha": "89f8fb0",
+            "rawText": "**AMQP Trigger Node:** Save failed executions ([#21878](https://github.com/n8n-io/n8n/issues/21878)) ([89f8fb0](https://github.com/n8n-io/n8n/commit/89f8fb04ca401517500b6b6100a95ed7578ca0f5))"
+          },
+          {
+            "prNumber": 24898,
+            "commitSha": "36afab0",
+            "rawText": "**Chat Node:** Output structure for Send and Wait operation ([#24898](https://github.com/n8n-io/n8n/issues/24898)) ([36afab0](https://github.com/n8n-io/n8n/commit/36afab0ec0e5a2e27b91d38bb6eb086637888290))"
+          },
+          {
+            "prNumber": 23902,
+            "commitSha": "e7c5c17",
+            "rawText": "**core:** Add Redis TCP Keep-Alive Configuration for Queue Mode ([#23902](https://github.com/n8n-io/n8n/issues/23902)) ([e7c5c17](https://github.com/n8n-io/n8n/commit/e7c5c174029e44db9fe0bda3605e71d6be90ddc5))"
+          },
+          {
+            "prNumber": 24989,
+            "commitSha": "a8d75f7",
+            "rawText": "**core:** Do not send an undefined location header on form redirects ([#24989](https://github.com/n8n-io/n8n/issues/24989)) ([a8d75f7](https://github.com/n8n-io/n8n/commit/a8d75f74337d9fd23e0b9a6cd2775a302f8c5da2))"
+          },
+          {
+            "prNumber": 24876,
+            "commitSha": "ad7571f",
+            "rawText": "**core:** Ensure execution ID is available at runtime in Webhook response ([#24876](https://github.com/n8n-io/n8n/issues/24876)) ([ad7571f](https://github.com/n8n-io/n8n/commit/ad7571fdb2ed1da26f7caabca56cf14e4cd826af))"
+          },
+          {
+            "prNumber": 24879,
+            "commitSha": "b006ecf",
+            "rawText": "**core:** Ensure workflows with response promises respect graceful shutdown ([#24879](https://github.com/n8n-io/n8n/issues/24879)) ([b006ecf](https://github.com/n8n-io/n8n/commit/b006ecfb96986aa2a2e90be68385f7df46c39f33))"
+          },
+          {
+            "prNumber": 25084,
+            "commitSha": "ea4d2d2",
+            "rawText": "**core:** Fix missing early return on Bull error ([#25084](https://github.com/n8n-io/n8n/issues/25084)) ([ea4d2d2](https://github.com/n8n-io/n8n/commit/ea4d2d217a7339bc0f842a696a9d6a6f8714cb7d))"
+          },
+          {
+            "prNumber": 23360,
+            "commitSha": "9958eed",
+            "rawText": "**core:** Fix orchestration init modules ([#23360](https://github.com/n8n-io/n8n/issues/23360)) ([9958eed](https://github.com/n8n-io/n8n/commit/9958eed92cacf766314b5f6e7478365dd86c4623))"
+          },
+          {
+            "prNumber": 24442,
+            "commitSha": "ae17e8e",
+            "rawText": "**core:** Log warning where file values contain white space at the start or end (e.g. new lines) ([#24442](https://github.com/n8n-io/n8n/issues/24442)) ([ae17e8e](https://github.com/n8n-io/n8n/commit/ae17e8ec618db2dc7668aa178eee6e193d131150))"
+          },
+          {
+            "prNumber": 20985,
+            "commitSha": "1edb600",
+            "rawText": "**core:** Replace deprecated 'application' actor value with 'app' in Linear OAuth ([#20985](https://github.com/n8n-io/n8n/issues/20985)) ([1edb600](https://github.com/n8n-io/n8n/commit/1edb600151d95319368ae055ec13113603b1e96a))"
+          },
+          {
+            "prNumber": 25146,
+            "commitSha": "a7408fa",
+            "rawText": "**core:** Revert ensuring execution ID in webhook response ([#25146](https://github.com/n8n-io/n8n/issues/25146)) ([a7408fa](https://github.com/n8n-io/n8n/commit/a7408fa0828f17ee48d83837514fca936784c199))"
+          },
+          {
+            "prNumber": 24882,
+            "commitSha": "dce4871",
+            "rawText": "**core:** Small optimizations on users api to reduce db calls ([#24882](https://github.com/n8n-io/n8n/issues/24882)) ([dce4871](https://github.com/n8n-io/n8n/commit/dce48711cefad2d124942370c7da6f17340b75a9))"
+          },
+          {
+            "prNumber": 25038,
+            "commitSha": "7e580ea",
+            "rawText": "**core:** Support reconnecting on Redis failover ([#25038](https://github.com/n8n-io/n8n/issues/25038)) ([7e580ea](https://github.com/n8n-io/n8n/commit/7e580ea8cf81ee28c328756de11177f13983af6e))"
+          },
+          {
+            "prNumber": 24883,
+            "commitSha": "0faada7",
+            "rawText": "**core:** Update AI Builder node types after community package changes ([#24883](https://github.com/n8n-io/n8n/issues/24883)) ([0faada7](https://github.com/n8n-io/n8n/commit/0faada7f365f6e14f6b182e87c8ae38aac944b13))"
+          },
+          {
+            "prNumber": 24974,
+            "commitSha": "40f6705",
+            "rawText": "**core:** Update ownership cache update on folder transfer ([#24974](https://github.com/n8n-io/n8n/issues/24974)) ([40f6705](https://github.com/n8n-io/n8n/commit/40f670562e45752cad30ead3319ffa18ceacf832))"
+          },
+          {
+            "prNumber": 24909,
+            "commitSha": "e1dd077",
+            "rawText": "**core:** Use proxy for all npm commands ([#24909](https://github.com/n8n-io/n8n/issues/24909)) ([e1dd077](https://github.com/n8n-io/n8n/commit/e1dd07777dea6c24bc136d66083cc67b2a9f2b9b))"
+          },
+          {
+            "prNumber": 24983,
+            "commitSha": "21421f5",
+            "rawText": "**core:** Use stricter flags when starting python runner ([#24983](https://github.com/n8n-io/n8n/issues/24983)) ([21421f5](https://github.com/n8n-io/n8n/commit/21421f5c39e94b4b8c4bf99cc0186261edfdc7e5))"
+          },
+          {
+            "prNumber": 24849,
+            "commitSha": "35583ad",
+            "rawText": "**editor:** Allow '-' and '_' in subworkflow caller IDs ([#24849](https://github.com/n8n-io/n8n/issues/24849)) ([35583ad](https://github.com/n8n-io/n8n/commit/35583ad80b88c3144781a9052a86ce0ca28c1704))"
+          },
+          {
+            "prNumber": 24948,
+            "commitSha": "8983bd5",
+            "rawText": "**editor:** Disable hover effects on non-drop-targets during drag ([#24948](https://github.com/n8n-io/n8n/issues/24948)) ([8983bd5](https://github.com/n8n-io/n8n/commit/8983bd563f98433926429a394044343a1ae26696))"
+          },
+          {
+            "prNumber": 24904,
+            "commitSha": "567ae92",
+            "rawText": "**editor:** Disable WF history button when autosave is not complete ([#24904](https://github.com/n8n-io/n8n/issues/24904)) ([567ae92](https://github.com/n8n-io/n8n/commit/567ae92756e7bd8cf556fe6b4f5f9cfc32ab78f3))"
+          },
+          {
+            "prNumber": 24994,
+            "commitSha": "526a239",
+            "rawText": "**editor:** Fix layout of insights tab ([#24994](https://github.com/n8n-io/n8n/issues/24994)) ([526a239](https://github.com/n8n-io/n8n/commit/526a2394df5105e9dccb87af6cdfad5d89cd2e40))"
+          },
+          {
+            "prNumber": 24575,
+            "commitSha": "7129c88",
+            "rawText": "**editor:** Improve checkbox and lock icon alignment ([#24575](https://github.com/n8n-io/n8n/issues/24575)) ([7129c88](https://github.com/n8n-io/n8n/commit/7129c88fd918a8b7c2c761b8d5bb074bd2def4f0))"
+          },
+          {
+            "prNumber": 25081,
+            "commitSha": "326869e",
+            "rawText": "**editor:** Move version store init after authentication ([#25081](https://github.com/n8n-io/n8n/issues/25081)) ([326869e](https://github.com/n8n-io/n8n/commit/326869e7945d8fd1bc14340c0d4f35a1f560022d))"
+          },
+          {
+            "prNumber": 24631,
+            "commitSha": "5c025c1",
+            "rawText": "**editor:** Prevent connection lines from overlapping plus handle buttons ([#24631](https://github.com/n8n-io/n8n/issues/24631)) ([5c025c1](https://github.com/n8n-io/n8n/commit/5c025c1684595bdacb5f42db59e4fa9b1b702961))"
+          },
+          {
+            "prNumber": 24896,
+            "commitSha": "1e777cf",
+            "rawText": "**editor:** Prevent executions date picker popover from being clipped ([#24896](https://github.com/n8n-io/n8n/issues/24896)) ([1e777cf](https://github.com/n8n-io/n8n/commit/1e777cf8e0d65ca4895d06b817533488af351883))"
+          },
+          {
+            "prNumber": 24853,
+            "commitSha": "b384e8c",
+            "rawText": "**editor:** Truncate long project names with ellipsis in breadcrumb ([#24853](https://github.com/n8n-io/n8n/issues/24853)) ([b384e8c](https://github.com/n8n-io/n8n/commit/b384e8c9ece826353544f04f2024e84a883cdf3d))"
+          },
+          {
+            "prNumber": 24866,
+            "commitSha": "f9e230e",
+            "rawText": "Fix issue with workflowId not being correctly validated ([#24866](https://github.com/n8n-io/n8n/issues/24866)) ([f9e230e](https://github.com/n8n-io/n8n/commit/f9e230e2d0b98290931f350f6d7f96e1687f44db))"
+          },
+          {
+            "prNumber": 25032,
+            "commitSha": "f3e2930",
+            "rawText": "**MySQL Node:** Support \"Continue on Error\" for connection-related errors ([#25032](https://github.com/n8n-io/n8n/issues/25032)) ([f3e2930](https://github.com/n8n-io/n8n/commit/f3e2930f0e7d2cc2e41374b46c210f53943ec562))"
+          },
+          {
+            "prNumber": 25034,
+            "commitSha": "01f000b",
+            "rawText": "Update stack cleanup command message to work from any directory ([#25034](https://github.com/n8n-io/n8n/issues/25034)) ([01f000b](https://github.com/n8n-io/n8n/commit/01f000b4c8a809463dd038cf18b5933349eeb73a))"
+          },
+          {
+            "prNumber": 24922,
+            "commitSha": "8b7ba6f",
+            "rawText": "Validate OpenAI urls ([#24922](https://github.com/n8n-io/n8n/issues/24922)) ([8b7ba6f](https://github.com/n8n-io/n8n/commit/8b7ba6f53b933fd21b3a8e44a6783cae5937790c))"
+          },
+          {
+            "prNumber": 25069,
+            "commitSha": "a5cde70",
+            "rawText": "**VectorStoreAzureAISearch Node:** Clear Azure AI Search index once per batch ([#25069](https://github.com/n8n-io/n8n/issues/25069)) ([a5cde70](https://github.com/n8n-io/n8n/commit/a5cde70330e158de03a8589ff92a07b1fc02a0b1))"
+          },
+          {
+            "prNumber": 15924,
+            "commitSha": "e3110d1",
+            "rawText": "**Wait Node:** Reject wait execution when workflow is canceled ([#15924](https://github.com/n8n-io/n8n/issues/15924)) ([e3110d1](https://github.com/n8n-io/n8n/commit/e3110d1f24354b32502c5def5383321ad7b27bbb))"
+          }
+        ]
+      },
+      {
+        "title": "Features",
+        "items": [
+          {
+            "prNumber": 24566,
+            "commitSha": "356e3e6",
+            "rawText": "Add Currents.dev node ([#24566](https://github.com/n8n-io/n8n/issues/24566)) ([356e3e6](https://github.com/n8n-io/n8n/commit/356e3e69bca44fea866a195fac167901744e8dd9))"
+          },
+          {
+            "prNumber": 24998,
+            "commitSha": "784ab19",
+            "rawText": "Add option to select eval suite on manual workflow dispatch ([#24998](https://github.com/n8n-io/n8n/issues/24998)) ([784ab19](https://github.com/n8n-io/n8n/commit/784ab19e40556a4cb415c1d1fd9a3293c59bb62f))"
+          },
+          {
+            "prNumber": 24732,
+            "commitSha": "18c903d",
+            "rawText": "**ai-builder:** Moving feedback buttons in workflow builder chat ([#24732](https://github.com/n8n-io/n8n/issues/24732)) ([18c903d](https://github.com/n8n-io/n8n/commit/18c903d78251106fc417873f70ce99a44848c2c5))"
+          },
+          {
+            "prNumber": 24641,
+            "commitSha": "d12e931",
+            "rawText": "**ai-builder:** Workflow builder \"respond to webhook\" understanding ([#24641](https://github.com/n8n-io/n8n/issues/24641)) ([d12e931](https://github.com/n8n-io/n8n/commit/d12e9318d0bd03eb4c6ba6be134ff7f0b0dd5f8f))"
+          },
+          {
+            "prNumber": 24701,
+            "commitSha": "18487d0",
+            "rawText": "**core:** Add auto-publish on Environments Feature Pull ([#24701](https://github.com/n8n-io/n8n/issues/24701)) ([18487d0](https://github.com/n8n-io/n8n/commit/18487d04591a1fce9a6738a2c2e919a6438fc8bc))"
+          },
+          {
+            "prNumber": 23610,
+            "commitSha": "6b474e4",
+            "rawText": "**core:** Add data table resources to the public API ([#23610](https://github.com/n8n-io/n8n/issues/23610)) ([6b474e4](https://github.com/n8n-io/n8n/commit/6b474e414146586cdf21ecd62ec43248bb4af0ac))"
+          },
+          {
+            "prNumber": 25041,
+            "commitSha": "daba1e2",
+            "rawText": "**core:** Add default Postgres query timeout ([#25041](https://github.com/n8n-io/n8n/issues/25041)) ([daba1e2](https://github.com/n8n-io/n8n/commit/daba1e2846528151e1fba914c78977cdc473cafd))"
+          },
+          {
+            "prNumber": 25049,
+            "commitSha": "659de94",
+            "rawText": "**core:** Add profiling support via sentry ([#25049](https://github.com/n8n-io/n8n/issues/25049)) ([659de94](https://github.com/n8n-io/n8n/commit/659de949cbd9fee3eec88cfab8349a819f97012b))"
+          },
+          {
+            "prNumber": 25042,
+            "commitSha": "252c5a6",
+            "rawText": "**core:** Allow changing the oauth token data for oauth2 credentials on public API PATCH ([#25042](https://github.com/n8n-io/n8n/issues/25042)) ([252c5a6](https://github.com/n8n-io/n8n/commit/252c5a6c3c9830ecd0d9f5c5da755cc7a7eb53d2))"
+          },
+          {
+            "prNumber": 24862,
+            "commitSha": "386979a",
+            "rawText": "**core:** Fill out external secret provider endpoints for CRUD operations ([#24862](https://github.com/n8n-io/n8n/issues/24862)) ([386979a](https://github.com/n8n-io/n8n/commit/386979a27cfe0b22657d3da947b37c0f040ca931))"
+          },
+          {
+            "prNumber": 24861,
+            "commitSha": "0e1b2a8",
+            "rawText": "**core:** Index both latest published and draft workflow versions ([#24861](https://github.com/n8n-io/n8n/issues/24861)) ([0e1b2a8](https://github.com/n8n-io/n8n/commit/0e1b2a870eaac2103a6aeb7212bbb1d456cb8a5d))"
+          },
+          {
+            "prNumber": 24985,
+            "commitSha": "308429c",
+            "rawText": "**core:** Make database ping timeout configurable ([#24985](https://github.com/n8n-io/n8n/issues/24985)) ([308429c](https://github.com/n8n-io/n8n/commit/308429c871af59ad602529aed154b9c830bde633))"
+          },
+          {
+            "prNumber": 24798,
+            "commitSha": "25f5199",
+            "rawText": "**Crypto Node:** Add credentials for Hmac and Sign operations ([#24798](https://github.com/n8n-io/n8n/issues/24798)) ([25f5199](https://github.com/n8n-io/n8n/commit/25f5199b462098075aa5bef6e6866f18d66e75e5))"
+          },
+          {
+            "prNumber": 20926,
+            "commitSha": "ff68b7b",
+            "rawText": "**editor:** Add AI Usage settings page ([#20926](https://github.com/n8n-io/n8n/issues/20926)) ([ff68b7b](https://github.com/n8n-io/n8n/commit/ff68b7bd2c2e07517782b17de77b9eeac6936fc4))"
+          },
+          {
+            "prNumber": 24591,
+            "commitSha": "a19ae52",
+            "rawText": "**editor:** Add Dialog component to design system ([#24591](https://github.com/n8n-io/n8n/issues/24591)) ([a19ae52](https://github.com/n8n-io/n8n/commit/a19ae52e7b0f0d4c38b09ae630773a556635fbfe))"
+          },
+          {
+            "prNumber": 24654,
+            "commitSha": "6dd4cc8",
+            "rawText": "**editor:** Add secrets provider connections dashboard ([#24654](https://github.com/n8n-io/n8n/issues/24654)) ([6dd4cc8](https://github.com/n8n-io/n8n/commit/6dd4cc81b496acbb90658bd55d8e3063376fdd13))"
+          },
+          {
+            "prNumber": 24456,
+            "commitSha": "769e781",
+            "rawText": "**editor:** Pause autosave on connection failures ([#24456](https://github.com/n8n-io/n8n/issues/24456)) ([769e781](https://github.com/n8n-io/n8n/commit/769e7819a6dd6e285b9faeeb749f101bee67c361))"
+          },
+          {
+            "prNumber": 25004,
+            "commitSha": "768bf7f",
+            "rawText": "**editor:** Secret Store connection modal for multiple providers ([#25004](https://github.com/n8n-io/n8n/issues/25004)) ([768bf7f](https://github.com/n8n-io/n8n/commit/768bf7f7f1947b6d6e6bcb1980508a9abcec6779))"
+          },
+          {
+            "prNumber": 24923,
+            "commitSha": "779a04f",
+            "rawText": "**editor:** Show ChatHub action buttons on hover ([#24923](https://github.com/n8n-io/n8n/issues/24923)) ([779a04f](https://github.com/n8n-io/n8n/commit/779a04f4712bf66498167fbed935e52f1c15fc43))"
+          },
+          {
+            "prNumber": 24644,
+            "commitSha": "44650b1",
+            "rawText": "**FormTrigger Node:** Support ip filtering for the FormTrigger node ([#24644](https://github.com/n8n-io/n8n/issues/24644)) ([44650b1](https://github.com/n8n-io/n8n/commit/44650b1bb3b88363ae698a1743c0d29fdec0e0ac))"
+          },
+          {
+            "prNumber": 21843,
+            "commitSha": "b110a9e",
+            "rawText": "**Kafka Trigger Node:** Add option to keep binary data for downstream processing ([#21843](https://github.com/n8n-io/n8n/issues/21843)) ([b110a9e](https://github.com/n8n-io/n8n/commit/b110a9e46764fb0a7df90ebca711186d9c5a7262))"
+          },
+          {
+            "prNumber": 25145,
+            "commitSha": "805b222",
+            "rawText": "**Microsoft Agent 365 Trigger Node:** Integration for Microsoft Agents 365 ([#25145](https://github.com/n8n-io/n8n/issues/25145)) ([805b222](https://github.com/n8n-io/n8n/commit/805b2223a87b2a0e9d1bcd5fe35085ea78b39c87))"
+          },
+          {
+            "prNumber": 24979,
+            "commitSha": "36355f8",
+            "rawText": "Remove success toasts on workflow creation ([#24979](https://github.com/n8n-io/n8n/issues/24979)) ([36355f8](https://github.com/n8n-io/n8n/commit/36355f8c589d38cc2ced600c332009f6bd089f8a))"
+          },
+          {
+            "prNumber": 24881,
+            "commitSha": "4622aca",
+            "rawText": "**Zendesk Trigger Node:** Add webhook signature verification ([#24881](https://github.com/n8n-io/n8n/issues/24881)) ([4622aca](https://github.com/n8n-io/n8n/commit/4622acaccc69afb9720390e8e0011f490208fd1a))"
+          }
+        ]
+      },
+      {
+        "title": "Performance Improvements",
+        "items": [
+          {
+            "prNumber": 24981,
+            "commitSha": "a5117a3",
+            "rawText": "**core:** Continue reducing baseline memory usage ([#24981](https://github.com/n8n-io/n8n/issues/24981)) ([a5117a3](https://github.com/n8n-io/n8n/commit/a5117a30fca20795f45650a99e7902e3a03f7143))"
+          },
+          {
+            "prNumber": 24902,
+            "commitSha": "012ce09",
+            "rawText": "**core:** Lazyload Swagger, PSL and MCP libs ([#24902](https://github.com/n8n-io/n8n/issues/24902)) ([012ce09](https://github.com/n8n-io/n8n/commit/012ce09846dfea82860742f8ca435fe22dcbbe39))"
+          },
+          {
+            "prNumber": 24899,
+            "commitSha": "b75347b",
+            "rawText": "**core:** Make MCP module exclusive to main ([#24899](https://github.com/n8n-io/n8n/issues/24899)) ([b75347b](https://github.com/n8n-io/n8n/commit/b75347b3a1f88ac73a70b14aadf355d3414d86fb))"
+          },
+          {
+            "prNumber": 25073,
+            "commitSha": "efd741f",
+            "rawText": "**core:** Minimize execution data fetching ([#25073](https://github.com/n8n-io/n8n/issues/25073)) ([efd741f](https://github.com/n8n-io/n8n/commit/efd741f529a71416897619a31de31688569f9e5b))"
+          },
+          {
+            "prNumber": 25089,
+            "commitSha": "075ffd0",
+            "rawText": "**core:** Optimize saving execution progress ([#25089](https://github.com/n8n-io/n8n/issues/25089)) ([075ffd0](https://github.com/n8n-io/n8n/commit/075ffd05f1c3172b512f9d5f52373ffb3af40319))"
+          }
+        ]
+      }
+    ],
+    "allPRs": [
+      24982,
+      24950,
+      25079,
+      21878,
+      24898,
+      23902,
+      24989,
+      24876,
+      24879,
+      25084,
+      23360,
+      24442,
+      20985,
+      25146,
+      24882,
+      25038,
+      24883,
+      24974,
+      24909,
+      24983,
+      24849,
+      24948,
+      24904,
+      24994,
+      24575,
+      25081,
+      24631,
+      24896,
+      24853,
+      24866,
+      25032,
+      25034,
+      24922,
+      25069,
+      15924,
+      24566,
+      24998,
+      24732,
+      24641,
+      24701,
+      23610,
+      25041,
+      25049,
+      25042,
+      24862,
+      24861,
+      24985,
+      24798,
+      20926,
+      24591,
+      24654,
+      24456,
+      25004,
+      24923,
+      24644,
+      21843,
+      25145,
+      24979,
+      24881,
+      24981,
+      24902,
+      24899,
+      25073,
+      25089
+    ],
+    "allSHAs": [
+      "3dbca3e",
+      "2b0f13d",
+      "fb7e5d5",
+      "89f8fb0",
+      "36afab0",
+      "e7c5c17",
+      "a8d75f7",
+      "ad7571f",
+      "b006ecf",
+      "ea4d2d2",
+      "9958eed",
+      "ae17e8e",
+      "1edb600",
+      "a7408fa",
+      "dce4871",
+      "7e580ea",
+      "0faada7",
+      "40f6705",
+      "e1dd077",
+      "21421f5",
+      "35583ad",
+      "8983bd5",
+      "567ae92",
+      "526a239",
+      "7129c88",
+      "326869e",
+      "5c025c1",
+      "1e777cf",
+      "b384e8c",
+      "f9e230e",
+      "f3e2930",
+      "01f000b",
+      "8b7ba6f",
+      "a5cde70",
+      "e3110d1",
+      "356e3e6",
+      "784ab19",
+      "18c903d",
+      "d12e931",
+      "18487d0",
+      "6b474e4",
+      "daba1e2",
+      "659de94",
+      "252c5a6",
+      "386979a",
+      "0e1b2a8",
+      "308429c",
+      "25f5199",
+      "ff68b7b",
+      "a19ae52",
+      "6dd4cc8",
+      "769e781",
+      "768bf7f",
+      "779a04f",
+      "44650b1",
+      "b110a9e",
+      "805b222",
+      "36355f8",
+      "4622aca",
+      "a5117a3",
+      "012ce09",
+      "b75347b",
+      "efd741f",
+      "075ffd0"
+    ]
+  },
+  "commits": [
+    {
+      "sha": "502479ccdbfd0d4885c47bde50377f5d35652a6a",
+      "shortSha": "502479c",
+      "message": "fix: Bump dependencies (#24516)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/502479ccdbfd0d4885c47bde50377f5d35652a6a"
+    },
+    {
+      "sha": "b014357e1f05cf9484feb4f6c9560842b6799a3f",
+      "shortSha": "b014357",
+      "message": "feat: Add SharedWorker and DataWorker initialization with SQLite WASM support (no-changelog) (#24308)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b014357e1f05cf9484feb4f6c9560842b6799a3f"
+    },
+    {
+      "sha": "3a94484042ade13151b067bc54207be627ca3b39",
+      "shortSha": "3a94484",
+      "message": "chore(core): Add static authentication for new API endpoints (#24346)",
+      "author": "phyllis-noester",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3a94484042ade13151b067bc54207be627ca3b39"
+    },
+    {
+      "sha": "e396d6de708d2f23658c9df04f5acd3806728649",
+      "shortSha": "e396d6d",
+      "message": ":rocket: Release 2.5.0 (#24586)\n\nCo-authored-by: tomi <10324676+tomi@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e396d6de708d2f23658c9df04f5acd3806728649"
+    },
+    {
+      "sha": "555f2ed75cdf67c40c371c0e93740e3a844e0ffc",
+      "shortSha": "555f2ed",
+      "message": "Merge tag 'n8n@2.5.0'",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/555f2ed75cdf67c40c371c0e93740e3a844e0ffc"
+    },
+    {
+      "sha": "ae62219165316252c1036008ae70fbec7b12853e",
+      "shortSha": "ae62219",
+      "message": "fix(editor): Correct undo state after adding node inbetween existing nodes (#24093)",
+      "author": "Charlie Kolb",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ae62219165316252c1036008ae70fbec7b12853e"
+    },
+    {
+      "sha": "0371bef8148536cf13e59b663b6b02c5bca2fd60",
+      "shortSha": "0371bef",
+      "message": "fix(editor): Add limitations section to AI builder responder prompt (#24457)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Mutasem Aldmour",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0371bef8148536cf13e59b663b6b02c5bca2fd60"
+    },
+    {
+      "sha": "2b4596eb66d8e68f504297e02e4e8a485c3a1e6b",
+      "shortSha": "2b4596e",
+      "message": "chore(core): Add dynamic credential user storage (#24579)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2b4596eb66d8e68f504297e02e4e8a485c3a1e6b"
+    },
+    {
+      "sha": "924817d9fd39c3bafb3f95d5368191cc41fde832",
+      "shortSha": "924817d",
+      "message": "ci: Add poutine custom rule for unpinned GitHub Actions detection (#24577)",
+      "author": "Artem Sorokin",
+      "html_url": "https://github.com/n8n-io/n8n/commit/924817d9fd39c3bafb3f95d5368191cc41fde832"
+    },
+    {
+      "sha": "e74e0f907eddd72faefe4a804e60406ac42ce6cb",
+      "shortSha": "e74e0f9",
+      "message": "chore(core): Add dtos for log streaming controller. Use zod to validate existing destination option types (#24493)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e74e0f907eddd72faefe4a804e60406ac42ce6cb"
+    },
+    {
+      "sha": "171eb3ae9140a17b28a5b42d9c00281bdea8687f",
+      "shortSha": "171eb3a",
+      "message": "feat(Airtop Node): Add resource locator in the agent node (#23008)\n\nCo-authored-by: Shireen Missi <94372015+ShireenMissi@users.noreply.github.com>",
+      "author": "Cesar Sanchez",
+      "html_url": "https://github.com/n8n-io/n8n/commit/171eb3ae9140a17b28a5b42d9c00281bdea8687f"
+    },
+    {
+      "sha": "78a16b70314f65d9a5dca29d92a43a5d7a7131f3",
+      "shortSha": "78a16b7",
+      "message": "fix(editor): Hide AI workflow button when AI credits service is not configured (#24607)",
+      "author": "Filipe Tavares",
+      "html_url": "https://github.com/n8n-io/n8n/commit/78a16b70314f65d9a5dca29d92a43a5d7a7131f3"
+    },
+    {
+      "sha": "4e4b89495830482cf7bdeb872d31427aead5574a",
+      "shortSha": "4e4b894",
+      "message": "fix(OpenAI Node): Convert error null to undefined to prevent false retries (#24206)",
+      "author": "John Lin",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4e4b89495830482cf7bdeb872d31427aead5574a"
+    },
+    {
+      "sha": "f1b8622d3da2bc014f4333f2fe68bebfc8df307d",
+      "shortSha": "f1b8622",
+      "message": "refactor(editor): Extract `useDocumentTitle` composable to shared package (no-changelog) (#24462)\n\nCo-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f1b8622d3da2bc014f4333f2fe68bebfc8df307d"
+    },
+    {
+      "sha": "ec1265fdecc986770d1f35fc0f36c47470998f64",
+      "shortSha": "ec1265f",
+      "message": "fix(Azure AI Search Node): Add metadata transformation for document insertion (#24623)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ec1265fdecc986770d1f35fc0f36c47470998f64"
+    },
+    {
+      "sha": "e05d6252a77c197cde2d9715e6dd2a01cc970a05",
+      "shortSha": "e05d625",
+      "message": "feat(editor): Store n8n version in SQLite WASM and reinitialize nodeTypes on change (no-changelog) (#24599)\n\nCo-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e05d6252a77c197cde2d9715e6dd2a01cc970a05"
+    },
+    {
+      "sha": "470539a4dfac1b0d29d6b2b3438dd76b85f800ef",
+      "shortSha": "470539a",
+      "message": "fix(core): Prevent dual loading of community packages (#24621)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/470539a4dfac1b0d29d6b2b3438dd76b85f800ef"
+    },
+    {
+      "sha": "22895006739c913595a40284aeb29febff179863",
+      "shortSha": "2289500",
+      "message": "refactor(editor): Replace old N8nTooltip with new Reka UI based tooltip (#22838)\n\nCo-authored-by: Claude <noreply@anthropic.com>",
+      "author": "Csaba Tuncsik",
+      "html_url": "https://github.com/n8n-io/n8n/commit/22895006739c913595a40284aeb29febff179863"
+    },
+    {
+      "sha": "cd489fe4bdf86d881ae2f5ad48358cc205a28036",
+      "shortSha": "cd489fe",
+      "message": "fix(n8n Form Node): Clarify description parameter (#24580)",
+      "author": "Michael Kret",
+      "html_url": "https://github.com/n8n-io/n8n/commit/cd489fe4bdf86d881ae2f5ad48358cc205a28036"
+    },
+    {
+      "sha": "ea2e13ad0c6506edbf7d57313f3f532dad3d735c",
+      "shortSha": "ea2e13a",
+      "message": "feat(core): Implement execution data stores (#24568)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ea2e13ad0c6506edbf7d57313f3f532dad3d735c"
+    },
+    {
+      "sha": "b28c29accd9bf510b06634db7d7c5c3970dabc45",
+      "shortSha": "b28c29a",
+      "message": "chore: Add provider-agnostic CRDT abstraction layer (#24458)",
+      "author": "Raúl Gómez Morales",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b28c29accd9bf510b06634db7d7c5c3970dabc45"
+    },
+    {
+      "sha": "8e6d7f45a26641f28d3436573013af54d645dbdd",
+      "shortSha": "8e6d7f4",
+      "message": "fix: Move webhook duplication checks to backend and make them more reliable (#23094)\n\nCo-authored-by: Michael Siega <michael.siega@n8n.io>\nCo-authored-by: Michael Kret <michael.k@radency.com>",
+      "author": "Dimitri Lavrenük",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8e6d7f45a26641f28d3436573013af54d645dbdd"
+    },
+    {
+      "sha": "06dfc3b6fe821d01e4e687dacca8a54d348556e9",
+      "shortSha": "06dfc3b",
+      "message": "feat(editor): Resource center experiment (no-changelog) (#24510)",
+      "author": "Romeo Balta",
+      "html_url": "https://github.com/n8n-io/n8n/commit/06dfc3b6fe821d01e4e687dacca8a54d348556e9"
+    },
+    {
+      "sha": "d9862bb4aa991200d2797123a37341b3da1796fb",
+      "shortSha": "d9862bb",
+      "message": "feat(core): Implement two-layered rate limiting system (#24636)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d9862bb4aa991200d2797123a37341b3da1796fb"
+    },
+    {
+      "sha": "b73e767fe3325914dafd8893c4ae408599a2910d",
+      "shortSha": "b73e767",
+      "message": "chore: Add claude settings (#24638)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b73e767fe3325914dafd8893c4ae408599a2910d"
+    },
+    {
+      "sha": "8864bc5136823bd72277d863d803830f61e59135",
+      "shortSha": "8864bc5",
+      "message": "feat: Remove stub resolver for dynamic credentials (#24637)",
+      "author": "Stephen Wright",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8864bc5136823bd72277d863d803830f61e59135"
+    },
+    {
+      "sha": "99cb5982a06cf399faed3f13ffd761449c2c47ce",
+      "shortSha": "99cb598",
+      "message": "ci(core): Add automated AI workflow builder evaluations (#24582)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/99cb5982a06cf399faed3f13ffd761449c2c47ce"
+    },
+    {
+      "sha": "98079c92454b1c09c19ab483fc034f74ad3d9094",
+      "shortSha": "98079c9",
+      "message": "fix(Data Table Node): Require condition for upsert (#24640)",
+      "author": "Charlie Kolb",
+      "html_url": "https://github.com/n8n-io/n8n/commit/98079c92454b1c09c19ab483fc034f74ad3d9094"
+    },
+    {
+      "sha": "4e7710e15c6f5295c373eb7197f96a0a0a39ee3f",
+      "shortSha": "4e7710e",
+      "message": "fix(editor): Always connect start node to trigger node (#24531)",
+      "author": "Nikhil Kuriakose",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4e7710e15c6f5295c373eb7197f96a0a0a39ee3f"
+    },
+    {
+      "sha": "1894aaf49b5fd130d3121d8cf0178ead6326c332",
+      "shortSha": "1894aaf",
+      "message": "fix(editor): Layout changes to the input triple (#24527)",
+      "author": "Nikhil Kuriakose",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1894aaf49b5fd130d3121d8cf0178ead6326c332"
+    },
+    {
+      "sha": "d2e410a244c85e584f5b37f5ec23b917a0908b39",
+      "shortSha": "d2e410a",
+      "message": "ci: Authenticate before syncing to private repo (#24656)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d2e410a244c85e584f5b37f5ec23b917a0908b39"
+    },
+    {
+      "sha": "cb07d6b0be055ba7fa5a86678b129bcac0be5752",
+      "shortSha": "cb07d6b",
+      "message": "fix(core): Make Respond to Chat nodes work on Chat hub with multi-main instances (#24657)",
+      "author": "Jaakko Husso",
+      "html_url": "https://github.com/n8n-io/n8n/commit/cb07d6b0be055ba7fa5a86678b129bcac0be5752"
+    },
+    {
+      "sha": "0aeb4a25e22aa4d3e0769dd54f117bedc0a9a498",
+      "shortSha": "0aeb4a2",
+      "message": "fix: Update nodejs to fix  CVE-2025-59466 (#24352)",
+      "author": "Loganaden Velvindron",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0aeb4a25e22aa4d3e0769dd54f117bedc0a9a498"
+    },
+    {
+      "sha": "4456bf3c9a42e5a3fbe765aa5c8039368bc58ef9",
+      "shortSha": "4456bf3",
+      "message": "refactor(core): Move workflow history compaction logs to debug (#24680)",
+      "author": "Charlie Kolb",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4456bf3c9a42e5a3fbe765aa5c8039368bc58ef9"
+    },
+    {
+      "sha": "b7c6d545239340dfcfe2b496469ba1abe40ca04e",
+      "shortSha": "b7c6d54",
+      "message": "feat(Microsoft Teams Node): Add support for government cloud tenants (#17297)\n\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>\nCo-authored-by: RomanDavydchuk <roman.d@radency.com>\nCo-authored-by: RomanDavydchuk <roman.davydchuk@n8n.io>",
+      "author": "Antonio Piazza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b7c6d545239340dfcfe2b496469ba1abe40ca04e"
+    },
+    {
+      "sha": "ac47bcb9a206a73182c64dc0188b48de70408c80",
+      "shortSha": "ac47bcb",
+      "message": "fix(core): Remove duplicate Resource Mapper Component fields (#24432)",
+      "author": "RomanDavydchuk",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ac47bcb9a206a73182c64dc0188b48de70408c80"
+    },
+    {
+      "sha": "b21c53677c7a7da81031d4624e954ead3a7d579f",
+      "shortSha": "b21c536",
+      "message": "feat: Add workflow demo diff view (#24585)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Mutasem Aldmour",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b21c53677c7a7da81031d4624e954ead3a7d579f"
+    },
+    {
+      "sha": "ee1a77cd46c56b02c5c7b1821cd4692ff5140f81",
+      "shortSha": "ee1a77c",
+      "message": "fix(core): Workflow tag removal syncing (#24557)",
+      "author": "James Gee",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ee1a77cd46c56b02c5c7b1821cd4692ff5140f81"
+    },
+    {
+      "sha": "8e0de0be029d7a14286f4c61a172ae22c696fa62",
+      "shortSha": "8e0de0b",
+      "message": "feat(core): Add limits to fields used for rate limiter keys (#24665)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8e0de0be029d7a14286f4c61a172ae22c696fa62"
+    },
+    {
+      "sha": "650fd00b115feb04046f83cafb2e88fb57259419",
+      "shortSha": "650fd00",
+      "message": "chore(editor): Trial indicator shows days, hours and minutes left (no-changelog) (#24629)",
+      "author": "Filipe Tavares",
+      "html_url": "https://github.com/n8n-io/n8n/commit/650fd00b115feb04046f83cafb2e88fb57259419"
+    },
+    {
+      "sha": "efc6c123c848a7e1df74effabf30a3f3cf9d1a8f",
+      "shortSha": "efc6c12",
+      "message": "Merge commit from fork\n\n* refactor(core): Improve expressions handling\n\n* refactor(core): More expressions handling improvements",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/efc6c123c848a7e1df74effabf30a3f3cf9d1a8f"
+    },
+    {
+      "sha": "c223f8cba78b556d8c7e1fa91e0408c740aba8b9",
+      "shortSha": "c223f8c",
+      "message": "feat(core): Check if dynamic credentials auth token is set, return 400 otherwise (#24647)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c223f8cba78b556d8c7e1fa91e0408c740aba8b9"
+    },
+    {
+      "sha": "1d2a32dda03a9b22189a4e384bc0830e7ed23603",
+      "shortSha": "1d2a32d",
+      "message": "feat(editor): Add new Button component to design system (no-changleog) (#24467)",
+      "author": "Rob Hough",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1d2a32dda03a9b22189a4e384bc0830e7ed23603"
+    },
+    {
+      "sha": "a6e8afeee7a7e0d4ee783f1b72bf0c158d6a39f7",
+      "shortSha": "a6e8afe",
+      "message": "feat(ai-builder): Remove techniques selection limit of 5 (#24530)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a6e8afeee7a7e0d4ee783f1b72bf0c158d6a39f7"
+    },
+    {
+      "sha": "add046aa2c638ffb096e96477157b8ddc2cd71e6",
+      "shortSha": "add046a",
+      "message": "feat(editor): Rework recommended templates UX (no-changelog) (#24294)",
+      "author": "Svetoslav Dekov",
+      "html_url": "https://github.com/n8n-io/n8n/commit/add046aa2c638ffb096e96477157b8ddc2cd71e6"
+    },
+    {
+      "sha": "eed218e1a9c9168659697539a000bd5ddb301c3f",
+      "shortSha": "eed218e",
+      "message": "build: Remove tsup from nodes-langchain to unblock Vitest migration (no-changelog) (#24670)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/eed218e1a9c9168659697539a000bd5ddb301c3f"
+    },
+    {
+      "sha": "5d481988a9659610adedb8d583158ec2a16f9be0",
+      "shortSha": "5d48198",
+      "message": "perf(core): Lazyload login strategies and external secrets (#24693)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/5d481988a9659610adedb8d583158ec2a16f9be0"
+    },
+    {
+      "sha": "d1328aae76c455f7648289ea681f559026f670f8",
+      "shortSha": "d1328aa",
+      "message": "feat(core): Improve Workflow History Compaction additive merging (no-changelog) (#24700)",
+      "author": "Charlie Kolb",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d1328aae76c455f7648289ea681f559026f670f8"
+    },
+    {
+      "sha": "8fc88bca5a6724d370df6fcf79c111f821ecbffa",
+      "shortSha": "8fc88bc",
+      "message": "fix: Validate attachments url (#24683)",
+      "author": "Michael Kret",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8fc88bca5a6724d370df6fcf79c111f821ecbffa"
+    },
+    {
+      "sha": "6f2c1efc2fa9e098b9d9f0e75329c10c5522be1e",
+      "shortSha": "6f2c1ef",
+      "message": "feat(ai-builder): Providing instructions from workflow builder on creation of data tables (#24595)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6f2c1efc2fa9e098b9d9f0e75329c10c5522be1e"
+    },
+    {
+      "sha": "6d9ee3a1ef084216278b1ea86ea6072215c3e996",
+      "shortSha": "6d9ee3a",
+      "message": "fix(core): Fix concurrency control not releasing capacity if execution continuation fails (#24396)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6d9ee3a1ef084216278b1ea86ea6072215c3e996"
+    },
+    {
+      "sha": "a588facc4a91b358e2844189ec143cac9319849e",
+      "shortSha": "a588fac",
+      "message": "test: Add Kafka test container (#24116)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a588facc4a91b358e2844189ec143cac9319849e"
+    },
+    {
+      "sha": "d9cc9592c49882ef1d9e1aa4d667d2e870fe29c1",
+      "shortSha": "d9cc959",
+      "message": "feat(core): Reduce optimizingMinimumAgeHours in Workflow History Compaction from 3 hours to 15min (#24709)",
+      "author": "Charlie Kolb",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d9cc9592c49882ef1d9e1aa4d667d2e870fe29c1"
+    },
+    {
+      "sha": "bdb035c9d823b0e9b936151d471d7eee03d4ba9c",
+      "shortSha": "bdb035c",
+      "message": "feat: Make default none for auth'd domains on domain aware credentials (#24702)",
+      "author": "Stephen Wright",
+      "html_url": "https://github.com/n8n-io/n8n/commit/bdb035c9d823b0e9b936151d471d7eee03d4ba9c"
+    },
+    {
+      "sha": "da42ca6fd4f57c7d643d524b57d4fd7aa38d7189",
+      "shortSha": "da42ca6",
+      "message": "chore(core): Remove allow failure toggle for context extractor (#24679)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/da42ca6fd4f57c7d643d524b57d4fd7aa38d7189"
+    },
+    {
+      "sha": "a5e5ea044c1eca7598b7d37c0d13a9b40fee9141",
+      "shortSha": "a5e5ea0",
+      "message": "feat: Dynamic creds workflow fails if no dynamic creds exist (#24660)",
+      "author": "phyllis-noester",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a5e5ea044c1eca7598b7d37c0d13a9b40fee9141"
+    },
+    {
+      "sha": "3e132960594ded0ff9cbdbcd585775201d95c012",
+      "shortSha": "3e13296",
+      "message": "docs: Add Claude Code guidance for workflow traversal and prompt building (no-changelog) (#24708)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3e132960594ded0ff9cbdbcd585775201d95c012"
+    },
+    {
+      "sha": "4dedbdde4e7d0ff2b4d6552ad3b1541c7a7a62e3",
+      "shortSha": "4dedbdd",
+      "message": "chore(API): Adds jitter middleware and swallow forgot password errors to prevent user enumeration (no-changelog) (#24553)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Filipe Tavares",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4dedbdde4e7d0ff2b4d6552ad3b1541c7a7a62e3"
+    },
+    {
+      "sha": "d513f1ca3fb85bcb693a807d32e67750a3398650",
+      "shortSha": "d513f1c",
+      "message": "fix(AI Agent Node): Fix gemini 3 thought signature handling on Vertex AI (#24473)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>\nCo-authored-by: Benjamin Schroth <benjamin@n8n.io>",
+      "author": "Mutasem Aldmour",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d513f1ca3fb85bcb693a807d32e67750a3398650"
+    },
+    {
+      "sha": "94ff4effa4328156a67a29ec6a106c5ca9ee9067",
+      "shortSha": "94ff4ef",
+      "message": "fix(core): Reconcile remote and local state for leader election (#24722)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/94ff4effa4328156a67a29ec6a106c5ca9ee9067"
+    },
+    {
+      "sha": "ccac24b0dec9211ad88b44a60812f39859dc7ed0",
+      "shortSha": "ccac24b",
+      "message": "chore(core): Remove gracefull error handling for http header extractor (#24714)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ccac24b0dec9211ad88b44a60812f39859dc7ed0"
+    },
+    {
+      "sha": "58bbb8a473f281ec1130ec0afcd4ca491521ac6a",
+      "shortSha": "58bbb8a",
+      "message": "feat(Kafka Trigger Node): Additional options for batch processing (#24596)",
+      "author": "Michael Kret",
+      "html_url": "https://github.com/n8n-io/n8n/commit/58bbb8a473f281ec1130ec0afcd4ca491521ac6a"
+    },
+    {
+      "sha": "0c120174b48a6287cae3a5bab5ef70b6e0ef9b05",
+      "shortSha": "0c12017",
+      "message": "fix(Git Node): Clean up URLs returned from config (#24713)",
+      "author": "RomanDavydchuk",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0c120174b48a6287cae3a5bab5ef70b6e0ef9b05"
+    },
+    {
+      "sha": "eb4f2bcae7f4925777f9923533c9797a2a5f4089",
+      "shortSha": "eb4f2bc",
+      "message": "feat(editor): Update template detail UX (no-changelog) (#24402)",
+      "author": "Svetoslav Dekov",
+      "html_url": "https://github.com/n8n-io/n8n/commit/eb4f2bcae7f4925777f9923533c9797a2a5f4089"
+    },
+    {
+      "sha": "9b19b4380c828d30b82a96a9af4c9871dbaab4cb",
+      "shortSha": "9b19b43",
+      "message": "fix(editor): Fix assignment component spacing (#24592)",
+      "author": "Elias Meire",
+      "html_url": "https://github.com/n8n-io/n8n/commit/9b19b4380c828d30b82a96a9af4c9871dbaab4cb"
+    },
+    {
+      "sha": "a05d606b6bacb55a13c32220d1e214e5e2c04ecb",
+      "shortSha": "a05d606",
+      "message": "feat(editor): Make expression resolution async (#24249)\n\nCo-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a05d606b6bacb55a13c32220d1e214e5e2c04ecb"
+    },
+    {
+      "sha": "dc8383ee76fe454eb5d7e2a5c7719f69045ff9c2",
+      "shortSha": "dc8383e",
+      "message": "chore: Add secrets provider api contracts (#24718)",
+      "author": "Irénée",
+      "html_url": "https://github.com/n8n-io/n8n/commit/dc8383ee76fe454eb5d7e2a5c7719f69045ff9c2"
+    },
+    {
+      "sha": "c5a8355dc7a9255887c098520f5d5f6c4fed8dbe",
+      "shortSha": "c5a8355",
+      "message": "feat: When adding an instance owner / admin to a project, they should default to project admin (#24723)",
+      "author": "Stephen Wright",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c5a8355dc7a9255887c098520f5d5f6c4fed8dbe"
+    },
+    {
+      "sha": "7d233b2f588abaea0b4dba9be168d7438ed2d201",
+      "shortSha": "7d233b2",
+      "message": "feat: Centralizes debounce timing constants (#24710)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/7d233b2f588abaea0b4dba9be168d7438ed2d201"
+    },
+    {
+      "sha": "09222733e1b49c856a17a8181a913a7c32d33696",
+      "shortSha": "0922273",
+      "message": "feat(ai-builder): Add webhook notifications for AI evaluation results (#24653)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/09222733e1b49c856a17a8181a913a7c32d33696"
+    },
+    {
+      "sha": "6ccffed46d7c28752eac22af98aa1aa6623eb72d",
+      "shortSha": "6ccffed",
+      "message": "chore(core): Extract ldap into module, and introduce auth handler for registering it (#24494)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6ccffed46d7c28752eac22af98aa1aa6623eb72d"
+    },
+    {
+      "sha": "0cead069d19bf746fb79200eaea1e22c3e9a25b6",
+      "shortSha": "0cead06",
+      "message": "chore(editor): Cleanup upgrade CTA experiment (no-changelog) (#24728)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Filipe Tavares",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0cead069d19bf746fb79200eaea1e22c3e9a25b6"
+    },
+    {
+      "sha": "ab2c8b56abad4cea89f6dc20f1a6bdcb6babe592",
+      "shortSha": "ab2c8b5",
+      "message": "feat(core): Generate HITL tool nodes for sendAndWait operations (#22315)\n\nCo-authored-by: yehorkardash <yehor.kardash@n8n.io>\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>",
+      "author": "Elias Meire",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ab2c8b56abad4cea89f6dc20f1a6bdcb6babe592"
+    },
+    {
+      "sha": "51142fb402a4fb9cd9415e3211e5e6539d002c1f",
+      "shortSha": "51142fb",
+      "message": "test: Refactor sharing spec tests to break up isolation  (#24359)\n\nCo-authored-by: Claude <claude@anthropic.com>\nCo-authored-by: Claude <noreply@anthropic.com>",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/51142fb402a4fb9cd9415e3211e5e6539d002c1f"
+    },
+    {
+      "sha": "3147b0b9ec7d2cbb1907bec8688b1d355300ca77",
+      "shortSha": "3147b0b",
+      "message": "fix(editor): Tweak wf template cards (no-changelog) (#24731)",
+      "author": "Svetoslav Dekov",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3147b0b9ec7d2cbb1907bec8688b1d355300ca77"
+    },
+    {
+      "sha": "f76ac6f15e2e654e5b790dcbc435a2667e19ca24",
+      "shortSha": "f76ac6f",
+      "message": "feat(editor): Add unpublish to workflow list (#23228)",
+      "author": "Robert Squires",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f76ac6f15e2e654e5b790dcbc435a2667e19ca24"
+    },
+    {
+      "sha": "8e58a039fc65ea41c2343783db6e9c55a3447e27",
+      "shortSha": "8e58a03",
+      "message": "feat: Add telemetry for dynamic credential changes (#24750)",
+      "author": "Stephen Wright",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8e58a039fc65ea41c2343783db6e9c55a3447e27"
+    },
+    {
+      "sha": "03ae5b6b7bc697cc26e62a55b665ae612646900e",
+      "shortSha": "03ae5b6",
+      "message": "fix(editor): Update ready to run CTA (#24757)",
+      "author": "Romeo Balta",
+      "html_url": "https://github.com/n8n-io/n8n/commit/03ae5b6b7bc697cc26e62a55b665ae612646900e"
+    },
+    {
+      "sha": "6ae470e4d9883033d60039825950fd08da7e27cc",
+      "shortSha": "6ae470e",
+      "message": "chore: Add ExternalSecretProvider entity (#24551)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Irénée",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6ae470e4d9883033d60039825950fd08da7e27cc"
+    },
+    {
+      "sha": "467d8f90c5f2be1ba3e4fbcd86756deac4d8aed1",
+      "shortSha": "467d8f9",
+      "message": "fix(core): Merge additive nested parameters in workflow history optimization (#24717)",
+      "author": "Charlie Kolb",
+      "html_url": "https://github.com/n8n-io/n8n/commit/467d8f90c5f2be1ba3e4fbcd86756deac4d8aed1"
+    },
+    {
+      "sha": "3f77bf58801b4dd30b43face81dc07b64daad062",
+      "shortSha": "3f77bf5",
+      "message": "feat(ai-builder): Add RLC options fetch tool for configurator sub-agent (#24589)",
+      "author": "Eugene",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3f77bf58801b4dd30b43face81dc07b64daad062"
+    },
+    {
+      "sha": "c09267327d7d9ecc1a1eef898c9344383074790d",
+      "shortSha": "c092673",
+      "message": "fix(Chat Node): Correct descriptions, aliases, UX improvements (#24619)",
+      "author": "RomanDavydchuk",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c09267327d7d9ecc1a1eef898c9344383074790d"
+    },
+    {
+      "sha": "b59d6bb6b261530308b474c1e1c489e314bbc6b7",
+      "shortSha": "b59d6bb",
+      "message": "fix(editor): AI response text in ChatHub not selectable while responding (#24712)",
+      "author": "Suguru Inoue",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b59d6bb6b261530308b474c1e1c489e314bbc6b7"
+    },
+    {
+      "sha": "0b316d8eb2e24901457e39118878b0c48c23453f",
+      "shortSha": "0b316d8",
+      "message": "fix(core): Handle JSON parsing errors gracefully in ActivateExecuteWorkflowTriggerWorkflows migration (#24410)",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0b316d8eb2e24901457e39118878b0c48c23453f"
+    },
+    {
+      "sha": "a1de45ed9b016890dc7d9bc20c4c3083a5b3c31e",
+      "shortSha": "a1de45e",
+      "message": "fix(editor): Include autonamed nodes with numbers in the end (#24720)",
+      "author": "Nikhil Kuriakose",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a1de45ed9b016890dc7d9bc20c4c3083a5b3c31e"
+    },
+    {
+      "sha": "29c90fbe9cd054790b7f726c43d84992985ed929",
+      "shortSha": "29c90fb",
+      "message": "chore(core): Adopt UI/UX for user identifier and fix parsing for hook definitions (#24779)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/29c90fbe9cd054790b7f726c43d84992985ed929"
+    },
+    {
+      "sha": "f4406c26d2c6430dab838985797e662687f3f69b",
+      "shortSha": "f4406c2",
+      "message": "fix(core): Check license when updating scopes (no-changelog) (#24394)\n\nCo-authored-by: Claude Sonnet 4.5 <noreply@anthropic.com>",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f4406c26d2c6430dab838985797e662687f3f69b"
+    },
+    {
+      "sha": "e10138bad1901b8ec0b02fa19cb77b9a491d3887",
+      "shortSha": "e10138b",
+      "message": "perf(core): Make source control push deletions async (#24784)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e10138bad1901b8ec0b02fa19cb77b9a491d3887"
+    },
+    {
+      "sha": "423844ba0be3b94c49de5b63c3108c494b920aa9",
+      "shortSha": "423844b",
+      "message": "feat: Add support for custom scopes in the MS Teams credential (#24755)",
+      "author": "Jon",
+      "html_url": "https://github.com/n8n-io/n8n/commit/423844ba0be3b94c49de5b63c3108c494b920aa9"
+    },
+    {
+      "sha": "e3c056044b200103ab2f55dbf8b2b72a7fd931de",
+      "shortSha": "e3c0560",
+      "message": "feat: Add support for custom scopes in the MS Excel credential (#24756)",
+      "author": "Jon",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e3c056044b200103ab2f55dbf8b2b72a7fd931de"
+    },
+    {
+      "sha": "4aaea8c26c0c9aca13a1f43e87fe2736c5096a32",
+      "shortSha": "4aaea8c",
+      "message": "feat(editor): Unify credential issues into single card in AI builder (#24781)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4aaea8c26c0c9aca13a1f43e87fe2736c5096a32"
+    },
+    {
+      "sha": "66cf563fcd244035cc82bc216f2acde458898c9e",
+      "shortSha": "66cf563",
+      "message": "fix(ai-builder): Ask/Build coachmark appearing as chat panel slides out (no-changelog) (#24788)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/66cf563fcd244035cc82bc216f2acde458898c9e"
+    },
+    {
+      "sha": "c608a19e57b6211b265e9ed6b232a2c0b716d310",
+      "shortSha": "c608a19",
+      "message": "fix(core): Remove wrongly pushed ldap server test files (#24789)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c608a19e57b6211b265e9ed6b232a2c0b716d310"
+    },
+    {
+      "sha": "40b8c9413bab9b241078bb8dff1c21ba8ff6598c",
+      "shortSha": "40b8c94",
+      "message": "chore(core): Log streaming refactor, test and documentation (#24764)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/40b8c9413bab9b241078bb8dff1c21ba8ff6598c"
+    },
+    {
+      "sha": "f38a59db7c5b90d163ded97e572dd430b3cb4a1a",
+      "shortSha": "f38a59d",
+      "message": "fix(ai-builder): Responder mentions workflow activation (no-changelog) (#24793)",
+      "author": "Eugene",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f38a59db7c5b90d163ded97e572dd430b3cb4a1a"
+    },
+    {
+      "sha": "df818f65ae549633b19322a76544aee801ddb4a5",
+      "shortSha": "df818f6",
+      "message": "feat(core): Add placeholders for external secret provider connections (#24770)\n\nCo-authored-by: Irénée <irenee.ajeneza@n8n.io>",
+      "author": "James Gee",
+      "html_url": "https://github.com/n8n-io/n8n/commit/df818f65ae549633b19322a76544aee801ddb4a5"
+    },
+    {
+      "sha": "4b268d646de065eb0a8af8c3ea204fe250074648",
+      "shortSha": "4b268d6",
+      "message": "fix: Increase max items per page from 50 to 100 (#24051)\n\nCo-authored-by: Ricardo Espinoza <ricardo@n8n.io>",
+      "author": "chauhan_s",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4b268d646de065eb0a8af8c3ea204fe250074648"
+    },
+    {
+      "sha": "122f92b169343981f219fbb8683340c10bcb9ff3",
+      "shortSha": "122f92b",
+      "message": "ci: Fix security cherrypick workflow (#24687)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/122f92b169343981f219fbb8683340c10bcb9ff3"
+    },
+    {
+      "sha": "2f370f4b5fbaafaa9a41da62e911aa899ba81814",
+      "shortSha": "2f370f4",
+      "message": "test: Migrate `@n8n/decorators` to Vitest (#24737)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2f370f4b5fbaafaa9a41da62e911aa899ba81814"
+    },
+    {
+      "sha": "60cd62c412141fe8d774dca415295bfa32c8b771",
+      "shortSha": "60cd62c",
+      "message": "fix(core): Handle null workflowId's on workflow_statistics table at migration (#24800)",
+      "author": "Jaakko Husso",
+      "html_url": "https://github.com/n8n-io/n8n/commit/60cd62c412141fe8d774dca415295bfa32c8b771"
+    },
+    {
+      "sha": "cb0d2a2a52be5c01fc801d30fc3c1d120d506c98",
+      "shortSha": "cb0d2a2",
+      "message": "fix(core): Add rate limiting to `mcp-oauth` endpoints (#24734)",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/cb0d2a2a52be5c01fc801d30fc3c1d120d506c98"
+    },
+    {
+      "sha": "ac5abba4b61c51a8277f31241d208c12bb427948",
+      "shortSha": "ac5abba",
+      "message": "feat(core): Add $tool.name and $tool.parameters expressions (#24783)",
+      "author": "yehorkardash",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ac5abba4b61c51a8277f31241d208c12bb427948"
+    },
+    {
+      "sha": "986ae4d68c8e0813fd5f83b736204d0145721a9f",
+      "shortSha": "986ae4d",
+      "message": "fix(AI Agent Node): Clarify error message for empty prompt values in `define` mode (#24774)",
+      "author": "Benjamin Schroth",
+      "html_url": "https://github.com/n8n-io/n8n/commit/986ae4d68c8e0813fd5f83b736204d0145721a9f"
+    },
+    {
+      "sha": "264ce6ffeb54e2c8a9c89fb07d5b1cb45271a6e7",
+      "shortSha": "264ce6f",
+      "message": "test: HITL for tools tests (#24769)\n\nCo-authored-by: Elias Meire <elias@meire.dev>\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>",
+      "author": "yehorkardash",
+      "html_url": "https://github.com/n8n-io/n8n/commit/264ce6ffeb54e2c8a9c89fb07d5b1cb45271a6e7"
+    },
+    {
+      "sha": "82b442adcbc87d73c34c6333207a20c7e92363ac",
+      "shortSha": "82b442a",
+      "message": "chore(core): Integrate ChatHub Extractor (#24533)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/82b442adcbc87d73c34c6333207a20c7e92363ac"
+    },
+    {
+      "sha": "28fb1a29d2432709b3305809e080543afecb84cd",
+      "shortSha": "28fb1a2",
+      "message": "ci: Open PR on security fix merge (#24856)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/28fb1a29d2432709b3305809e080543afecb84cd"
+    },
+    {
+      "sha": "5d1eff6a953a44f8b4d696e8995ca612e3620a10",
+      "shortSha": "5d1eff6",
+      "message": "fix: Make label optional in TOTP credential (#24795)",
+      "author": "Jon",
+      "html_url": "https://github.com/n8n-io/n8n/commit/5d1eff6a953a44f8b4d696e8995ca612e3620a10"
+    },
+    {
+      "sha": "56220709da1a0aa6950605633e8df14b9ccaaf62",
+      "shortSha": "5622070",
+      "message": "fix(editor): Add support for dynamic credentials and credential resolver indicators in UI (#24733)",
+      "author": "Csaba Tuncsik",
+      "html_url": "https://github.com/n8n-io/n8n/commit/56220709da1a0aa6950605633e8df14b9ccaaf62"
+    },
+    {
+      "sha": "341976947f32fd78cd7701165af017f6adddc34b",
+      "shortSha": "3419769",
+      "message": "feat(ai-builder): Add webhook notifications with HMAC authentication for AI evaluation results (#24766)\n\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/341976947f32fd78cd7701165af017f6adddc34b"
+    },
+    {
+      "sha": "5143c8bd7effb24a447feacb301341884e34c2d6",
+      "shortSha": "5143c8b",
+      "message": "fix(WooCommerce Node): Update node icon (#20878)\n\nCo-authored-by: Jon <jonathan.bennetts@gmail.com>",
+      "author": "James LePage",
+      "html_url": "https://github.com/n8n-io/n8n/commit/5143c8bd7effb24a447feacb301341884e34c2d6"
+    },
+    {
+      "sha": "a9f00ec49ba22dce6a742d350b3c0caa520a3dd4",
+      "shortSha": "a9f00ec",
+      "message": "feat(AI Agent Node): Pass chat input in denial messages (#24748)\n\nCo-authored-by: Elias Meire <elias@meire.dev>\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>",
+      "author": "yehorkardash",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a9f00ec49ba22dce6a742d350b3c0caa520a3dd4"
+    },
+    {
+      "sha": "78dcc32ae0d8f15cdc602af91270e58c73897ea3",
+      "shortSha": "78dcc32",
+      "message": "feat(editor): Change layout for dynamic credentials section, add tooltip. Add oauth filtering (#24782)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/78dcc32ae0d8f15cdc602af91270e58c73897ea3"
+    },
+    {
+      "sha": "b95949651ac82145550595fd7764ebafb356684e",
+      "shortSha": "b959496",
+      "message": "fix(editor): Show publish actions on read-only instances (#24761)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b95949651ac82145550595fd7764ebafb356684e"
+    },
+    {
+      "sha": "0b1bf967ebfd88c70f21768173b5895e08e0ebcd",
+      "shortSha": "0b1bf96",
+      "message": "fix(Eventbrite Trigger Node): Validate received URL (#24677)",
+      "author": "RomanDavydchuk",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0b1bf967ebfd88c70f21768173b5895e08e0ebcd"
+    },
+    {
+      "sha": "f6ebc2dcc1b35462d6ffad5e7a778049b15aeee4",
+      "shortSha": "f6ebc2d",
+      "message": "feat(editor): New operations in the Slack node (#24643)\n\nCo-authored-by: Shireen Missi <94372015+ShireenMissi@users.noreply.github.com>",
+      "author": "Nikhil Kuriakose",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f6ebc2dcc1b35462d6ffad5e7a778049b15aeee4"
+    },
+    {
+      "sha": "ed1f8041fbb034d77e398b8a9504dbb54ab8a0d7",
+      "shortSha": "ed1f804",
+      "message": "fix(editor): Adjust ChatHub sidebar spacing to match main n8n sidebar (no-changelog) (#24863)",
+      "author": "Suguru Inoue",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ed1f8041fbb034d77e398b8a9504dbb54ab8a0d7"
+    },
+    {
+      "sha": "2dabbd6e582ca65b07d851f465570126a259eded",
+      "shortSha": "2dabbd6",
+      "message": "ci: Build image once for e2e shards (#24512)",
+      "author": "Artem Sorokin",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2dabbd6e582ca65b07d851f465570126a259eded"
+    },
+    {
+      "sha": "16fc8fd6e151423a9efb41feeec899027c08ff47",
+      "shortSha": "16fc8fd",
+      "message": "feat(core): Add new landing page on Chat hub for first time users (#24730)\n\nCo-authored-by: autologie <suguru@n8n.io>",
+      "author": "Jaakko Husso",
+      "html_url": "https://github.com/n8n-io/n8n/commit/16fc8fd6e151423a9efb41feeec899027c08ff47"
+    },
+    {
+      "sha": "b1dab743bbe1d9d25b8b6b65ebfcc21cb2489674",
+      "shortSha": "b1dab74",
+      "message": "fix: Disable usage of IMAP trigger as a tool (#24854)",
+      "author": "Eugene",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b1dab743bbe1d9d25b8b6b65ebfcc21cb2489674"
+    },
+    {
+      "sha": "83181d7eeced236395d9b41c479852a6207c154a",
+      "shortSha": "83181d7",
+      "message": "chore(core): Add telemetry to workflow history compaction (#24771)\n\nCo-authored-by: Nikhil Kuriakose <nikhil.kuriakose@n8n.io>",
+      "author": "Charlie Kolb",
+      "html_url": "https://github.com/n8n-io/n8n/commit/83181d7eeced236395d9b41c479852a6207c154a"
+    },
+    {
+      "sha": "851a193e8a805dc77f606e584b93f74689f825dc",
+      "shortSha": "851a193",
+      "message": "ci: Add merge-release-tag-to-master job with dedicated GitHub App (#24758)",
+      "author": "Artem Sorokin",
+      "html_url": "https://github.com/n8n-io/n8n/commit/851a193e8a805dc77f606e584b93f74689f825dc"
+    },
+    {
+      "sha": "cbb1f33fe59555fbd521bb26b6bcd30175e5e490",
+      "shortSha": "cbb1f33",
+      "message": "feat(core): Migration to distinguish published vs draft workflow index entries (no-changelog) (#24846)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/cbb1f33fe59555fbd521bb26b6bcd30175e5e490"
+    },
+    {
+      "sha": "f099516935dcb447a961590d7e671d76d15482c9",
+      "shortSha": "f099516",
+      "message": "chore: Introduce backport github action (#24655)",
+      "author": "Dimitri Lavrenük",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f099516935dcb447a961590d7e671d76d15482c9"
+    },
+    {
+      "sha": "030f4cd5c1c8234e0f0ff40b2326f9f9f35e9f5d",
+      "shortSha": "030f4cd",
+      "message": "feat(editor): Prioritize newer models on Chat hub model picker (#24867)",
+      "author": "Jaakko Husso",
+      "html_url": "https://github.com/n8n-io/n8n/commit/030f4cd5c1c8234e0f0ff40b2326f9f9f35e9f5d"
+    },
+    {
+      "sha": "cb8b621245a5978338ec0b84eb5874ed50901de2",
+      "shortSha": "cb8b621",
+      "message": "docs: Add test migration guidelines (#24759)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/cb8b621245a5978338ec0b84eb5874ed50901de2"
+    },
+    {
+      "sha": "4293b748c8e3d8519489a9846817ff0b04a8835e",
+      "shortSha": "4293b74",
+      "message": "feat: Optimize community nodes types fetching (#24632)\n\nCo-authored-by: RomanDavydchuk <roman.davydchuk@n8n.io>",
+      "author": "Michael Kret",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4293b748c8e3d8519489a9846817ff0b04a8835e"
+    },
+    {
+      "sha": "bfec0685f79543145e4f81bea06b068e2b94a9ba",
+      "shortSha": "bfec068",
+      "message": "fix(Onfleet Trigger Node): Fix content type issue (#24767)",
+      "author": "Shireen Missi",
+      "html_url": "https://github.com/n8n-io/n8n/commit/bfec0685f79543145e4f81bea06b068e2b94a9ba"
+    },
+    {
+      "sha": "bbc74965ed0022f5bbac4779bc163e634627284e",
+      "shortSha": "bbc7496",
+      "message": "ci: Extract GHCR cleanup to shared script and add scheduled cleanup (#24870)",
+      "author": "Artem Sorokin",
+      "html_url": "https://github.com/n8n-io/n8n/commit/bbc74965ed0022f5bbac4779bc163e634627284e"
+    },
+    {
+      "sha": "44650b1bb3b88363ae698a1743c0d29fdec0e0ac",
+      "shortSha": "44650b1",
+      "message": "feat(FormTrigger Node): Support ip filtering for the FormTrigger node (#24644)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/44650b1bb3b88363ae698a1743c0d29fdec0e0ac"
+    },
+    {
+      "sha": "7129c88fd918a8b7c2c761b8d5bb074bd2def4f0",
+      "shortSha": "7129c88",
+      "message": "fix(editor): Improve checkbox and lock icon alignment (#24575)",
+      "author": "Giulio Andreini",
+      "html_url": "https://github.com/n8n-io/n8n/commit/7129c88fd918a8b7c2c761b8d5bb074bd2def4f0"
+    },
+    {
+      "sha": "6b474e414146586cdf21ecd62ec43248bb4af0ac",
+      "shortSha": "6b474e4",
+      "message": "feat(core): Add data table resources to the public API (#23610)\n\nCo-authored-by: Claude Sonnet 4.5 <noreply@anthropic.com>",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6b474e414146586cdf21ecd62ec43248bb4af0ac"
+    },
+    {
+      "sha": "ee2ce6cd190ef50b7c2fb11b1cc0099f2c6ddb82",
+      "shortSha": "ee2ce6c",
+      "message": "chore(core): Introduce n8n resolver for dynamic credentials (#24625)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ee2ce6cd190ef50b7c2fb11b1cc0099f2c6ddb82"
+    },
+    {
+      "sha": "eeba9f1cedd2b5b8dfdf511e785059cd8c3d35cc",
+      "shortSha": "eeba9f1",
+      "message": ":rocket: Release 2.6.0 (#24880)\n\nCo-authored-by: tomi <10324676+tomi@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/eeba9f1cedd2b5b8dfdf511e785059cd8c3d35cc"
+    },
+    {
+      "sha": "b384e8c9ece826353544f04f2024e84a883cdf3d",
+      "shortSha": "b384e8c",
+      "message": "fix(editor): Truncate long project names with ellipsis in breadcrumb (#24853)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b384e8c9ece826353544f04f2024e84a883cdf3d"
+    },
+    {
+      "sha": "993228addc24d5eaa2855ff5e0f04a95b461d402",
+      "shortSha": "993228a",
+      "message": "chore: Bump up dependencies (#24886)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/993228addc24d5eaa2855ff5e0f04a95b461d402"
+    },
+    {
+      "sha": "0deee3c1cae832bc0329919fb278e213a8a6f107",
+      "shortSha": "0deee3c",
+      "message": "ci: Fix release tag merge failing with unrelated histories (#24884)",
+      "author": "Artem Sorokin",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0deee3c1cae832bc0329919fb278e213a8a6f107"
+    },
+    {
+      "sha": "3f7d7e3e7037dc869530147ddc517b86d58c949f",
+      "shortSha": "3f7d7e3",
+      "message": "Merge tag 'n8n@2.6.0'",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3f7d7e3e7037dc869530147ddc517b86d58c949f"
+    },
+    {
+      "sha": "c52da486c8ef5e8815a6053dd1627d0714146c54",
+      "shortSha": "c52da48",
+      "message": "ci: Add timing stats for unit tests (#24821)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c52da486c8ef5e8815a6053dd1627d0714146c54"
+    },
+    {
+      "sha": "76b4604a311885649751c93718d9a7c012e5d5fc",
+      "shortSha": "76b4604",
+      "message": "refactor(core): Improve f-string handling (#24864)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/76b4604a311885649751c93718d9a7c012e5d5fc"
+    },
+    {
+      "sha": "0faada7f365f6e14f6b182e87c8ae38aac944b13",
+      "shortSha": "0faada7",
+      "message": "fix(core): Update AI Builder node types after community package changes (#24883)",
+      "author": "Eugene",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0faada7f365f6e14f6b182e87c8ae38aac944b13"
+    },
+    {
+      "sha": "6dd4cc81b496acbb90658bd55d8e3063376fdd13",
+      "shortSha": "6dd4cc8",
+      "message": "feat(editor): Add secrets provider connections dashboard (#24654)\n\nCo-authored-by: Jan <3185243+JanOstrowka@users.noreply.github.com>",
+      "author": "Sandra Zollner",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6dd4cc81b496acbb90658bd55d8e3063376fdd13"
+    },
+    {
+      "sha": "c5f00060aac0049fa2b8a4a85aff86517428b2a9",
+      "shortSha": "c5f0006",
+      "message": "ci: Allow runner fallback from global variable (#24786)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c5f00060aac0049fa2b8a4a85aff86517428b2a9"
+    },
+    {
+      "sha": "1522df3712bc6289893294fe3622fcbc689c6747",
+      "shortSha": "1522df3",
+      "message": "refactor(core): Introduce `ExecutionPersistence` service (#24857)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1522df3712bc6289893294fe3622fcbc689c6747"
+    },
+    {
+      "sha": "af0c70ec733c49f9ef2e2d0a4773bdec2c29c26f",
+      "shortSha": "af0c70e",
+      "message": "ci: Optimize GHCR cleanup script with early termination and parallel pagination (#24892)",
+      "author": "Artem Sorokin",
+      "html_url": "https://github.com/n8n-io/n8n/commit/af0c70ec733c49f9ef2e2d0a4773bdec2c29c26f"
+    },
+    {
+      "sha": "5c025c1684595bdacb5f42db59e4fa9b1b702961",
+      "shortSha": "5c025c1",
+      "message": "fix(editor): Prevent connection lines from overlapping plus handle buttons (#24631)",
+      "author": "Sandra Zollner",
+      "html_url": "https://github.com/n8n-io/n8n/commit/5c025c1684595bdacb5f42db59e4fa9b1b702961"
+    },
+    {
+      "sha": "012ce09846dfea82860742f8ca435fe22dcbbe39",
+      "shortSha": "012ce09",
+      "message": "perf(core): Lazyload Swagger, PSL and MCP libs (#24902)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/012ce09846dfea82860742f8ca435fe22dcbbe39"
+    },
+    {
+      "sha": "35583ad80b88c3144781a9052a86ce0ca28c1704",
+      "shortSha": "35583ad",
+      "message": "fix(editor): Allow '-' and '_' in subworkflow caller IDs (#24849)",
+      "author": "chauhan_s",
+      "html_url": "https://github.com/n8n-io/n8n/commit/35583ad80b88c3144781a9052a86ce0ca28c1704"
+    },
+    {
+      "sha": "cbdee677c32722f856c80502a751fc4908a91156",
+      "shortSha": "cbdee67",
+      "message": "feat(editor): AI builder in empty state (no-changelog) (#24840)",
+      "author": "Romeo Balta",
+      "html_url": "https://github.com/n8n-io/n8n/commit/cbdee677c32722f856c80502a751fc4908a91156"
+    },
+    {
+      "sha": "ad7571fdb2ed1da26f7caabca56cf14e4cd826af",
+      "shortSha": "ad7571f",
+      "message": "fix(core): Ensure execution ID is available at runtime in Webhook response (#24876)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ad7571fdb2ed1da26f7caabca56cf14e4cd826af"
+    },
+    {
+      "sha": "b75347b3a1f88ac73a70b14aadf355d3414d86fb",
+      "shortSha": "b75347b",
+      "message": "perf(core): Make MCP module exclusive to main (#24899)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b75347b3a1f88ac73a70b14aadf355d3414d86fb"
+    },
+    {
+      "sha": "30190e83f94b98b816c63f623b97a6cd798937bf",
+      "shortSha": "30190e8",
+      "message": "chore: Add secrets provider connection tables migration (#24877)",
+      "author": "Irénée",
+      "html_url": "https://github.com/n8n-io/n8n/commit/30190e83f94b98b816c63f623b97a6cd798937bf"
+    },
+    {
+      "sha": "567ae92756e7bd8cf556fe6b4f5f9cfc32ab78f3",
+      "shortSha": "567ae92",
+      "message": "fix(editor): Disable WF history button when autosave is not complete (#24904)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/567ae92756e7bd8cf556fe6b4f5f9cfc32ab78f3"
+    },
+    {
+      "sha": "07273e5b86e7960a844788c940149bbad75ba4b3",
+      "shortSha": "07273e5",
+      "message": "refactor(editor): Improve text styles in Chat Hub (#24794)",
+      "author": "Rob Hough",
+      "html_url": "https://github.com/n8n-io/n8n/commit/07273e5b86e7960a844788c940149bbad75ba4b3"
+    },
+    {
+      "sha": "d12e9318d0bd03eb4c6ba6be134ff7f0b0dd5f8f",
+      "shortSha": "d12e931",
+      "message": "feat(ai-builder): Workflow builder \"respond to webhook\" understanding (#24641)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d12e9318d0bd03eb4c6ba6be134ff7f0b0dd5f8f"
+    },
+    {
+      "sha": "0e1b2a870eaac2103a6aeb7212bbb1d456cb8a5d",
+      "shortSha": "0e1b2a8",
+      "message": "feat(core): Index both latest published and draft workflow versions (#24861)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0e1b2a870eaac2103a6aeb7212bbb1d456cb8a5d"
+    },
+    {
+      "sha": "8b7ba6f53b933fd21b3a8e44a6783cae5937790c",
+      "shortSha": "8b7ba6f",
+      "message": "fix: Validate OpenAI urls (#24922)",
+      "author": "yehorkardash",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8b7ba6f53b933fd21b3a8e44a6783cae5937790c"
+    },
+    {
+      "sha": "356e3e69bca44fea866a195fac167901744e8dd9",
+      "shortSha": "356e3e6",
+      "message": "feat: Add Currents.dev node (#24566)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/356e3e69bca44fea866a195fac167901744e8dd9"
+    },
+    {
+      "sha": "bc0c5067ffe2f616b8f37afb593275085d414f1a",
+      "shortSha": "bc0c506",
+      "message": "feat(core): Introduce feature flag for workflow publication (no-changelog) (#24921)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/bc0c5067ffe2f616b8f37afb593275085d414f1a"
+    },
+    {
+      "sha": "b006ecfb96986aa2a2e90be68385f7df46c39f33",
+      "shortSha": "b006ecf",
+      "message": "fix(core): Ensure workflows with response promises respect graceful shutdown (#24879)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b006ecfb96986aa2a2e90be68385f7df46c39f33"
+    },
+    {
+      "sha": "36afab0ec0e5a2e27b91d38bb6eb086637888290",
+      "shortSha": "36afab0",
+      "message": "fix(Chat Node): Output structure for Send and Wait operation (#24898)\n\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "RomanDavydchuk",
+      "html_url": "https://github.com/n8n-io/n8n/commit/36afab0ec0e5a2e27b91d38bb6eb086637888290"
+    },
+    {
+      "sha": "8474689a4907f2c741574d63ca6f5934914acddc",
+      "shortSha": "8474689",
+      "message": "test: Add testcontainers infrastructure and MySQL integration tests (#24603)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8474689a4907f2c741574d63ca6f5934914acddc"
+    },
+    {
+      "sha": "dce48711cefad2d124942370c7da6f17340b75a9",
+      "shortSha": "dce4871",
+      "message": "fix(core): Small optimizations on users api to reduce db calls (#24882)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/dce48711cefad2d124942370c7da6f17340b75a9"
+    },
+    {
+      "sha": "b110a9e46764fb0a7df90ebca711186d9c5a7262",
+      "shortSha": "b110a9e",
+      "message": "feat(Kafka Trigger Node): Add option to keep binary data for downstream processing (#21843)\n\nCo-authored-by: Elias Meire <elias@meire.dev>",
+      "author": "rutgere-indeed",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b110a9e46764fb0a7df90ebca711186d9c5a7262"
+    },
+    {
+      "sha": "8693d9ead1331081454e64980c2302051b881f0f",
+      "shortSha": "8693d9e",
+      "message": "refactor(core): Improve Python match extraction handling (#24975)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8693d9ead1331081454e64980c2302051b881f0f"
+    },
+    {
+      "sha": "e7c5c174029e44db9fe0bda3605e71d6be90ddc5",
+      "shortSha": "e7c5c17",
+      "message": "fix(core): Add Redis TCP Keep-Alive Configuration for Queue Mode (#23902)",
+      "author": "Horacio Gonzalez",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e7c5c174029e44db9fe0bda3605e71d6be90ddc5"
+    },
+    {
+      "sha": "ea83ed49a0887e6aa0555f185d692d04b1e861d0",
+      "shortSha": "ea83ed4",
+      "message": "ci: Docker CI changes (#24962)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ea83ed49a0887e6aa0555f185d692d04b1e861d0"
+    },
+    {
+      "sha": "e3110d1f24354b32502c5def5383321ad7b27bbb",
+      "shortSha": "e3110d1",
+      "message": "fix(Wait Node): Reject wait execution when workflow is canceled (#15924)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e3110d1f24354b32502c5def5383321ad7b27bbb"
+    },
+    {
+      "sha": "7c9ec61eaf149ce94342840ed918e47fdbe91779",
+      "shortSha": "7c9ec61",
+      "message": "fix(editor): Replace O(n) find with O(1) Map lookup in `getConnectionLabel` (no-changelog) (#24968)\n\nCo-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/7c9ec61eaf149ce94342840ed918e47fdbe91779"
+    },
+    {
+      "sha": "4622acaccc69afb9720390e8e0011f490208fd1a",
+      "shortSha": "4622aca",
+      "message": "feat(Zendesk Trigger Node): Add webhook signature verification (#24881)",
+      "author": "Dawid Myslak",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4622acaccc69afb9720390e8e0011f490208fd1a"
+    },
+    {
+      "sha": "728031187c503999a1b16715a4bce0d3e17f8468",
+      "shortSha": "7280311",
+      "message": "refactor(editor): Use Map for node lookup in connection mapping (no-changelog) (#24972)\n\nCo-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/728031187c503999a1b16715a4bce0d3e17f8468"
+    },
+    {
+      "sha": "1e777cf8e0d65ca4895d06b817533488af351883",
+      "shortSha": "1e777cf",
+      "message": "fix(editor): Prevent executions date picker popover from being clipped (#24896)",
+      "author": "chauhan_s",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1e777cf8e0d65ca4895d06b817533488af351883"
+    },
+    {
+      "sha": "a5117a30fca20795f45650a99e7902e3a03f7143",
+      "shortSha": "a5117a3",
+      "message": "perf(core): Continue reducing baseline memory usage (#24981)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a5117a30fca20795f45650a99e7902e3a03f7143"
+    },
+    {
+      "sha": "a19ae52e7b0f0d4c38b09ae630773a556635fbfe",
+      "shortSha": "a19ae52",
+      "message": "feat(editor): Add Dialog component to design system (#24591)",
+      "author": "Rob Hough",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a19ae52e7b0f0d4c38b09ae630773a556635fbfe"
+    },
+    {
+      "sha": "308429c871af59ad602529aed154b9c830bde633",
+      "shortSha": "308429c",
+      "message": "feat(core): Make database ping timeout configurable (#24985)\n\nCo-authored-by: Claude <noreply@anthropic.com>",
+      "author": "Danny Martini",
+      "html_url": "https://github.com/n8n-io/n8n/commit/308429c871af59ad602529aed154b9c830bde633"
+    },
+    {
+      "sha": "18c903d78251106fc417873f70ce99a44848c2c5",
+      "shortSha": "18c903d",
+      "message": "feat(ai-builder): Moving feedback buttons in workflow builder chat (#24732)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/18c903d78251106fc417873f70ce99a44848c2c5"
+    },
+    {
+      "sha": "31a11c07feec6810223f8c9ae0f1d1f1666dab77",
+      "shortSha": "31a11c0",
+      "message": "refactor(editor): Extract workflow list management into dedicated store (no-changelog) (#24971)\n\nCo-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/31a11c07feec6810223f8c9ae0f1d1f1666dab77"
+    },
+    {
+      "sha": "8983bd563f98433926429a394044343a1ae26696",
+      "shortSha": "8983bd5",
+      "message": "fix(editor): Disable hover effects on non-drop-targets during drag (#24948)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Eugene",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8983bd563f98433926429a394044343a1ae26696"
+    },
+    {
+      "sha": "a8d75f74337d9fd23e0b9a6cd2775a302f8c5da2",
+      "shortSha": "a8d75f7",
+      "message": "fix(core): Do not send an undefined location header on form redirects (#24989)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a8d75f74337d9fd23e0b9a6cd2775a302f8c5da2"
+    },
+    {
+      "sha": "2a7c837459ce849184d11f4a0806eb226008bb1c",
+      "shortSha": "2a7c837",
+      "message": "chore: Remove beta label from API page (#24992)",
+      "author": "Marc Littlemore",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2a7c837459ce849184d11f4a0806eb226008bb1c"
+    },
+    {
+      "sha": "da7b2f070969b306021b3c10f7294f2c8b010e3b",
+      "shortSha": "da7b2f0",
+      "message": "fix(core): Posthog proxy (no-changelog) (#22432)\n\nCo-authored-by: Milorad FIlipović <milorad@n8n.io>",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/da7b2f070969b306021b3c10f7294f2c8b010e3b"
+    },
+    {
+      "sha": "d6a33902d3835e256d0ff5a4a827656bdaa45999",
+      "shortSha": "d6a3390",
+      "message": "fix(editor): Fix source control sidebar icon width when collapsed (no-changelog) (#24990)",
+      "author": "Giulio Andreini",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d6a33902d3835e256d0ff5a4a827656bdaa45999"
+    },
+    {
+      "sha": "784ab19e40556a4cb415c1d1fd9a3293c59bb62f",
+      "shortSha": "784ab19",
+      "message": "feat: Add option to select eval suite on manual workflow dispatch (#24998)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/784ab19e40556a4cb415c1d1fd9a3293c59bb62f"
+    },
+    {
+      "sha": "b98d0fc98ab673a0986c2019b0b063f4d41f0ee4",
+      "shortSha": "b98d0fc",
+      "message": "feat: Add telemetry for the auth method used in MCP client (no-changelog) (#24984)",
+      "author": "RomanDavydchuk",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b98d0fc98ab673a0986c2019b0b063f4d41f0ee4"
+    },
+    {
+      "sha": "ae17e8ec618db2dc7668aa178eee6e193d131150",
+      "shortSha": "ae17e8e",
+      "message": "fix(core): Log warning where file values contain white space at the start or end (e.g. new lines) (#24442)",
+      "author": "Marc Littlemore",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ae17e8ec618db2dc7668aa178eee6e193d131150"
+    },
+    {
+      "sha": "9958eed92cacf766314b5f6e7478365dd86c4623",
+      "shortSha": "9958eed",
+      "message": "fix(core): Fix orchestration init modules (#23360)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/9958eed92cacf766314b5f6e7478365dd86c4623"
+    },
+    {
+      "sha": "386979a27cfe0b22657d3da947b37c0f040ca931",
+      "shortSha": "386979a",
+      "message": "feat(core): Fill out external secret provider endpoints for CRUD operations (#24862)",
+      "author": "James Gee",
+      "html_url": "https://github.com/n8n-io/n8n/commit/386979a27cfe0b22657d3da947b37c0f040ca931"
+    },
+    {
+      "sha": "2b0f13d760de4cc19dc214ef070edd2817dd7ad2",
+      "shortSha": "2b0f13d",
+      "message": "fix(ai-builder): Detect placeholder values inside larger parameters generated by workflow builder (#24950)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2b0f13d760de4cc19dc214ef070edd2817dd7ad2"
+    },
+    {
+      "sha": "01f000b4c8a809463dd038cf18b5933349eeb73a",
+      "shortSha": "01f000b",
+      "message": "fix: Update stack cleanup command message to work from any directory (#25034)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/01f000b4c8a809463dd038cf18b5933349eeb73a"
+    },
+    {
+      "sha": "526a2394df5105e9dccb87af6cdfad5d89cd2e40",
+      "shortSha": "526a239",
+      "message": "fix(editor): Fix layout of insights tab (#24994)",
+      "author": "Csaba Tuncsik",
+      "html_url": "https://github.com/n8n-io/n8n/commit/526a2394df5105e9dccb87af6cdfad5d89cd2e40"
+    },
+    {
+      "sha": "36355f8c589d38cc2ced600c332009f6bd089f8a",
+      "shortSha": "36355f8",
+      "message": "feat: Remove success toasts on workflow creation (#24979)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/36355f8c589d38cc2ced600c332009f6bd089f8a"
+    },
+    {
+      "sha": "27eae1186c07d5209f98ad2b196a1b51a07fe143",
+      "shortSha": "27eae11",
+      "message": "fix(editor): Drop the contact prompt on workflow save as it's not needed anymore (no-changelog) (#24891)",
+      "author": "Svetoslav Dekov",
+      "html_url": "https://github.com/n8n-io/n8n/commit/27eae1186c07d5209f98ad2b196a1b51a07fe143"
+    },
+    {
+      "sha": "768bf7f7f1947b6d6e6bcb1980508a9abcec6779",
+      "shortSha": "768bf7f",
+      "message": "feat(editor): Secret Store connection modal for multiple providers (#25004)",
+      "author": "Sandra Zollner",
+      "html_url": "https://github.com/n8n-io/n8n/commit/768bf7f7f1947b6d6e6bcb1980508a9abcec6779"
+    },
+    {
+      "sha": "f57572828971aaebc28e427c04119a5824963116",
+      "shortSha": "f575728",
+      "message": "chore: Upgrade sentry packages to major 10 (#25026)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f57572828971aaebc28e427c04119a5824963116"
+    },
+    {
+      "sha": "68d33796db0e450c6e3ee09404cbbf9c3067b4ba",
+      "shortSha": "68d3379",
+      "message": "ci: Derive runner image from n8n image for CI (#25035)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/68d33796db0e450c6e3ee09404cbbf9c3067b4ba"
+    },
+    {
+      "sha": "daba1e2846528151e1fba914c78977cdc473cafd",
+      "shortSha": "daba1e2",
+      "message": "feat(core): Add default Postgres query timeout (#25041)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/daba1e2846528151e1fba914c78977cdc473cafd"
+    },
+    {
+      "sha": "f3e2930f0e7d2cc2e41374b46c210f53943ec562",
+      "shortSha": "f3e2930",
+      "message": "fix(MySQL Node): Support \"Continue on Error\" for connection-related errors (#25032)",
+      "author": "RomanDavydchuk",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f3e2930f0e7d2cc2e41374b46c210f53943ec562"
+    },
+    {
+      "sha": "39df0d5ff143b1f1a528fca3f48064f93fb1b3b4",
+      "shortSha": "39df0d5",
+      "message": "chore(core): Remove mysql and mariadb specfic code (#24908)\n\nCo-authored-by: Danny Martini <danny@n8n.io>\nCo-authored-by: Claude <noreply@anthropic.com>",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/39df0d5ff143b1f1a528fca3f48064f93fb1b3b4"
+    },
+    {
+      "sha": "252c5a6c3c9830ecd0d9f5c5da755cc7a7eb53d2",
+      "shortSha": "252c5a6",
+      "message": "feat(core): Allow changing the oauth token data for oauth2 credentials on public API PATCH (#25042)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/252c5a6c3c9830ecd0d9f5c5da755cc7a7eb53d2"
+    },
+    {
+      "sha": "3dbca3e0dfc4c482420af72c5ff932c88526872c",
+      "shortSha": "3dbca3e",
+      "message": "fix(AI Agent Node): Fix gemini thought signatures for parallel tool calls (#24982)",
+      "author": "Benjamin Schroth",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3dbca3e0dfc4c482420af72c5ff932c88526872c"
+    },
+    {
+      "sha": "2a710239d216d59be6257e0a3e6248e585544611",
+      "shortSha": "2a71023",
+      "message": "ci: Skip node base CI integration tests (#25068)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2a710239d216d59be6257e0a3e6248e585544611"
+    },
+    {
+      "sha": "779a04f4712bf66498167fbed935e52f1c15fc43",
+      "shortSha": "779a04f",
+      "message": "feat(editor): Show ChatHub action buttons on hover (#24923)",
+      "author": "Rob Hough",
+      "html_url": "https://github.com/n8n-io/n8n/commit/779a04f4712bf66498167fbed935e52f1c15fc43"
+    },
+    {
+      "sha": "659de949cbd9fee3eec88cfab8349a819f97012b",
+      "shortSha": "659de94",
+      "message": "feat(core): Add profiling support via sentry (#25049)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/659de949cbd9fee3eec88cfab8349a819f97012b"
+    },
+    {
+      "sha": "ad62c8f1fd6810c8935ddaba5b50a806d4da8618",
+      "shortSha": "ad62c8f",
+      "message": "test: Fix flaky demo test (#25076)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ad62c8f1fd6810c8935ddaba5b50a806d4da8618"
+    },
+    {
+      "sha": "a5cde70330e158de03a8589ff92a07b1fc02a0b1",
+      "shortSha": "a5cde70",
+      "message": "fix(VectorStoreAzureAISearch Node): Clear Azure AI Search index once per batch (#25069)",
+      "author": "Albert Alises",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a5cde70330e158de03a8589ff92a07b1fc02a0b1"
+    },
+    {
+      "sha": "d176890e997b9ae02a13ca41fb45f5b185cc317c",
+      "shortSha": "d176890",
+      "message": "refactor(editor): Update connection handling to use providerKey (#25061)",
+      "author": "Sandra Zollner",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d176890e997b9ae02a13ca41fb45f5b185cc317c"
+    },
+    {
+      "sha": "a4a9234a39fa10d6b2e5b10c28744ff776038df8",
+      "shortSha": "a4a9234",
+      "message": "chore(editor): Remove all calls to fetch all users and replace with targeted filtering (#25024)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a4a9234a39fa10d6b2e5b10c28744ff776038df8"
+    },
+    {
+      "sha": "7e580ea8cf81ee28c328756de11177f13983af6e",
+      "shortSha": "7e580ea",
+      "message": "fix(core): Support reconnecting on Redis failover (#25038)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/7e580ea8cf81ee28c328756de11177f13983af6e"
+    },
+    {
+      "sha": "fb7e5d5a2052ca4882360e826a4d80fae889becc",
+      "shortSha": "fb7e5d5",
+      "message": "fix(ai-builder): Fixing padding in WFB chat when message feedback is showing (#25079)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/fb7e5d5a2052ca4882360e826a4d80fae889becc"
+    },
+    {
+      "sha": "efd741f529a71416897619a31de31688569f9e5b",
+      "shortSha": "efd741f",
+      "message": "perf(core): Minimize execution data fetching (#25073)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/efd741f529a71416897619a31de31688569f9e5b"
+    },
+    {
+      "sha": "f3da425dd2de54912be823c979850c2efd995274",
+      "shortSha": "f3da425",
+      "message": "feat(core): Introduce table to track actually published workflow versions (no-changelog) (#25051)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f3da425dd2de54912be823c979850c2efd995274"
+    },
+    {
+      "sha": "326869e7945d8fd1bc14340c0d4f35a1f560022d",
+      "shortSha": "326869e",
+      "message": "fix(editor): Move version store init after authentication (#25081)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/326869e7945d8fd1bc14340c0d4f35a1f560022d"
+    },
+    {
+      "sha": "25f5199b462098075aa5bef6e6866f18d66e75e5",
+      "shortSha": "25f5199",
+      "message": "feat(Crypto Node): Add credentials for Hmac and Sign operations (#24798)",
+      "author": "krisn0x",
+      "html_url": "https://github.com/n8n-io/n8n/commit/25f5199b462098075aa5bef6e6866f18d66e75e5"
+    },
+    {
+      "sha": "eb9978b8903b172b3fae78661f1fb6c784e1c2ce",
+      "shortSha": "eb9978b",
+      "message": "refactor(core): Rename `~/.n8n/binaryData` to `~/.n8n/storage` (#24937)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/eb9978b8903b172b3fae78661f1fb6c784e1c2ce"
+    },
+    {
+      "sha": "c4ce0fbfbbf431ebcfb4433e694a3b6be4bdfbb5",
+      "shortSha": "c4ce0fb",
+      "message": "refactor(core): Route execution creation through `ExecutionPersistence` (#24912)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c4ce0fbfbbf431ebcfb4433e694a3b6be4bdfbb5"
+    },
+    {
+      "sha": "d93a5ba09755a90150d611fed5c7d536e563b416",
+      "shortSha": "d93a5ba",
+      "message": "docs: Update contributing guide to ease onboarding (#24951)\n\nCo-authored-by: Marc Littlemore <MarcL@users.noreply.github.com>",
+      "author": "phyllis-noester",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d93a5ba09755a90150d611fed5c7d536e563b416"
+    },
+    {
+      "sha": "4d6d0d15b7dde39c37445ca712c0641dda2bbe87",
+      "shortSha": "4d6d0d1",
+      "message": "feat(core): Show project secrets in expression editor (no-changelog) (#25062)",
+      "author": "Konstantin Tieber",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4d6d0d15b7dde39c37445ca712c0641dda2bbe87"
+    },
+    {
+      "sha": "e1dd07777dea6c24bc136d66083cc67b2a9f2b9b",
+      "shortSha": "e1dd077",
+      "message": "fix(core): Use proxy for all npm commands (#24909)",
+      "author": "yehorkardash",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e1dd07777dea6c24bc136d66083cc67b2a9f2b9b"
+    },
+    {
+      "sha": "e91edc794fd447dfa07d52ef00d08eb75394dd0d",
+      "shortSha": "e91edc7",
+      "message": "chore(core): Support cookie for auth token extraction in dynamic credential endpoints (#25036)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e91edc794fd447dfa07d52ef00d08eb75394dd0d"
+    },
+    {
+      "sha": "ea4d2d217a7339bc0f842a696a9d6a6f8714cb7d",
+      "shortSha": "ea4d2d2",
+      "message": "fix(core): Fix missing early return on Bull error (#25084)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ea4d2d217a7339bc0f842a696a9d6a6f8714cb7d"
+    },
+    {
+      "sha": "0396402e69a2e7690aef569cdc037f82c0c85e5e",
+      "shortSha": "0396402",
+      "message": "refactor(core): Use websockets on Chat hub message streaming (#24995)",
+      "author": "Jaakko Husso",
+      "html_url": "https://github.com/n8n-io/n8n/commit/0396402e69a2e7690aef569cdc037f82c0c85e5e"
+    },
+    {
+      "sha": "4f3358810a46c2fc8683a29adc1d7e038b5af51b",
+      "shortSha": "4f33588",
+      "message": "feat(editor): Add dynamic templates experiment (no-changelog) (#25030)",
+      "author": "Svetoslav Dekov",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4f3358810a46c2fc8683a29adc1d7e038b5af51b"
+    },
+    {
+      "sha": "1edb600151d95319368ae055ec13113603b1e96a",
+      "shortSha": "1edb600",
+      "message": "fix(core): Replace deprecated 'application' actor value with 'app' in Linear OAuth (#20985)\n\nCo-authored-by: yehorkardash <yehor.kardash@n8n.io>",
+      "author": "Adrien",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1edb600151d95319368ae055ec13113603b1e96a"
+    },
+    {
+      "sha": "769e7819a6dd6e285b9faeeb749f101bee67c361",
+      "shortSha": "769e781",
+      "message": "feat(editor): Pause autosave on connection failures (#24456)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/769e7819a6dd6e285b9faeeb749f101bee67c361"
+    },
+    {
+      "sha": "83e657eb4e86176c2377b0cc462a94bd1499ec38",
+      "shortSha": "83e657e",
+      "message": "fix(editor): Always ensure data worker tables exist (no-changelog) (#25087)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/83e657eb4e86176c2377b0cc462a94bd1499ec38"
+    },
+    {
+      "sha": "1ae7b6ee1b312dc47fb40d1a2659c563b818640b",
+      "shortSha": "1ae7b6e",
+      "message": "chore: Remove error reporting of too large telemetry events (#25103)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1ae7b6ee1b312dc47fb40d1a2659c563b818640b"
+    },
+    {
+      "sha": "89f8fb04ca401517500b6b6100a95ed7578ca0f5",
+      "shortSha": "89f8fb0",
+      "message": "fix(AMQP Trigger Node): Save failed executions (#21878)\n\nCo-authored-by: Michael Kret <michael.k@radency.com>\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "yehorkardash",
+      "html_url": "https://github.com/n8n-io/n8n/commit/89f8fb04ca401517500b6b6100a95ed7578ca0f5"
+    },
+    {
+      "sha": "ab8bd71268186b11f79227a275cb815e77a1e18c",
+      "shortSha": "ab8bd71",
+      "message": "ci: Cleanup some CI checks (#25111)",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ab8bd71268186b11f79227a275cb815e77a1e18c"
+    },
+    {
+      "sha": "ebc11d92763f9ecdf92857828d7c3692c1a6d82a",
+      "shortSha": "ebc11d9",
+      "message": "chore: Ignore health and metrics endpoints from tracing (#25117)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ebc11d92763f9ecdf92857828d7c3692c1a6d82a"
+    },
+    {
+      "sha": "4995710fcb7234232d82201cea8131b25dfd71f9",
+      "shortSha": "4995710",
+      "message": "chore: Upgrade pg to 8.17.0 (#25116)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4995710fcb7234232d82201cea8131b25dfd71f9"
+    },
+    {
+      "sha": "075ffd05f1c3172b512f9d5f52373ffb3af40319",
+      "shortSha": "075ffd0",
+      "message": "perf(core): Optimize saving execution progress (#25089)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/075ffd05f1c3172b512f9d5f52373ffb3af40319"
+    },
+    {
+      "sha": "ff68b7bd2c2e07517782b17de77b9eeac6936fc4",
+      "shortSha": "ff68b7b",
+      "message": "feat(editor): Add AI Usage settings page (#20926)",
+      "author": "Milorad FIlipović",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ff68b7bd2c2e07517782b17de77b9eeac6936fc4"
+    },
+    {
+      "sha": "754386247cbd282cb72ac3f6463c67ed43f4bba2",
+      "shortSha": "7543862",
+      "message": "feat(core): Index both draft and published workflow versions (no-changelog) (#25009)",
+      "author": "mfsiega",
+      "html_url": "https://github.com/n8n-io/n8n/commit/754386247cbd282cb72ac3f6463c67ed43f4bba2"
+    },
+    {
+      "sha": "a7408fa0828f17ee48d83837514fca936784c199",
+      "shortSha": "a7408fa",
+      "message": "fix(core): Revert ensuring execution ID in webhook response (#25146)",
+      "author": "Iván Ovejero",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a7408fa0828f17ee48d83837514fca936784c199"
+    },
+    {
+      "sha": "805b2223a87b2a0e9d1bcd5fe35085ea78b39c87",
+      "shortSha": "805b222",
+      "message": "feat(Microsoft Agent 365 Trigger Node): Integration for Microsoft Agents 365 (#25145)\n\nCo-authored-by: Rick Brighenti <202984599+rbrighenti@users.noreply.github.com>",
+      "author": "Michael Kret",
+      "html_url": "https://github.com/n8n-io/n8n/commit/805b2223a87b2a0e9d1bcd5fe35085ea78b39c87"
+    },
+    {
+      "sha": "d4a6a068d436f8068942a21b2a7a04642a6998a8",
+      "shortSha": "d4a6a06",
+      "message": "refactor(core): Split title generation and executions handling from Chat hub service (#25110)",
+      "author": "Jaakko Husso",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d4a6a068d436f8068942a21b2a7a04642a6998a8"
+    },
+    {
+      "sha": "40f670562e45752cad30ead3319ffa18ceacf832",
+      "shortSha": "40f6705",
+      "message": "fix(core): Update ownership cache update on folder transfer (#24974)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/40f670562e45752cad30ead3319ffa18ceacf832"
+    },
+    {
+      "sha": "038a399adabc8fdeedc2346581e1bde7c93c8413",
+      "shortSha": "038a399",
+      "message": "chore(core): Change db column type to TEXT for subject_id (#25044)",
+      "author": "Andreas Fitzek",
+      "html_url": "https://github.com/n8n-io/n8n/commit/038a399adabc8fdeedc2346581e1bde7c93c8413"
+    },
+    {
+      "sha": "18487d04591a1fce9a6738a2c2e919a6438fc8bc",
+      "shortSha": "18487d0",
+      "message": "feat(core): Add auto-publish on Environments Feature Pull (#24701)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/18487d04591a1fce9a6738a2c2e919a6438fc8bc"
+    },
+    {
+      "sha": "f9e230e2d0b98290931f350f6d7f96e1687f44db",
+      "shortSha": "f9e230e",
+      "message": "fix: Fix issue with workflowId not being correctly validated (#24866)",
+      "author": "Jon",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f9e230e2d0b98290931f350f6d7f96e1687f44db"
+    },
+    {
+      "sha": "21421f5c39e94b4b8c4bf99cc0186261edfdc7e5",
+      "shortSha": "21421f5",
+      "message": "fix(core): Use stricter flags when starting python runner (#24983)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/21421f5c39e94b4b8c4bf99cc0186261edfdc7e5"
+    },
+    {
+      "sha": "50706d82e1b097d9b4bcd3c8656db865f3be2c0e",
+      "shortSha": "50706d8",
+      "message": "chore(core): Remove unused json compatible output check and tracking (#25155)",
+      "author": "Guillaume Jacquart",
+      "html_url": "https://github.com/n8n-io/n8n/commit/50706d82e1b097d9b4bcd3c8656db865f3be2c0e"
+    },
+    {
+      "sha": "974426263baa7011845be52557a92c16f1b4bae5",
+      "shortSha": "9744262",
+      "message": "refactor(core): Use task runner for sort operations (#24910)",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/974426263baa7011845be52557a92c16f1b4bae5"
+    },
+    {
+      "sha": "f2189fddf3c2196899c7708d82b0be5015814ff6",
+      "shortSha": "f2189fd",
+      "message": "chore:  Crdt package follow up (#24715)",
+      "author": "Raúl Gómez Morales",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f2189fddf3c2196899c7708d82b0be5015814ff6"
+    },
+    {
+      "sha": "9c52c963da2660119e4b94ad455f1b89cc6c23e5",
+      "shortSha": "9c52c96",
+      "message": "refactor(core): Update date query validation to accommodate timing issue (#25095)",
+      "author": "Sandra Zollner",
+      "html_url": "https://github.com/n8n-io/n8n/commit/9c52c963da2660119e4b94ad455f1b89cc6c23e5"
+    },
+    {
+      "sha": "c7c9fa5693cda334ddbe5deb1808658ee002ee88",
+      "shortSha": "c7c9fa5",
+      "message": "refactor(editor): Replace old N8nInput with new Reka UI based input (#22963)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Csaba Tuncsik",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c7c9fa5693cda334ddbe5deb1808658ee002ee88"
+    },
+    {
+      "sha": "e53cff5d839b4e30cd4aede231b7d5b0ac6d3325",
+      "shortSha": "e53cff5",
+      "message": "fix(editor): Set up baseline to empty workflows list (no-changelog) (#25063)\n\nCo-authored-by: Svetoslav Dekov <svetoslav.dekov@n8n.io>",
+      "author": "Ricardo Espinoza",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e53cff5d839b4e30cd4aede231b7d5b0ac6d3325"
+    },
+    {
+      "sha": "e2f7d548d91b1dd1af1b9d76d87fc41423fc2135",
+      "shortSha": "e2f7d54",
+      "message": "fix(editor): Load pull result modal key (no-changelog) (#25160)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e2f7d548d91b1dd1af1b9d76d87fc41423fc2135"
+    },
+    {
+      "sha": "58d0227ddd6c6f91de60ada26838143247f98d55",
+      "shortSha": "58d0227",
+      "message": "refactor(editor): Centralize workflow ID via provide/inject (#25097)\n\nCo-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/58d0227ddd6c6f91de60ada26838143247f98d55"
+    },
+    {
+      "sha": "83bf5e16ec92da226f5222fc839c823d1aa5e3fa",
+      "shortSha": "83bf5e1",
+      "message": "feat(editor): Sidebar state experiment (no-changelog) (#25096)",
+      "author": "Romeo Balta",
+      "html_url": "https://github.com/n8n-io/n8n/commit/83bf5e16ec92da226f5222fc839c823d1aa5e3fa"
+    },
+    {
+      "sha": "abe0d8a362bfe16a0b45536521f2cd1f849edefd",
+      "shortSha": "abe0d8a",
+      "message": ":rocket: Release 2.7.0 (#25167)",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/abe0d8a362bfe16a0b45536521f2cd1f849edefd"
+    }
+  ]
+}

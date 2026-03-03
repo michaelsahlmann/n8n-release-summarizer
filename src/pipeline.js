@@ -2,25 +2,31 @@ import { fetchReleases } from './fetchReleases.js';
 import { parseRefs } from './parseRelease.js';
 import { fetchCompare } from './fetchCompare.js';
 import { fetchPRs } from './fetchDetails.js';
+import { listLocalReleaseVersions } from './localReleases.js';
 import { buildSummary } from './summarize.js';
 
 /**
- * Fetch and process N releases, writing markdown to output/ and JSON to data/.
+ * Fetch and process up to N additional releases, writing markdown to output/ and JSON to data/.
  *
- * @param {number} count       Number of most-recent stable releases to process
+ * @param {number} count       Number of additional releases to process
  * @param {function} onProgress  Called with a log string for each status update
  * @returns {Promise<Array<{version, prCount, commitCount}>>}
  */
 export async function runPipeline(count, onProgress = () => {}) {
-  onProgress(`Fetching ${count} most recent stable n8n releases...\n`);
+  const localVersions = await listLocalReleaseVersions();
+  const existingSummaryLabel = localVersions.length === 1 ? 'summary' : 'summaries';
+  onProgress(`Found ${localVersions.length} local ${existingSummaryLabel}.\n`);
+  onProgress(`Fetching up to ${count} additional n8n releases (including prereleases)...\n`);
 
-  const releases = await fetchReleases(count);
+  const releases = await fetchReleases(count, { excludeVersions: localVersions });
 
   if (releases.length === 0) {
-    throw new Error('No stable releases found.');
+    onProgress('No new releases were found. Local summaries are already up to date.\n');
+    return [];
   }
 
-  onProgress(`Found ${releases.length} stable releases.\n`);
+  const releaseLabel = releases.length === 1 ? 'release' : 'releases';
+  onProgress(`Found ${releases.length} new ${releaseLabel} to process.\n`);
 
   const results = [];
 
@@ -35,7 +41,7 @@ export async function runPipeline(count, onProgress = () => {}) {
     const parsed = parseRefs(release.body);
 
     // 2. Fetch compare vs previous release (catches commits not in body)
-    const prevTag = i > 0 ? releases[i - 1].tag_name : null;
+    const prevTag = release.previousTagName ?? (i > 0 ? releases[i - 1].tag_name : null);
     let commits = [];
     if (prevTag) {
       try {

@@ -4,395 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>n8n Release Social Summary</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f5f5f5;
-      color: #1a1a1a;
-      line-height: 1.5;
-      padding: 2rem 1rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #ea4b71;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.25rem;
-      max-width: 640px;
-    }
-
-    .card h2 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-
-    .release-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      max-height: 280px;
-      overflow-y: auto;
-      margin-bottom: 1rem;
-    }
-
-    .release-list label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      font-size: 0.9rem;
-      padding: 0.25rem 0;
-    }
-
-    .release-list input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-    }
-
-    .empty-msg {
-      font-size: 0.85rem;
-      color: #888;
-      font-style: italic;
-    }
-
-    button {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: opacity 0.15s;
-    }
-
-    button:disabled { opacity: 0.45; cursor: not-allowed; }
-    button:not(:disabled):hover { opacity: 0.85; }
-
-    .btn-primary { background: #ea4b71; color: #fff; }
-    .btn-secondary { background: #333; color: #fff; }
-    .btn-ghost { background: #e5e5e5; color: #333; }
-
-    .fetch-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .fetch-row input[type="number"] {
-      width: 70px;
-      padding: 0.45rem 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 0.9rem;
-    }
-
-    .status {
-      font-size: 0.8rem;
-      color: #666;
-      margin-top: 0.5rem;
-      min-height: 1.2em;
-    }
-
-    .status.error { color: #c0392b; }
-    .status.success { color: #27ae60; }
-
-    .spinner {
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      border: 2px solid rgba(255,255,255,0.4);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-      vertical-align: middle;
-    }
-
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    #summary-card { display: none; }
-
-    #summary-text {
-      white-space: pre-wrap;
-      font-size: 0.88rem;
-      line-height: 1.6;
-      background: #f9f9f9;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .model-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .model-row label {
-      font-size: 0.9rem;
-      color: #555;
-      white-space: nowrap;
-    }
-
-    .model-row select {
-      padding: 0.45rem 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      background: #fff;
-      cursor: pointer;
-      min-width: 160px;
-    }
-
-    .model-row select:disabled {
-      background: #f0f0f0;
-      cursor: not-allowed;
-      color: #999;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="hero-kicker">Release intelligence for n8n</p>
+      <div class="hero-copy">
+        <div>
+          <h1>Shape polished release notes into a publishable social summary.</h1>
+          <p class="hero-subtitle">
+            Select versions, choose the model that should write the summary, and keep the output visible while you refine the next run.
+          </p>
+        </div>
+        <div class="readiness-strip" aria-label="Workspace status">
+          <span class="readiness-pill">Static UI ready</span>
+          <span class="readiness-pill">API-backed workflow</span>
+          <span class="readiness-pill">Local summary cache</span>
+        </div>
+      </div>
+    </header>
 
-<h1>n8n Release — Social Summary</h1>
+    <main class="workspace">
+      <section class="control-column" aria-label="Controls">
+        <section class="panel panel-emphasis" id="release-panel" aria-labelledby="release-heading">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Release Library</p>
+              <h2 id="release-heading">Choose the versions to include</h2>
+            </div>
+            <span id="selection-count" class="selection-count" aria-live="polite">0 releases selected</span>
+          </div>
+          <p class="panel-copy">
+            The release list is sourced from local markdown summaries in the <code>output</code> folder. Your selections stay in place after a refresh when possible.
+          </p>
+          <div
+            id="release-list"
+            class="release-list"
+            aria-live="polite"
+            aria-busy="true"
+          >
+            <div class="release-placeholder">
+              <span class="inline-loader" aria-hidden="true"></span>
+              <span>Loading local release summaries...</span>
+            </div>
+          </div>
+          <div class="status-stack">
+            <div id="release-status" class="status-message" aria-live="polite" hidden></div>
+          </div>
+        </section>
 
-<!-- Card 1: Available Releases -->
-<div class="card">
-  <h2>Available Releases</h2>
-  <div id="release-list" class="release-list">
-    <span class="empty-msg">Loading releases…</span>
+        <section class="panel panel-soft" id="fetch-panel" aria-labelledby="fetch-heading">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Refresh Data</p>
+              <h2 id="fetch-heading">Pull additional releases</h2>
+            </div>
+          </div>
+          <p class="panel-copy">
+            Request between 1 and 50 more releases from GitHub. Cached versions are skipped automatically, so repeated fetches append more release history without reprocessing the same files.
+          </p>
+          <div class="fetch-layout">
+            <label class="field field-compact" for="fetch-count">
+              <span class="field-label">Release count</span>
+              <input type="number" id="fetch-count" value="3" min="1" max="50" inputmode="numeric">
+            </label>
+            <button id="fetch-btn" class="button button-secondary" type="button">
+              <span class="button-loader" aria-hidden="true"></span>
+              <span class="button-label">Fetch Releases</span>
+            </button>
+          </div>
+          <div class="helper-text">Tip: smaller batches are faster when you are iterating on the UI.</div>
+          <div class="status-stack">
+            <div id="fetch-status" class="status-message" aria-live="polite" hidden></div>
+          </div>
+          <div id="fetch-details" class="fetch-details" hidden></div>
+        </section>
+      </section>
+
+      <aside class="summary-column" aria-label="Summary workspace">
+        <section class="panel summary-panel" id="summary-panel" aria-labelledby="summary-heading">
+          <div class="panel-header">
+            <div>
+              <p class="panel-kicker">Summary Studio</p>
+              <h2 id="summary-heading">Set the model and review the generated output</h2>
+            </div>
+          </div>
+          <p class="panel-copy">
+            Pick the provider and model here, then keep this panel in view while you compare runs. The latest successful summary stays visible until a newer one replaces it.
+          </p>
+          <div class="summary-config">
+            <fieldset class="control-grid">
+              <legend class="sr-only">Summary generation settings</legend>
+              <label class="field" for="provider-select">
+                <span class="field-label">Provider</span>
+                <select id="provider-select">
+                  <option value="">Select a provider</option>
+                  <option value="anthropic">Anthropic</option>
+                  <option value="openai">OpenAI</option>
+                  <option value="gemini">Gemini</option>
+                </select>
+              </label>
+              <label class="field" for="model-select">
+                <span class="field-label">Model</span>
+                <select id="model-select" disabled>
+                  <option value="">Select a provider first</option>
+                </select>
+              </label>
+            </fieldset>
+            <div class="status-stack summary-status-stack">
+              <div id="model-status" class="status-message" aria-live="polite" hidden></div>
+            </div>
+            <div class="primary-action summary-primary-action">
+              <button id="generate-btn" class="button button-primary" type="button" disabled>
+                <span class="button-loader" aria-hidden="true"></span>
+                <span class="button-label">Generate Social Summary</span>
+              </button>
+              <div id="generate-status" class="status-message" aria-live="polite" hidden></div>
+            </div>
+          </div>
+          <div id="summary-meta" class="summary-meta" aria-live="polite">No summary generated yet.</div>
+          <div id="summary-text" class="summary-copy summary-empty" aria-live="polite">
+            Select one or more releases, choose a provider and model, then generate a summary. The result will stay visible here while you adjust the next run.
+          </div>
+          <div class="summary-actions">
+            <button id="copy-btn" class="button button-ghost" type="button" disabled>
+              <span class="button-loader" aria-hidden="true"></span>
+              <span class="button-label">Copy to Clipboard</span>
+            </button>
+            <div id="summary-status" class="status-message" aria-live="polite" hidden></div>
+          </div>
+        </section>
+      </aside>
+    </main>
   </div>
-  <div class="model-row">
-    <label for="provider-select">Provider:</label>
-    <select id="provider-select">
-      <option value="">— select provider —</option>
-      <option value="anthropic">Anthropic</option>
-      <option value="openai">OpenAI</option>
-      <option value="gemini">Gemini</option>
-    </select>
-    <label for="model-select">Model:</label>
-    <select id="model-select" disabled>
-      <option value="">— select provider first —</option>
-    </select>
-  </div>
-  <div id="model-error" class="status error"></div>
-  <button id="generate-btn" class="btn-primary" disabled>Generate Social Summary</button>
-  <div id="generate-status" class="status"></div>
-</div>
 
-<!-- Card 2: Fetch More -->
-<div class="card">
-  <h2>Fetch More Releases</h2>
-  <div class="fetch-row">
-    <input type="number" id="fetch-count" value="3" min="1" max="50">
-    <button id="fetch-btn" class="btn-secondary">Fetch</button>
-  </div>
-  <div id="fetch-status" class="status"></div>
-</div>
-
-<!-- Card 3: Social Summary Output -->
-<div class="card" id="summary-card">
-  <h2>Social Summary</h2>
-  <div id="summary-text"></div>
-  <button id="copy-btn" class="btn-ghost">Copy to Clipboard</button>
-</div>
-
-<script>
-  // --- State ---
-  let allVersions = [];
-
-  // --- Helpers ---
-  function setStatus(el, msg, type = '') {
-    el.textContent = msg;
-    el.className = 'status' + (type ? ` ${type}` : '');
-  }
-
-  function getChecked() {
-    return [...document.querySelectorAll('#release-list input:checked')].map(cb => cb.value);
-  }
-
-  function updateGenerateBtn() {
-    const modelSel = document.getElementById('model-select');
-    const hasVersions = getChecked().length > 0;
-    const hasModel = modelSel.value !== '';
-    document.getElementById('generate-btn').disabled = !(hasVersions && hasModel);
-  }
-
-  // --- Provider / model loading ---
-  async function loadModels(provider) {
-    const modelSel = document.getElementById('model-select');
-    const modelErr = document.getElementById('model-error');
-
-    modelSel.disabled = true;
-    modelSel.innerHTML = '<option value="">Loading…</option>';
-    modelErr.textContent = '';
-    updateGenerateBtn();
-
-    try {
-      const res = await fetch(`/api/models?provider=${encodeURIComponent(provider)}`);
-      const data = await res.json();
-      if (!res.ok || data.error) throw new Error(data.error || 'Unknown error');
-
-      if (data.models.length === 0) {
-        modelSel.innerHTML = '<option value="">No models found</option>';
-      } else {
-        modelSel.innerHTML = data.models
-          .map(m => `<option value="${m}">${m}</option>`)
-          .join('');
-        modelSel.disabled = false;
-      }
-    } catch (err) {
-      modelSel.innerHTML = '<option value="">— error loading models —</option>';
-      modelErr.textContent = `Error: ${err.message}`;
-    }
-    updateGenerateBtn();
-  }
-
-  document.getElementById('provider-select').addEventListener('change', (e) => {
-    const provider = e.target.value;
-    const modelSel = document.getElementById('model-select');
-    const modelErr = document.getElementById('model-error');
-    if (!provider) {
-      modelSel.innerHTML = '<option value="">— select provider first —</option>';
-      modelSel.disabled = true;
-      modelErr.textContent = '';
-      updateGenerateBtn();
-      return;
-    }
-    loadModels(provider);
-  });
-
-  // --- Load releases ---
-  async function loadReleases() {
-    const listEl = document.getElementById('release-list');
-    try {
-      const res = await fetch('/api/releases');
-      const { versions } = await res.json();
-      allVersions = versions; // already sorted newest-first by server
-      renderReleases(versions);
-    } catch (err) {
-      listEl.innerHTML = '<span class="empty-msg">Failed to load releases.</span>';
-    }
-  }
-
-  function renderReleases(versions) {
-    const listEl = document.getElementById('release-list');
-    if (versions.length === 0) {
-      listEl.innerHTML = '<span class="empty-msg">No releases fetched yet. Use "Fetch More" below.</span>';
-      return;
-    }
-    listEl.innerHTML = versions.map(v => `
-      <label>
-        <input type="checkbox" value="${v}" onchange="updateGenerateBtn()">
-        ${v}
-      </label>
-    `).join('');
-    updateGenerateBtn();
-  }
-
-  // --- Generate social summary ---
-  document.getElementById('generate-btn').addEventListener('click', async () => {
-    const btn = document.getElementById('generate-btn');
-    const statusEl = document.getElementById('generate-status');
-    const summaryCard = document.getElementById('summary-card');
-    const summaryText = document.getElementById('summary-text');
-
-    const versions = getChecked();
-    const provider = document.getElementById('provider-select').value;
-    const model = document.getElementById('model-select').value;
-    if (versions.length === 0 || !provider || !model) return;
-
-    btn.disabled = true;
-    btn.innerHTML = '<span class="spinner"></span> Generating…';
-    setStatus(statusEl, '');
-    summaryCard.style.display = 'none';
-
-    try {
-      const res = await fetch('/api/social-summary', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ versions, provider, model }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Unknown error');
-
-      summaryText.textContent = data.summary;
-      summaryCard.style.display = 'block';
-      setStatus(statusEl, `Generated for: ${versions.join(', ')}`, 'success');
-    } catch (err) {
-      setStatus(statusEl, `Error: ${err.message}`, 'error');
-    } finally {
-      btn.innerHTML = 'Generate Social Summary';
-      updateGenerateBtn();
-    }
-  });
-
-  // --- Fetch more releases ---
-  document.getElementById('fetch-btn').addEventListener('click', async () => {
-    const btn = document.getElementById('fetch-btn');
-    const statusEl = document.getElementById('fetch-status');
-    const count = parseInt(document.getElementById('fetch-count').value, 10);
-
-    if (isNaN(count) || count < 1) {
-      setStatus(statusEl, 'Enter a valid count (1–50).', 'error');
-      return;
-    }
-
-    btn.disabled = true;
-    btn.innerHTML = '<span class="spinner"></span> Fetching…';
-    setStatus(statusEl, 'Fetching releases from GitHub…');
-
-    try {
-      const res = await fetch('/api/fetch', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ count }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.ok) throw new Error(data.error || 'Unknown error');
-
-      setStatus(statusEl, `Fetched ${data.fetched.length} release(s).`, 'success');
-      await loadReleases(); // refresh checklist
-    } catch (err) {
-      setStatus(statusEl, `Error: ${err.message}`, 'error');
-    } finally {
-      btn.innerHTML = 'Fetch';
-      btn.disabled = false;
-    }
-  });
-
-  // --- Copy to clipboard ---
-  document.getElementById('copy-btn').addEventListener('click', async () => {
-    const text = document.getElementById('summary-text').textContent;
-    try {
-      await navigator.clipboard.writeText(text);
-      const btn = document.getElementById('copy-btn');
-      btn.textContent = 'Copied!';
-      setTimeout(() => btn.textContent = 'Copy to Clipboard', 1500);
-    } catch {
-      alert('Copy failed — please select and copy manually.');
-    }
-  });
-
-  // --- Init ---
-  loadReleases();
-</script>
+  <script type="module" src="/app.js"></script>
 </body>
 </html>

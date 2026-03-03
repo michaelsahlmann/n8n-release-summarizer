@@ -1,8 +1,9 @@
 import 'dotenv/config';
 import express from 'express';
-import { readdir, readFile } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { listLocalReleaseVersions } from './localReleases.js';
 import { runPipeline } from './pipeline.js';
 import { generateSocialSummary } from './socialSummarize.js';
 
@@ -22,21 +23,13 @@ console.log(`GEMINI_API_KEY:    ${process.env.GEMINI_API_KEY ? 'set' : 'NOT SET'
 const SAFE_VERSION = /^[\w.\-]+$/;
 
 // --- GET /api/releases ---
-// Scans output/*.md and returns sorted version list (newest first)
+// Returns locally cached release summaries (newest first)
 app.get('/api/releases', async (req, res) => {
   try {
-    const files = await readdir(OUTPUT_DIR);
-    const versions = files
-      .filter((f) => f.endsWith('.md'))
-      .map((f) => f.replace(/\.md$/, ''))
-      .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
+    const versions = await listLocalReleaseVersions();
     res.json({ versions });
   } catch (err) {
-    if (err.code === 'ENOENT') {
-      res.json({ versions: [] });
-    } else {
-      res.status(500).json({ error: err.message });
-    }
+    res.status(500).json({ error: err.message });
   }
 });
 
@@ -101,7 +94,7 @@ app.get('/api/models', async (req, res) => {
 
 // --- POST /api/fetch ---
 // Body: { count: number }
-// Runs the pipeline and returns progress log
+// Fetches up to N additional unseen releases and returns progress log
 app.post('/api/fetch', async (req, res) => {
   const count = parseInt(req.body?.count, 10);
   if (isNaN(count) || count < 1 || count > 50) {

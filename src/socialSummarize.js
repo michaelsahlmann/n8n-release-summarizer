@@ -1,6 +1,33 @@
 import Anthropic from '@anthropic-ai/sdk';
 import OpenAI from 'openai';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { readFile } from 'fs/promises';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, '..');
+const PROMPT_TEMPLATE_PATH = join(ROOT, 'references', 'social-summary-prompt.md');
+const TEMPLATE_ERROR =
+  'Social summary prompt template must include {{version_label}} and {{release_content}}';
+
+export function buildSocialSummaryPrompt(template, mdContents, versions) {
+  if (
+    !template.includes('{{version_label}}') ||
+    !template.includes('{{release_content}}')
+  ) {
+    throw new Error(TEMPLATE_ERROR);
+  }
+
+  const versionLabel = versions.join(', ');
+  const combinedContent = mdContents
+    .map((md, i) => `--- Release: ${versions[i]} ---\n\n${md}`)
+    .join('\n\n');
+
+  return template
+    .replaceAll('{{version_label}}', versionLabel)
+    .replaceAll('{{release_content}}', combinedContent);
+}
 
 /**
  * Generate a social-media-ready summary from one or more release markdown files.
@@ -12,24 +39,16 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
  * @returns {Promise<string>}    Plain-text summary suitable for newsletter/social
  */
 export async function generateSocialSummary(mdContents, versions, provider, model) {
-  const versionLabel = versions.join(', ');
+  let template;
+  try {
+    template = await readFile(PROMPT_TEMPLATE_PATH, 'utf8');
+  } catch (err) {
+    throw new Error(
+      'Social summary prompt template could not be read from references/social-summary-prompt.md',
+    );
+  }
 
-  const combinedContent = mdContents
-    .map((md, i) => `--- Release: ${versions[i]} ---\n\n${md}`)
-    .join('\n\n');
-
-  const prompt = `You are writing a "what's new" update for the n8n community newsletter and social media.
-Audience: technical workflow builders (developers, power users).
-
-INCLUDE: new nodes or operations, new workflow/trigger features, AI capabilities, user-visible bug fixes (editor bugs, broken outputs, data loss risks), visible performance improvements, new user-facing settings.
-
-SKIP: CI config, test infra, linting, build tooling, internal refactors with no user effect, lines containing "(no-changelog)", dependency bumps, items prefixed with \`chore:\`, \`ci:\`, \`test:\`, \`refactor:\` unless the description clearly describes something the user would see.
-
-FORMAT: One short paragraph intro (2-3 sentences), then 5–10 bullets — each one plain sentence. No section headers. No PR numbers or commit links. Under 300 words total.
-
-Here is the release content for ${versionLabel}:
-
-${combinedContent}`;
+  const prompt = buildSocialSummaryPrompt(template, mdContents, versions);
 
   if (provider === 'anthropic') {
     const apiKey = process.env.ANTHROPIC_API_KEY;

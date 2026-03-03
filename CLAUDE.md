@@ -17,7 +17,7 @@ Two entry points share the same pipeline modules:
 Core modules in `src/`:
 - `pipeline.js` — orchestrates the full workflow
 - `api.js` — GitHub API wrapper with retry logic
-- `fetchReleases.js` — fetches N most recent stable releases
+- `fetchReleases.js` — fetches the next N unfetched releases from GitHub, including prereleases
 - `parseRelease.js` — extracts PR refs and commit SHAs from release markdown
 - `fetchCompare.js` — gets full commit list between two release tags
 - `fetchDetails.js` — fetches PR/issue titles, bodies, and labels
@@ -26,7 +26,7 @@ Core modules in `src/`:
 
 # How to Run
 
-**CLI** (fetches releases, writes files, exits):
+**CLI** (fetches additional releases, writes files, exits):
 ```bash
 npm start              # default: 5 releases
 npm start -- --count 10
@@ -51,6 +51,8 @@ Copy `.env.example` to `.env` and fill in:
 
 - `data/{version}.json` — raw release, parsed refs, and commit data
 - `output/{version}.md` — formatted markdown summary
+
+Repeated fetches are incremental against the local `output/` cache. Existing summaries are skipped, and prereleases are still eligible to be fetched.
 
 # Gotchas
 

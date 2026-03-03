@@ -1,0 +1,132 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/287680988",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/287680988/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/287680988/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.9.1",
+    "id": 287680988,
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4RJanc",
+    "tag_name": "n8n@2.9.1",
+    "target_commitish": "release/2.9.1",
+    "name": "n8n@2.9.1",
+    "draft": false,
+    "immutable": true,
+    "prerelease": true,
+    "created_at": "2026-02-18T12:38:30Z",
+    "updated_at": "2026-02-18T13:09:25Z",
+    "published_at": "2026-02-18T13:09:24Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.9.1",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.9.1",
+    "body": "## [2.9.1](https://github.com/n8n-io/n8n/compare/n8n@2.9.0...n8n@2.9.1) (2026-02-18)\n\n\n### Bug Fixes\n\n* **ai-builder:** Don't release types when loading node types for workflow builder service ([#25891](https://github.com/n8n-io/n8n/issues/25891)) ([785875b](https://github.com/n8n-io/n8n/commit/785875bfd8a72ab83cd3c11fd1bf1d82d891acf4))\n* **editor:** Patch Button v2 migration issues ([#25846](https://github.com/n8n-io/n8n/issues/25846)) ([d08e487](https://github.com/n8n-io/n8n/commit/d08e487bb3e20debe3f0e2394f37b7d626c44194))\n* **editor:** Style regressions on Button ([#25924](https://github.com/n8n-io/n8n/issues/25924)) ([7874c80](https://github.com/n8n-io/n8n/commit/7874c80f51172e376dcad3020fd80452fc629108))",
+    "reactions": {
+      "url": "https://api.github.com/repos/n8n-io/n8n/releases/287680988/reactions",
+      "total_count": 10,
+      "+1": 4,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 6,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "previousTagName": "n8n@2.9.0"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.9.1](https://github.com/n8n-io/n8n/compare/n8n@2.9.0...n8n@2.9.1) (2026-02-18)",
+        "items": []
+      },
+      {
+        "title": "Bug Fixes",
+        "items": [
+          {
+            "prNumber": 25891,
+            "commitSha": "785875b",
+            "rawText": "**ai-builder:** Don't release types when loading node types for workflow builder service ([#25891](https://github.com/n8n-io/n8n/issues/25891)) ([785875b](https://github.com/n8n-io/n8n/commit/785875bfd8a72ab83cd3c11fd1bf1d82d891acf4))"
+          },
+          {
+            "prNumber": 25846,
+            "commitSha": "d08e487",
+            "rawText": "**editor:** Patch Button v2 migration issues ([#25846](https://github.com/n8n-io/n8n/issues/25846)) ([d08e487](https://github.com/n8n-io/n8n/commit/d08e487bb3e20debe3f0e2394f37b7d626c44194))"
+          },
+          {
+            "prNumber": 25924,
+            "commitSha": "7874c80",
+            "rawText": "**editor:** Style regressions on Button ([#25924](https://github.com/n8n-io/n8n/issues/25924)) ([7874c80](https://github.com/n8n-io/n8n/commit/7874c80f51172e376dcad3020fd80452fc629108))"
+          }
+        ]
+      }
+    ],
+    "allPRs": [
+      25891,
+      25846,
+      25924
+    ],
+    "allSHAs": [
+      "785875b",
+      "d08e487",
+      "7874c80"
+    ]
+  },
+  "commits": [
+    {
+      "sha": "d08e487bb3e20debe3f0e2394f37b7d626c44194",
+      "shortSha": "d08e487",
+      "message": "fix(editor): Patch Button v2 migration issues (#25846)",
+      "author": "Rob Hough",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d08e487bb3e20debe3f0e2394f37b7d626c44194"
+    },
+    {
+      "sha": "6d18cd0dfd61f78d767106297792ea757cf9ea97",
+      "shortSha": "6d18cd0",
+      "message": "ci: Enable Sentry source maps in Docker builds (#25888)\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+      "author": "Declan Carroll",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6d18cd0dfd61f78d767106297792ea757cf9ea97"
+    },
+    {
+      "sha": "785875bfd8a72ab83cd3c11fd1bf1d82d891acf4",
+      "shortSha": "785875b",
+      "message": "fix(ai-builder): Don't release types when loading node types for workflow builder service (#25891)",
+      "author": "Michael Drury",
+      "html_url": "https://github.com/n8n-io/n8n/commit/785875bfd8a72ab83cd3c11fd1bf1d82d891acf4"
+    },
+    {
+      "sha": "7874c80f51172e376dcad3020fd80452fc629108",
+      "shortSha": "7874c80",
+      "message": "fix(editor): Style regressions on Button (#25924)",
+      "author": "Rob Hough",
+      "html_url": "https://github.com/n8n-io/n8n/commit/7874c80f51172e376dcad3020fd80452fc629108"
+    },
+    {
+      "sha": "8f29d82ed11f9c78b1b5d024a968fbe25aa1ca18",
+      "shortSha": "8f29d82",
+      "message": ":rocket: Release 2.9.1 (#25936)\n\nCo-authored-by: tomi <10324676+tomi@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/8f29d82ed11f9c78b1b5d024a968fbe25aa1ca18"
+    }
+  ]
+}

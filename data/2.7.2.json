@@ -1,10 +1,10 @@
 {
   "release": {
-    "url": "https://api.github.com/repos/n8n-io/n8n/releases/285258176",
-    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/285258176/assets",
-    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/285258176/assets{?name,label}",
-    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.8.1",
-    "id": 285258176,
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/283356498",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/283356498/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/283356498/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.7.2",
+    "id": 283356498,
     "author": {
       "login": "github-actions[bot]",
       "id": 41898282,
@@ -26,21 +26,21 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDOC4Q8Qs4RALHA",
-    "tag_name": "n8n@2.8.1",
-    "target_commitish": "release/2.8.1",
-    "name": "n8n@2.8.1",
+    "node_id": "RE_kwDOC4Q8Qs4Q461S",
+    "tag_name": "n8n@2.7.2",
+    "target_commitish": "release/2.7.2",
+    "name": "n8n@2.7.2",
     "draft": false,
     "immutable": false,
-    "prerelease": false,
-    "created_at": "2026-02-11T13:21:38Z",
-    "updated_at": "2026-02-12T15:36:00Z",
-    "published_at": "2026-02-11T13:40:30Z",
+    "prerelease": true,
+    "created_at": "2026-02-05T13:01:34Z",
+    "updated_at": "2026-02-05T13:36:01Z",
+    "published_at": "2026-02-05T13:34:09Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/354211692",
-        "id": 354211692,
-        "node_id": "RA_kwDOC4Q8Qs4VHNds",
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/351142886",
+        "id": 351142886,
+        "node_id": "RA_kwDOC4Q8Qs4U7gPm",
         "name": "sbom-source.cdx.json",
         "label": "",
         "uploader": {
@@ -66,17 +66,17 @@
         },
         "content_type": "application/json",
         "state": "uploaded",
-        "size": 4434103,
-        "digest": "sha256:c2a1d17ca036001a0c9b0ea12e3f7f604bfface165418d4a1d58a3e059f1f68e",
-        "download_count": 11,
-        "created_at": "2026-02-11T13:42:17Z",
-        "updated_at": "2026-02-11T13:42:17Z",
-        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.8.1/sbom-source.cdx.json"
+        "size": 4470122,
+        "digest": "sha256:e073ac546d46bca698c680eb3db52104143f7f0616fdff019581de312a61718d",
+        "download_count": 12,
+        "created_at": "2026-02-05T13:36:01Z",
+        "updated_at": "2026-02-05T13:36:01Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.7.2/sbom-source.cdx.json"
       },
       {
-        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/354211693",
-        "id": 354211693,
-        "node_id": "RA_kwDOC4Q8Qs4VHNdt",
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/351142888",
+        "id": 351142888,
+        "node_id": "RA_kwDOC4Q8Qs4U7gPo",
         "name": "vex.openvex.json",
         "label": "",
         "uploader": {
@@ -105,57 +105,80 @@
         "size": 328,
         "digest": "sha256:14824a4d666f067f09a7cefeae09130853f90dafa52a54f11b4e2fabd454f28d",
         "download_count": 12,
-        "created_at": "2026-02-11T13:42:17Z",
-        "updated_at": "2026-02-11T13:42:17Z",
-        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.8.1/vex.openvex.json"
+        "created_at": "2026-02-05T13:36:01Z",
+        "updated_at": "2026-02-05T13:36:01Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.7.2/vex.openvex.json"
       }
     ],
-    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.8.1",
-    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.8.1",
-    "body": "## [2.8.1](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.8.1) (2026-02-11)\r\n\r\n\r\n### Bug Fixes\r\n\r\n* **core:** Revert the fix for execution history when flow includes wait node ([#25610](https://github.com/n8n-io/n8n/issues/25610)) ([61394f7](https://github.com/n8n-io/n8n/commit/61394f7ad15849a111ed2f0227a2ab2c2a470e3c))\r\n* fix(ai-builder): Improve plan mode UX: naming, question skipping, thinking states (no-changelog) ([#25609](https://github.com/n8n-io/n8n/pull/25609)) ([c614663](https://github.com/n8n-io/n8n/pull/25629/commits/c61466372b1b3fcd95efc7eaef6911b86b3589a9))",
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.7.2",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.7.2",
+    "body": "## [2.7.2](https://github.com/n8n-io/n8n/compare/n8n@2.7.1...n8n@2.7.2) (2026-02-05)\n\n\n### Bug Fixes\n\n* **core:** Prevent SQL syntax error when filtering users with empty ids array ([#25284](https://github.com/n8n-io/n8n/issues/25284)) ([e90a385](https://github.com/n8n-io/n8n/commit/e90a38523b8f3f1927b14e6312098fcaac25eced))\n* **core:** Wrong pagination argument order for sqlite in copyTables helper ([#25301](https://github.com/n8n-io/n8n/issues/25301)) ([d7db629](https://github.com/n8n-io/n8n/commit/d7db62943bc5afa242aff29f95445c5d40dcac6f))",
     "reactions": {
-      "url": "https://api.github.com/repos/n8n-io/n8n/releases/285258176/reactions",
-      "total_count": 9,
-      "+1": 8,
+      "url": "https://api.github.com/repos/n8n-io/n8n/releases/283356498/reactions",
+      "total_count": 8,
+      "+1": 5,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
       "confused": 0,
       "heart": 0,
-      "rocket": 0,
-      "eyes": 1
-    }
+      "rocket": 1,
+      "eyes": 2
+    },
+    "previousTagName": "n8n@2.7.1"
   },
   "parsed": {
     "sections": [
       {
-        "title": "[2.8.1](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.8.1) (2026-02-11)",
+        "title": "[2.7.2](https://github.com/n8n-io/n8n/compare/n8n@2.7.1...n8n@2.7.2) (2026-02-05)",
         "items": []
       },
       {
         "title": "Bug Fixes",
         "items": [
           {
-            "prNumber": 25610,
-            "commitSha": "61394f7",
-            "rawText": "**core:** Revert the fix for execution history when flow includes wait node ([#25610](https://github.com/n8n-io/n8n/issues/25610)) ([61394f7](https://github.com/n8n-io/n8n/commit/61394f7ad15849a111ed2f0227a2ab2c2a470e3c))"
+            "prNumber": 25284,
+            "commitSha": "e90a385",
+            "rawText": "**core:** Prevent SQL syntax error when filtering users with empty ids array ([#25284](https://github.com/n8n-io/n8n/issues/25284)) ([e90a385](https://github.com/n8n-io/n8n/commit/e90a38523b8f3f1927b14e6312098fcaac25eced))"
           },
           {
-            "prNumber": 25609,
-            "commitSha": "c614663",
-            "rawText": "fix(ai-builder): Improve plan mode UX: naming, question skipping, thinking states (no-changelog) ([#25609](https://github.com/n8n-io/n8n/pull/25609)) ([c614663](https://github.com/n8n-io/n8n/pull/25629/commits/c61466372b1b3fcd95efc7eaef6911b86b3589a9))"
+            "prNumber": 25301,
+            "commitSha": "d7db629",
+            "rawText": "**core:** Wrong pagination argument order for sqlite in copyTables helper ([#25301](https://github.com/n8n-io/n8n/issues/25301)) ([d7db629](https://github.com/n8n-io/n8n/commit/d7db62943bc5afa242aff29f95445c5d40dcac6f))"
           }
         ]
       }
     ],
     "allPRs": [
-      25610,
-      25609
+      25284,
+      25301
     ],
     "allSHAs": [
-      "61394f7",
-      "c614663"
+      "e90a385",
+      "d7db629"
     ]
   },
-  "commits": []
+  "commits": [
+    {
+      "sha": "e90a38523b8f3f1927b14e6312098fcaac25eced",
+      "shortSha": "e90a385",
+      "message": "fix(core): Prevent SQL syntax error when filtering users with empty ids array (#25284)\n\nCo-authored-by: Claude Opus 4.5 <noreply@anthropic.com>",
+      "author": "Tomi Turtiainen",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e90a38523b8f3f1927b14e6312098fcaac25eced"
+    },
+    {
+      "sha": "d7db62943bc5afa242aff29f95445c5d40dcac6f",
+      "shortSha": "d7db629",
+      "message": "fix(core): Wrong pagination argument order for sqlite in copyTables helper (#25301)\n\nCo-authored-by: Andreas Fitzek <andreas.fitzek@n8n.io>",
+      "author": "Konstantin Tieber",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d7db62943bc5afa242aff29f95445c5d40dcac6f"
+    },
+    {
+      "sha": "036ef0195a9475d3c1709ccdf127eaae44a99144",
+      "shortSha": "036ef01",
+      "message": ":rocket: Release 2.7.2 (#25363)",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/036ef0195a9475d3c1709ccdf127eaae44a99144"
+    }
+  ]
 }
