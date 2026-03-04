@@ -20,6 +20,14 @@ const state = {
     fetch: "",
     generate: "",
   },
+  modal: {
+    open: false,
+    version: null,
+    data: null,
+    loading: false,
+    error: "",
+    explanations: {},
+  },
 };
 
 const elements = {
@@ -40,6 +48,14 @@ const elements = {
   summaryText: document.getElementById("summary-text"),
   copyButton: document.getElementById("copy-btn"),
   summaryStatus: document.getElementById("summary-status"),
+  modal: document.getElementById("release-modal"),
+  modalTitle: document.querySelector("#release-modal .modal-title"),
+  modalDate: document.querySelector("#release-modal .modal-date"),
+  modalGithubLink: document.querySelector("#release-modal .modal-github-link"),
+  modalCloseBtn: document.querySelector("#release-modal .modal-close-btn"),
+  modalLoading: document.querySelector("#release-modal .modal-loading"),
+  modalError: document.querySelector("#release-modal .modal-error"),
+  modalSections: document.querySelector("#release-modal .modal-sections"),
 };
 
 let copyResetTimer = null;
@@ -125,14 +141,15 @@ function renderReleases() {
   const markup = state.versions
     .map((version) => {
       const checked = state.selectedVersions.has(version);
+      const safeVersion = escapeHtml(version);
       return `
-        <label class="release-item${checked ? " is-selected" : ""}">
-          <input type="checkbox" value="${escapeHtml(version)}" ${checked ? "checked" : ""}>
-          <span class="release-label">
-            <span class="release-version">${escapeHtml(version)}</span>
-            <span class="release-note">${checked ? "Included in the next summary run" : "Click to include this release"}</span>
-          </span>
-        </label>
+        <div class="release-item${checked ? " is-selected" : ""}">
+          <input type="checkbox" id="rel-${safeVersion}" value="${safeVersion}" ${checked ? "checked" : ""}>
+          <div class="release-label">
+            <button type="button" class="release-version-btn" data-version="${safeVersion}">${safeVersion}</button>
+            <label for="rel-${safeVersion}" class="release-note">${checked ? "Included in the next summary run" : "Check to include this release"}</label>
+          </div>
+        </div>
       `;
     })
     .join("");
@@ -532,7 +549,7 @@ elements.releaseList.addEventListener("change", (event) => {
     row.classList.toggle("is-selected", target.checked);
   }
   if (note) {
-    note.textContent = target.checked ? "Included in the next summary run" : "Click to include this release";
+    note.textContent = target.checked ? "Included in the next summary run" : "Check to include this release";
   }
 
   renderSelectionCount();
@@ -564,6 +581,220 @@ elements.modelSelect.addEventListener("change", (event) => {
 elements.generateButton.addEventListener("click", handleGenerate);
 elements.fetchButton.addEventListener("click", handleFetch);
 elements.copyButton.addEventListener("click", handleCopy);
+
+// --- Modal ---
+
+function renderModalItem(item) {
+  const prUrl = item.prNumber ? `https://github.com/n8n-io/n8n/issues/${item.prNumber}` : null;
+  const commitUrl = item.commitSha ? `https://github.com/n8n-io/n8n/commit/${item.commitSha}` : null;
+  const componentHtml = item.component
+    ? `<span class="modal-item-component">${escapeHtml(item.component)}</span>`
+    : "";
+
+  return `
+    <div class="modal-item" data-pr="${item.prNumber || ""}" data-sha="${item.commitSha || ""}">
+      <div class="modal-item-header">
+        ${componentHtml}
+        <span class="modal-item-description">${escapeHtml(item.description)}</span>
+      </div>
+      <div class="modal-item-actions">
+        ${prUrl ? `<a class="button button-ghost button-small" href="${prUrl}" target="_blank" rel="noopener"><span class="button-label">PR #${item.prNumber}</span></a>` : ""}
+        ${commitUrl ? `<a class="button button-ghost button-small" href="${commitUrl}" target="_blank" rel="noopener"><span class="button-label">${escapeHtml(item.commitSha)}</span></a>` : ""}
+        <button class="button button-secondary button-small modal-explain-btn" type="button">
+          <span class="button-loader" aria-hidden="true"></span>
+          <span class="button-label">AI Explain</span>
+        </button>
+      </div>
+      <div class="modal-item-explanation" hidden></div>
+    </div>
+  `;
+}
+
+function renderModalSection(section, index) {
+  const sectionId = `modal-section-${index}`;
+  const itemCount = section.items.length;
+  const itemLabel = `${itemCount} item${itemCount === 1 ? "" : "s"}`;
+
+  return `
+    <div class="modal-section">
+      <h3 class="modal-section-heading">
+        <button
+          class="modal-section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="${sectionId}"
+          aria-label="Toggle ${escapeHtml(section.title)} section"
+        >
+          <span class="modal-section-toggle-icon" aria-hidden="true"></span>
+          <span class="modal-section-title">${escapeHtml(section.title)}</span>
+          <span class="modal-section-count">${itemLabel}</span>
+        </button>
+      </h3>
+      <div class="modal-items" id="${sectionId}">
+        ${section.items.map((item) => renderModalItem(item)).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderModal() {
+  const { data, loading, error, version } = state.modal;
+
+  elements.modalTitle.textContent = version || "";
+  elements.modalLoading.hidden = !loading;
+  elements.modalError.hidden = !error;
+  elements.modalSections.innerHTML = "";
+
+  if (error) {
+    elements.modalError.textContent = error;
+    elements.modalError.hidden = false;
+    return;
+  }
+  if (loading || !data) return;
+
+  elements.modalDate.textContent = data.publishedAt
+    ? `Released ${new Date(data.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}`
+    : "";
+  if (data.htmlUrl) {
+    elements.modalGithubLink.href = data.htmlUrl;
+    elements.modalGithubLink.hidden = false;
+  } else {
+    elements.modalGithubLink.hidden = true;
+  }
+
+  if (data.sections.length === 0) {
+    elements.modalSections.innerHTML = `<p class="modal-empty">No structured release items found for this version.</p>`;
+    return;
+  }
+
+  elements.modalSections.innerHTML = data.sections
+    .map((section, index) => renderModalSection(section, index))
+    .join("");
+}
+
+async function openModal(version) {
+  state.modal.open = true;
+  state.modal.version = version;
+  state.modal.data = null;
+  state.modal.loading = true;
+  state.modal.error = "";
+  state.modal.explanations = {};
+
+  elements.modal.hidden = false;
+  document.body.style.overflow = "hidden";
+  renderModal();
+
+  try {
+    const res = await fetch(`/api/release-data/${encodeURIComponent(version)}`);
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to load release data");
+    state.modal.data = data;
+  } catch (err) {
+    state.modal.error = err.message;
+  } finally {
+    state.modal.loading = false;
+    renderModal();
+  }
+}
+
+function closeModal() {
+  state.modal.open = false;
+  elements.modal.hidden = true;
+  document.body.style.overflow = "";
+}
+
+async function handleExplainItem(prNumber, commitSha, button, itemEl) {
+  const key = `${prNumber}-${commitSha}`;
+  const explanationEl = itemEl.querySelector(".modal-item-explanation");
+
+  // Toggle visibility if already explained
+  if (state.modal.explanations[key]?.text) {
+    explanationEl.hidden = !explanationEl.hidden;
+    return;
+  }
+
+  // Check that provider/model are selected
+  if (!state.provider || !state.model) {
+    explanationEl.hidden = false;
+    explanationEl.textContent = "Select a provider and model in the Summary Studio panel first.";
+    explanationEl.dataset.state = "info";
+    return;
+  }
+
+  setButtonLoading(button, true);
+  explanationEl.hidden = false;
+  explanationEl.textContent = "Generating explanation...";
+  explanationEl.dataset.state = "loading";
+
+  try {
+    const res = await fetch("/api/explain-item", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        version: state.modal.version,
+        prNumber: prNumber || null,
+        commitSha: commitSha || null,
+        provider: state.provider,
+        model: state.model,
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to generate explanation");
+
+    state.modal.explanations[key] = { text: data.explanation };
+    explanationEl.textContent = data.explanation;
+    explanationEl.dataset.state = "success";
+  } catch (err) {
+    explanationEl.textContent = err.message;
+    explanationEl.dataset.state = "error";
+  } finally {
+    setButtonLoading(button, false);
+  }
+}
+
+// Open modal when version button is clicked
+elements.releaseList.addEventListener("click", (event) => {
+  const btn = event.target.closest(".release-version-btn");
+  if (!btn) return;
+  event.preventDefault();
+  openModal(btn.dataset.version);
+});
+
+// Close modal on overlay click or close button
+elements.modal.addEventListener("click", (event) => {
+  if (event.target === elements.modal || event.target.closest(".modal-close-btn")) {
+    closeModal();
+  }
+});
+
+// Close modal on Escape key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.modal.open) {
+    closeModal();
+  }
+});
+
+// AI Explain button (delegated from modal sections)
+elements.modalSections.addEventListener("click", (event) => {
+  const sectionToggle = event.target.closest(".modal-section-toggle");
+  if (sectionToggle) {
+    const section = sectionToggle.closest(".modal-section");
+    const sectionItems = section?.querySelector(".modal-items");
+    if (!sectionItems) return;
+
+    const isExpanded = sectionToggle.getAttribute("aria-expanded") === "true";
+    sectionToggle.setAttribute("aria-expanded", String(!isExpanded));
+    sectionItems.hidden = isExpanded;
+    return;
+  }
+
+  const btn = event.target.closest(".modal-explain-btn");
+  if (!btn) return;
+  const item = btn.closest(".modal-item");
+  const pr = item.dataset.pr ? parseInt(item.dataset.pr, 10) : null;
+  const sha = item.dataset.sha || null;
+  handleExplainItem(pr, sha, btn, item);
+});
 
 renderSelectionCount();
 renderModels();

@@ -6,10 +6,12 @@ import { fileURLToPath } from 'url';
 import { listLocalReleaseVersions } from './localReleases.js';
 import { runPipeline } from './pipeline.js';
 import { generateSocialSummary } from './socialSummarize.js';
+import { explainItem } from './explainItem.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const OUTPUT_DIR = join(ROOT, 'output');
+const DATA_DIR = join(ROOT, 'data');
 
 const app = express();
 app.use(express.json());
@@ -107,6 +109,85 @@ app.post('/api/fetch', async (req, res) => {
     res.json({ ok: true, fetched, log });
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message, log });
+  }
+});
+
+// --- GET /api/release-data/:version ---
+// Returns structured release data for the modal view
+app.get('/api/release-data/:version', async (req, res) => {
+  const { version } = req.params;
+  if (!SAFE_VERSION.test(version)) {
+    return res.status(400).json({ error: `Invalid version string: ${version}` });
+  }
+
+  const filePath = join(DATA_DIR, `${version}.json`);
+  let raw;
+  try {
+    raw = await readFile(filePath, 'utf8');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      return res.status(404).json({ error: `No data found for version ${version}.` });
+    }
+    return res.status(500).json({ error: err.message });
+  }
+
+  const data = JSON.parse(raw);
+  const sections = (data.parsed?.sections || [])
+    .map((section) => ({
+      title: section.title,
+      items: section.items.map((item) => {
+        let text = item.rawText;
+        const componentMatch = text.match(/^\*\*([^*]+?):\*\*\s*/);
+        const component = componentMatch ? componentMatch[1] : null;
+        if (componentMatch) text = text.slice(componentMatch[0].length);
+        text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+        text = text.replace(/\s*\(#\d+\)/g, '');
+        text = text.replace(/\s*\([a-f0-9]{7,}\)/g, '');
+        return {
+          prNumber: item.prNumber,
+          commitSha: item.commitSha,
+          description: text.trim(),
+          component,
+        };
+      }),
+    }))
+    .filter((section) => section.items.length > 0);
+
+  res.json({
+    version,
+    tagName: data.release?.tag_name || `n8n@${version}`,
+    publishedAt: data.release?.published_at || null,
+    htmlUrl: data.release?.html_url || null,
+    sections,
+  });
+});
+
+// --- POST /api/explain-item ---
+// Fetches PR/commit context from GitHub and generates an AI explanation
+app.post('/api/explain-item', async (req, res) => {
+  const { version, prNumber, commitSha, provider, model } = req.body ?? {};
+
+  if (!version || !SAFE_VERSION.test(version)) {
+    return res.status(400).json({ error: 'A valid version is required.' });
+  }
+  if (!provider) {
+    return res.status(400).json({ error: 'provider is required.' });
+  }
+  if (!model) {
+    return res.status(400).json({ error: 'model is required.' });
+  }
+  if (!prNumber && !commitSha) {
+    return res.status(400).json({ error: 'At least one of prNumber or commitSha is required.' });
+  }
+
+  try {
+    const explanation = await explainItem(version, prNumber || null, commitSha || null, provider, model);
+    res.json({ explanation });
+  } catch (err) {
+    if (/_API_KEY/.test(err.message)) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(502).json({ error: `AI API error: ${err.message}` });
   }
 });
 

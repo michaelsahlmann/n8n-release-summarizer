@@ -1,0 +1,193 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/292859782",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/292859782/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/292859782/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.11.1",
+    "id": 292859782,
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4RdK-G",
+    "tag_name": "n8n@2.11.1",
+    "target_commitish": "release/2.11.1",
+    "name": "n8n@2.11.1",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-03-04T07:03:54Z",
+    "updated_at": "2026-03-04T07:42:19Z",
+    "published_at": "2026-03-04T07:40:40Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/366612996",
+        "id": 366612996,
+        "node_id": "RA_kwDOC4Q8Qs4V2hIE",
+        "name": "sbom-source.cdx.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 4476161,
+        "digest": "sha256:3dc8c8a2b1fb43ca6c9c378a2ffe4f8e3255260f6036ef11fe1b632521827b0a",
+        "download_count": 3,
+        "created_at": "2026-03-04T07:42:18Z",
+        "updated_at": "2026-03-04T07:42:19Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.11.1/sbom-source.cdx.json"
+      },
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/366612997",
+        "id": 366612997,
+        "node_id": "RA_kwDOC4Q8Qs4V2hIF",
+        "name": "vex.openvex.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 2708,
+        "digest": "sha256:a2b6a9444b21027742cf4b120f3b6e22d745c9d3a025d766635b6e2304ed41d7",
+        "download_count": 2,
+        "created_at": "2026-03-04T07:42:18Z",
+        "updated_at": "2026-03-04T07:42:18Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.11.1/vex.openvex.json"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.11.1",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.11.1",
+    "body": "## [2.11.1](https://github.com/n8n-io/n8n/compare/n8n@2.11.0...n8n@2.11.1) (2026-03-04)\n\n\n### Bug Fixes\n\n* **editor:** Always show auth mode dropdown in credential modal ([#26280](https://github.com/n8n-io/n8n/issues/26280)) ([01ddc46](https://github.com/n8n-io/n8n/commit/01ddc46b5bf61848dbeee59cbb3434a3532771f3))\n* Handle collaboration push old format ([#26467](https://github.com/n8n-io/n8n/issues/26467)) ([2f3c4d7](https://github.com/n8n-io/n8n/commit/2f3c4d76bed0413fb69417d8c4052f4fc2f18c55))\n* Merge by sql update ([#26364](https://github.com/n8n-io/n8n/issues/26364)) ([ccb961e](https://github.com/n8n-io/n8n/commit/ccb961efc0765cde7ca5d5337ca17ee4ab378a08))",
+    "previousTagName": "n8n@2.11.0"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.11.1](https://github.com/n8n-io/n8n/compare/n8n@2.11.0...n8n@2.11.1) (2026-03-04)",
+        "items": []
+      },
+      {
+        "title": "Bug Fixes",
+        "items": [
+          {
+            "prNumber": 26280,
+            "commitSha": "01ddc46",
+            "rawText": "**editor:** Always show auth mode dropdown in credential modal ([#26280](https://github.com/n8n-io/n8n/issues/26280)) ([01ddc46](https://github.com/n8n-io/n8n/commit/01ddc46b5bf61848dbeee59cbb3434a3532771f3))"
+          },
+          {
+            "prNumber": 26467,
+            "commitSha": "2f3c4d7",
+            "rawText": "Handle collaboration push old format ([#26467](https://github.com/n8n-io/n8n/issues/26467)) ([2f3c4d7](https://github.com/n8n-io/n8n/commit/2f3c4d76bed0413fb69417d8c4052f4fc2f18c55))"
+          },
+          {
+            "prNumber": 26364,
+            "commitSha": "ccb961e",
+            "rawText": "Merge by sql update ([#26364](https://github.com/n8n-io/n8n/issues/26364)) ([ccb961e](https://github.com/n8n-io/n8n/commit/ccb961efc0765cde7ca5d5337ca17ee4ab378a08))"
+          }
+        ]
+      }
+    ],
+    "allPRs": [
+      26280,
+      26467,
+      26364
+    ],
+    "allSHAs": [
+      "01ddc46",
+      "2f3c4d7",
+      "ccb961e"
+    ]
+  },
+  "commits": [
+    {
+      "sha": "ccb961efc0765cde7ca5d5337ca17ee4ab378a08",
+      "shortSha": "ccb961e",
+      "message": "fix: Merge by sql update (#26364)",
+      "author": "Michael Kret",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ccb961efc0765cde7ca5d5337ca17ee4ab378a08"
+    },
+    {
+      "sha": "01ddc46b5bf61848dbeee59cbb3434a3532771f3",
+      "shortSha": "01ddc46",
+      "message": "fix(editor): Always show auth mode dropdown in credential modal (#26280)",
+      "author": "Elias Meire",
+      "html_url": "https://github.com/n8n-io/n8n/commit/01ddc46b5bf61848dbeee59cbb3434a3532771f3"
+    },
+    {
+      "sha": "4ec63700890d305af3a2697b128c3da34e9dee65",
+      "shortSha": "4ec6370",
+      "message": "fix: Initialize Demo layout (no-changelog) (#26468)",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4ec63700890d305af3a2697b128c3da34e9dee65"
+    },
+    {
+      "sha": "2f3c4d76bed0413fb69417d8c4052f4fc2f18c55",
+      "shortSha": "2f3c4d7",
+      "message": "fix: Handle collaboration push old format (#26467)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2f3c4d76bed0413fb69417d8c4052f4fc2f18c55"
+    },
+    {
+      "sha": "ba008bcbb35e14e7b564250d330d3858c26abe2c",
+      "shortSha": "ba008bc",
+      "message": ":rocket: Release 2.11.1 (#26506)\n\nCo-authored-by: tomi <10324676+tomi@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ba008bcbb35e14e7b564250d330d3858c26abe2c"
+    }
+  ]
+}
