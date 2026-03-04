@@ -291,9 +291,47 @@ code {
   gap: 0.12rem;
 }
 
+.release-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 .release-version {
   font-weight: 700;
   color: var(--text);
+}
+
+.release-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.release-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.2rem;
+  padding: 0.08rem 0.45rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.release-badge-prerelease {
+  color: #8b4b2b;
+  background: rgba(209, 93, 63, 0.12);
+  border-color: rgba(209, 93, 63, 0.2);
+}
+
+.release-badge-latest {
+  color: #1f6b4c;
+  background: rgba(47, 127, 93, 0.16);
+  border-color: rgba(47, 127, 93, 0.28);
 }
 
 .release-note {

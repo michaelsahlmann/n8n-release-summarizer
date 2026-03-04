@@ -107,6 +107,10 @@ function updateGenerateAvailability() {
   elements.copyButton.disabled = !state.summary;
 }
 
+function getVersionNames() {
+  return state.versions.map((release) => release.version);
+}
+
 function renderReleases() {
   elements.releaseList.setAttribute("aria-busy", state.loading.releases ? "true" : "false");
 
@@ -139,15 +143,28 @@ function renderReleases() {
   }
 
   const markup = state.versions
-    .map((version) => {
-      const checked = state.selectedVersions.has(version);
-      const safeVersion = escapeHtml(version);
+    .map((release) => {
+      const checked = state.selectedVersions.has(release.version);
+      const safeVersion = escapeHtml(release.version);
+      const badges = [];
+      if (release.isPrerelease) {
+        badges.push('<span class="release-badge release-badge-prerelease">Pre-release</span>');
+      }
+      if (release.isLatest) {
+        badges.push('<span class="release-badge release-badge-latest">Latest</span>');
+      }
+      const badgeMarkup = badges.length
+        ? `<div class="release-badges" aria-label="Release status">${badges.join("")}</div>`
+        : "";
       return `
-        <div class="release-item${checked ? " is-selected" : ""}">
+        <div class="release-item${checked ? " is-selected" : ""}" data-version="${safeVersion}">
           <input type="checkbox" id="rel-${safeVersion}" value="${safeVersion}" ${checked ? "checked" : ""}>
           <div class="release-label">
-            <button type="button" class="release-version-btn" data-version="${safeVersion}">${safeVersion}</button>
-            <label for="rel-${safeVersion}" class="release-note">${checked ? "Included in the next summary run" : "Check to include this release"}</label>
+            <div class="release-meta">
+              <button type="button" class="release-version-btn" data-version="${safeVersion}">${safeVersion}</button>
+              ${badgeMarkup}
+            </div>
+            <span class="release-note">${checked ? "Included in the next summary run" : "Check to include this release"}</span>
           </div>
         </div>
       `;
@@ -335,9 +352,18 @@ async function loadReleases() {
       throw new Error(data.error || "Unable to load releases");
     }
 
-    state.versions = Array.isArray(data.versions) ? data.versions : [];
+    state.versions = Array.isArray(data.versions)
+      ? data.versions
+          .filter((release) => release && typeof release.version === "string")
+          .map((release) => ({
+            version: release.version,
+            isPrerelease: release.isPrerelease === true,
+            isLatest: release.isLatest === true,
+          }))
+      : [];
+    const availableVersions = new Set(getVersionNames());
     state.selectedVersions = new Set(
-      [...state.selectedVersions].filter((version) => state.versions.includes(version)),
+      [...state.selectedVersions].filter((version) => availableVersions.has(version)),
     );
 
     if (state.versions.length === 0) {
@@ -752,12 +778,21 @@ async function handleExplainItem(prNumber, commitSha, button, itemEl) {
   }
 }
 
-// Open modal when version button is clicked
+// Open the release modal when any non-checkbox part of a row is clicked
 elements.releaseList.addEventListener("click", (event) => {
-  const btn = event.target.closest(".release-version-btn");
-  if (!btn) return;
+  const target = event.target;
+  if (!(target instanceof Element)) {
+    return;
+  }
+
+  if (target.closest('input[type="checkbox"]')) {
+    return;
+  }
+
+  const item = target.closest(".release-item");
+  if (!item) return;
   event.preventDefault();
-  openModal(btn.dataset.version);
+  openModal(item.dataset.version);
 });
 
 // Close modal on overlay click or close button

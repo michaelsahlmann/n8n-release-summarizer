@@ -3,7 +3,7 @@ import express from 'express';
 import { readFile } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { listLocalReleaseVersions } from './localReleases.js';
+import { listLocalReleases } from './localReleases.js';
 import { runPipeline } from './pipeline.js';
 import { generateSocialSummary } from './socialSummarize.js';
 import { explainItem } from './explainItem.js';
@@ -28,7 +28,7 @@ const SAFE_VERSION = /^[\w.\-]+$/;
 // Returns locally cached release summaries (newest first)
 app.get('/api/releases', async (req, res) => {
   try {
-    const versions = await listLocalReleaseVersions();
+    const versions = await listLocalReleases();
     res.json({ versions });
   } catch (err) {
     res.status(500).json({ error: err.message });
