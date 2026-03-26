@@ -1,0 +1,256 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/301749446",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/301749446/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/301749446/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.13.4",
+    "id": 301749446,
+    "author": {
+      "login": "n8n-assistant[bot]",
+      "id": 100856346,
+      "node_id": "BOT_kgDOBgLyGg",
+      "avatar_url": "https://avatars.githubusercontent.com/in/177217?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/n8n-assistant%5Bbot%5D",
+      "html_url": "https://github.com/apps/n8n-assistant",
+      "followers_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4R_FTG",
+    "tag_name": "n8n@2.13.4",
+    "target_commitish": "release/2.13.4",
+    "name": "n8n@2.13.4",
+    "draft": false,
+    "immutable": false,
+    "prerelease": false,
+    "created_at": "2026-03-26T08:46:00Z",
+    "updated_at": "2026-03-26T09:42:26Z",
+    "published_at": "2026-03-26T09:40:34Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/381976034",
+        "id": 381976034,
+        "node_id": "RA_kwDOC4Q8Qs4WxH3i",
+        "name": "sbom-source.cdx.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 6071150,
+        "digest": "sha256:705f577dadb63751737221800b655021ede205a55bd8845834998887da5fa556",
+        "download_count": 9,
+        "created_at": "2026-03-26T09:42:25Z",
+        "updated_at": "2026-03-26T09:42:26Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.13.4/sbom-source.cdx.json"
+      },
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/381976036",
+        "id": 381976036,
+        "node_id": "RA_kwDOC4Q8Qs4WxH3k",
+        "name": "vex.openvex.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 2708,
+        "digest": "sha256:a2b6a9444b21027742cf4b120f3b6e22d745c9d3a025d766635b6e2304ed41d7",
+        "download_count": 7,
+        "created_at": "2026-03-26T09:42:25Z",
+        "updated_at": "2026-03-26T09:42:26Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.13.4/vex.openvex.json"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.13.4",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.13.4",
+    "body": "## [2.13.4](https://github.com/n8n-io/n8n/compare/n8n@2.13.3...n8n@2.13.4) (2026-03-26)\n\n\n### Bug Fixes\n\n* **editor:** Clean up quick connect feature flag and fix first load ([#27551](https://github.com/n8n-io/n8n/issues/27551)) ([089bf1b](https://github.com/n8n-io/n8n/commit/089bf1bd4e6784001c94d0ad2a77d512214048f4))",
+    "previousTagName": "n8n@2.14.2"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.13.4](https://github.com/n8n-io/n8n/compare/n8n@2.13.3...n8n@2.13.4) (2026-03-26)",
+        "items": []
+      },
+      {
+        "title": "Bug Fixes",
+        "items": [
+          {
+            "prNumber": 27551,
+            "commitSha": "089bf1b",
+            "rawText": "**editor:** Clean up quick connect feature flag and fix first load ([#27551](https://github.com/n8n-io/n8n/issues/27551)) ([089bf1b](https://github.com/n8n-io/n8n/commit/089bf1bd4e6784001c94d0ad2a77d512214048f4))"
+          }
+        ]
+      }
+    ],
+    "allPRs": [
+      27551
+    ],
+    "allSHAs": [
+      "089bf1b"
+    ]
+  },
+  "commits": [
+    {
+      "sha": "44c565b3abef939420be4c70312bdee5dc69dcd3",
+      "shortSha": "44c565b",
+      "message": "fix(editor): Adjust external secrets input styling (backport to release-candidate/2.13.x) (#27164)\n\nCo-authored-by: Rob Hough <robhough180@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/44c565b3abef939420be4c70312bdee5dc69dcd3"
+    },
+    {
+      "sha": "e31a59fe341e1828d2bdeee3c7bc7584e411a84f",
+      "shortSha": "e31a59f",
+      "message": "chore(editor): Add A/A exp to validate experimentation system (no-changelog) (backport to release-candidate/2.13.x) (#27141)\n\nCo-authored-by: Paul Issert <paul@n8n.io>\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>\nCo-authored-by: Romeo Balta <7095569+romeobalta@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/e31a59fe341e1828d2bdeee3c7bc7584e411a84f"
+    },
+    {
+      "sha": "4fd8c210202b58c06120fb7a39ecda43bcf56819",
+      "shortSha": "4fd8c21",
+      "message": "chore(editor): Differentiate canvas and chat hub events (backport to release-candidate/2.13.x) (#27166)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4fd8c210202b58c06120fb7a39ecda43bcf56819"
+    },
+    {
+      "sha": "07ea0549d3adb24c797885bd31665356c67af667",
+      "shortSha": "07ea054",
+      "message": "fix(editor): Command bar wasn't finding any workflows (backport to release-candidate/2.13.x) (#27136)\n\nCo-authored-by: Svetoslav Dekov <svetoslav.dekov@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/07ea0549d3adb24c797885bd31665356c67af667"
+    },
+    {
+      "sha": "409066c39fe79d0fcc1decf2950e6e1a2a9d5bbf",
+      "shortSha": "409066c",
+      "message": "fix(core): Emit `leader-takeover` on leadership mismatch in `checkLeader` (backport to release-candidate/2.13.x) (#27149)\n\nCo-authored-by: Iván Ovejero <ivov.src@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/409066c39fe79d0fcc1decf2950e6e1a2a9d5bbf"
+    },
+    {
+      "sha": "9d8ac306dcd67e41965532cc953b22cecac005dc",
+      "shortSha": "9d8ac30",
+      "message": "ci: Create github releases from mjs scripts (backport to release-candidate/2.13.x) (#27208)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/9d8ac306dcd67e41965532cc953b22cecac005dc"
+    },
+    {
+      "sha": "3ebc233d2380a61446c13f8b751133f3e601ecf3",
+      "shortSha": "3ebc233",
+      "message": ":rocket: Release 2.13.1 (#27214)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3ebc233d2380a61446c13f8b751133f3e601ecf3"
+    },
+    {
+      "sha": "24a5709c05244b38688e2dbdd8ccfb6e65b3184f",
+      "shortSha": "24a5709",
+      "message": "fix(ai-builder): Show feedback buttons in variant (no-changelog) (backport to release-candidate/2.13.x) (#27219)\n\nCo-authored-by: Benjamin Schroth <68321970+schrothbn@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/24a5709c05244b38688e2dbdd8ccfb6e65b3184f"
+    },
+    {
+      "sha": "1bcb43aa957134660df77c13298c051744b0c756",
+      "shortSha": "1bcb43a",
+      "message": "ci: Propagate dependency bumps transitively (backport to release-candidate/2.13.x) (#27274)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1bcb43aa957134660df77c13298c051744b0c756"
+    },
+    {
+      "sha": "96c0d4ba6fcd4d21bea378a5bec4eccf0505aa00",
+      "shortSha": "96c0d4b",
+      "message": ":rocket: Release 2.13.2 (#27319)\n\nCo-authored-by: github-merge-queue <118344674+github-merge-queue@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/96c0d4ba6fcd4d21bea378a5bec4eccf0505aa00"
+    },
+    {
+      "sha": "9a4649e3d49c12779172bcba3feb235761c8ec4e",
+      "shortSha": "9a4649e",
+      "message": "ci: Modify immutable commit subject via spreading (backport to release-candidate/2.13.x) (#27471)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/9a4649e3d49c12779172bcba3feb235761c8ec4e"
+    },
+    {
+      "sha": "542b0efe8951730e59c5273758ed22f898c222bf",
+      "shortSha": "542b0ef",
+      "message": "chore: Bundle 2026-W9 (backport to release-candidate/2.13.x) (#27537)\n\nCo-authored-by: n8n-assistant[bot] <100856346+n8n-assistant[bot]@users.noreply.github.com>\nCo-authored-by: Matsu <matias.huhta@n8n.io>\nCo-authored-by: Dimitri Lavrenük <20122620+dlavrenuek@users.noreply.github.com>\nCo-authored-by: Charlie Kolb <charlie@n8n.io>\nCo-authored-by: RomanDavydchuk <roman.davydchuk@n8n.io>\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>\nCo-authored-by: Dawid Myslak <dawid.myslak@gmail.com>\nCo-authored-by: Svetoslav Dekov <svetoslav.dekov@n8n.io>\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>\nCo-authored-by: Guillaume Jacquart <jacquart.guillaume@gmail.com>\nCo-authored-by: Sandra Zollner <sandra.zollner@n8n.io>\nCo-authored-by: Milorad FIlipović <milorad@n8n.io>\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>\nCo-authored-by: Ricardo Espinoza <ricardo@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/542b0efe8951730e59c5273758ed22f898c222bf"
+    },
+    {
+      "sha": "5e64bafa225582c79b164c09dc83709d242e2ea0",
+      "shortSha": "5e64baf",
+      "message": ":rocket: Release 2.13.3 (#27548)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/5e64bafa225582c79b164c09dc83709d242e2ea0"
+    },
+    {
+      "sha": "30128113132585f41c738c39944945f763ee7089",
+      "shortSha": "3012811",
+      "message": "ci: Replace vars context with runner.name in composite action (backport to release-candidate/2.13.x) (#27555)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>\nCo-authored-by: Claude Sonnet 4.6 <noreply@anthropic.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/30128113132585f41c738c39944945f763ee7089"
+    },
+    {
+      "sha": "089bf1bd4e6784001c94d0ad2a77d512214048f4",
+      "shortSha": "089bf1b",
+      "message": "fix(editor): Clean up quick connect feature flag and fix first load (backport to release-candidate/2.13.x) (#27551)\n\nCo-authored-by: Elias Meire <elias@meire.dev>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/089bf1bd4e6784001c94d0ad2a77d512214048f4"
+    },
+    {
+      "sha": "86bd7ef095d26756b1e122330329ad8c49e6e882",
+      "shortSha": "86bd7ef",
+      "message": ":rocket: Release 2.13.4 (#27595)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/86bd7ef095d26756b1e122330329ad8c49e6e882"
+    }
+  ]
+}

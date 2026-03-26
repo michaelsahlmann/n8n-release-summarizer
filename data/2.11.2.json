@@ -1,0 +1,287 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/294565108",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/294565108/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/294565108/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.11.2",
+    "id": 294565108,
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4RjrT0",
+    "tag_name": "n8n@2.11.2",
+    "target_commitish": "release/2.11.2",
+    "name": "n8n@2.11.2",
+    "draft": false,
+    "immutable": false,
+    "prerelease": false,
+    "created_at": "2026-03-09T06:26:13Z",
+    "updated_at": "2026-03-10T06:23:10Z",
+    "published_at": "2026-03-09T07:04:55Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/369918772",
+        "id": 369918772,
+        "node_id": "RA_kwDOC4Q8Qs4WDIM0",
+        "name": "sbom-source.cdx.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 4476161,
+        "digest": "sha256:9159ebe266462aea52b1a21c99873fb3fd5b3e5f8b7286699f641513de674aa7",
+        "download_count": 20,
+        "created_at": "2026-03-09T07:06:42Z",
+        "updated_at": "2026-03-09T07:06:43Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.11.2/sbom-source.cdx.json"
+      },
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/369918771",
+        "id": 369918771,
+        "node_id": "RA_kwDOC4Q8Qs4WDIMz",
+        "name": "vex.openvex.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 2708,
+        "digest": "sha256:a2b6a9444b21027742cf4b120f3b6e22d745c9d3a025d766635b6e2304ed41d7",
+        "download_count": 12,
+        "created_at": "2026-03-09T07:06:42Z",
+        "updated_at": "2026-03-09T07:06:43Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.11.2/vex.openvex.json"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.11.2",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.11.2",
+    "body": "## [2.11.2](https://github.com/n8n-io/n8n/compare/n8n@2.11.1...n8n@2.11.2) (2026-03-09)\r\n\r\n\r\n### Bug Fixes\r\n\r\n* **ai-builder:** Don't use autoGenerate for UUID columns for WFB persistence migration (backport to release-candidate/2.11.x) ([#26589](https://github.com/n8n-io/n8n/issues/26589)) ([d672e4c](https://github.com/n8n-io/n8n/commit/d672e4c1d809cdd508d41281d33b1295d9399e00))\r\n* **Form Node:** Improve custom CSS sanitization (backport to release-candidate/2.11.x) ([#26666](https://github.com/n8n-io/n8n/issues/26666)) ([7ab5335](https://github.com/n8n-io/n8n/commit/7ab53356d631dcd5b402a161e98557a154993455))\r\n* **Form Node:** Improve form rendering consistency (backport to release-candidate/2.11.x) ([#26652](https://github.com/n8n-io/n8n/issues/26652)) ([2481969](https://github.com/n8n-io/n8n/commit/2481969032f79b9fe0f0d3cc6b508cd9ee1685ab))\r\n* Log streaming config works with proxy (backport to release-candidate/2.11.x) ([#26590](https://github.com/n8n-io/n8n/issues/26590)) ([2034f5f](https://github.com/n8n-io/n8n/commit/2034f5f731ae8fab105911d93f897240a93dd666))\r\n\r\n\r\n### Features\r\n\r\n* Add option to hide credential overwrites (backport to release-candidate/2.11.x) ([#26679](https://github.com/n8n-io/n8n/issues/26679)) ([ab6791d](https://github.com/n8n-io/n8n/commit/ab6791d2d975b7ae316207948ed0fc1b04cce077))\r\n* Implement additional checkbox confirmation for quick connect flow (backport to release-candidate/2.11.x) ([#26686](https://github.com/n8n-io/n8n/issues/26686)) ([54d8c65](https://github.com/n8n-io/n8n/commit/54d8c65b522a1b2558398cce612cb67a39ecc57e))",
+    "reactions": {
+      "url": "https://api.github.com/repos/n8n-io/n8n/releases/294565108/reactions",
+      "total_count": 18,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 5,
+      "hooray": 4,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 5,
+      "eyes": 4
+    },
+    "previousTagName": "n8n@2.12.0"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.11.2](https://github.com/n8n-io/n8n/compare/n8n@2.11.1...n8n@2.11.2) (2026-03-09)",
+        "items": []
+      },
+      {
+        "title": "Bug Fixes",
+        "items": [
+          {
+            "prNumber": 26589,
+            "commitSha": "d672e4c",
+            "rawText": "**ai-builder:** Don't use autoGenerate for UUID columns for WFB persistence migration (backport to release-candidate/2.11.x) ([#26589](https://github.com/n8n-io/n8n/issues/26589)) ([d672e4c](https://github.com/n8n-io/n8n/commit/d672e4c1d809cdd508d41281d33b1295d9399e00))"
+          },
+          {
+            "prNumber": 26666,
+            "commitSha": "7ab5335",
+            "rawText": "**Form Node:** Improve custom CSS sanitization (backport to release-candidate/2.11.x) ([#26666](https://github.com/n8n-io/n8n/issues/26666)) ([7ab5335](https://github.com/n8n-io/n8n/commit/7ab53356d631dcd5b402a161e98557a154993455))"
+          },
+          {
+            "prNumber": 26652,
+            "commitSha": "2481969",
+            "rawText": "**Form Node:** Improve form rendering consistency (backport to release-candidate/2.11.x) ([#26652](https://github.com/n8n-io/n8n/issues/26652)) ([2481969](https://github.com/n8n-io/n8n/commit/2481969032f79b9fe0f0d3cc6b508cd9ee1685ab))"
+          },
+          {
+            "prNumber": 26590,
+            "commitSha": "2034f5f",
+            "rawText": "Log streaming config works with proxy (backport to release-candidate/2.11.x) ([#26590](https://github.com/n8n-io/n8n/issues/26590)) ([2034f5f](https://github.com/n8n-io/n8n/commit/2034f5f731ae8fab105911d93f897240a93dd666))"
+          }
+        ]
+      },
+      {
+        "title": "Features",
+        "items": [
+          {
+            "prNumber": 26679,
+            "commitSha": "ab6791d",
+            "rawText": "Add option to hide credential overwrites (backport to release-candidate/2.11.x) ([#26679](https://github.com/n8n-io/n8n/issues/26679)) ([ab6791d](https://github.com/n8n-io/n8n/commit/ab6791d2d975b7ae316207948ed0fc1b04cce077))"
+          },
+          {
+            "prNumber": 26686,
+            "commitSha": "54d8c65",
+            "rawText": "Implement additional checkbox confirmation for quick connect flow (backport to release-candidate/2.11.x) ([#26686](https://github.com/n8n-io/n8n/issues/26686)) ([54d8c65](https://github.com/n8n-io/n8n/commit/54d8c65b522a1b2558398cce612cb67a39ecc57e))"
+          }
+        ]
+      }
+    ],
+    "allPRs": [
+      26589,
+      26666,
+      26652,
+      26590,
+      26679,
+      26686
+    ],
+    "allSHAs": [
+      "d672e4c",
+      "7ab5335",
+      "2481969",
+      "2034f5f",
+      "ab6791d",
+      "54d8c65"
+    ]
+  },
+  "commits": [
+    {
+      "sha": "ccb961efc0765cde7ca5d5337ca17ee4ab378a08",
+      "shortSha": "ccb961e",
+      "message": "fix: Merge by sql update (#26364)",
+      "author": "Michael Kret",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ccb961efc0765cde7ca5d5337ca17ee4ab378a08"
+    },
+    {
+      "sha": "01ddc46b5bf61848dbeee59cbb3434a3532771f3",
+      "shortSha": "01ddc46",
+      "message": "fix(editor): Always show auth mode dropdown in credential modal (#26280)",
+      "author": "Elias Meire",
+      "html_url": "https://github.com/n8n-io/n8n/commit/01ddc46b5bf61848dbeee59cbb3434a3532771f3"
+    },
+    {
+      "sha": "4ec63700890d305af3a2697b128c3da34e9dee65",
+      "shortSha": "4ec6370",
+      "message": "fix: Initialize Demo layout (no-changelog) (#26468)",
+      "author": "Alex Grozav",
+      "html_url": "https://github.com/n8n-io/n8n/commit/4ec63700890d305af3a2697b128c3da34e9dee65"
+    },
+    {
+      "sha": "2f3c4d76bed0413fb69417d8c4052f4fc2f18c55",
+      "shortSha": "2f3c4d7",
+      "message": "fix: Handle collaboration push old format (#26467)",
+      "author": "Daria",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2f3c4d76bed0413fb69417d8c4052f4fc2f18c55"
+    },
+    {
+      "sha": "ba008bcbb35e14e7b564250d330d3858c26abe2c",
+      "shortSha": "ba008bc",
+      "message": ":rocket: Release 2.11.1 (#26506)\n\nCo-authored-by: tomi <10324676+tomi@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ba008bcbb35e14e7b564250d330d3858c26abe2c"
+    },
+    {
+      "sha": "d672e4c1d809cdd508d41281d33b1295d9399e00",
+      "shortSha": "d672e4c",
+      "message": "fix(ai-builder): Don't use autoGenerate for UUID columns for WFB persistence migration (backport to release-candidate/2.11.x) (#26589)\n\nCo-authored-by: Michael Drury <me@michaeldrury.co.uk>\nCo-authored-by: Tomi Turtiainen <10324676+tomi@users.noreply.github.com>",
+      "author": "github-actions[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d672e4c1d809cdd508d41281d33b1295d9399e00"
+    },
+    {
+      "sha": "2034f5f731ae8fab105911d93f897240a93dd666",
+      "shortSha": "2034f5f",
+      "message": "fix: Log streaming config works with proxy (backport to release-candidate/2.11.x) (#26590)\n\nCo-authored-by: phyllis-noester <102315132+phyllis-noester@users.noreply.github.com>",
+      "author": "github-actions[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2034f5f731ae8fab105911d93f897240a93dd666"
+    },
+    {
+      "sha": "2481969032f79b9fe0f0d3cc6b508cd9ee1685ab",
+      "shortSha": "2481969",
+      "message": "fix(Form Node): Improve form rendering consistency (backport to release-candidate/2.11.x) (#26652)\n\nCo-authored-by: Dawid Myslak <dawid.myslak@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/2481969032f79b9fe0f0d3cc6b508cd9ee1685ab"
+    },
+    {
+      "sha": "c7afb3591acb434c4b72cfa1c08ab460451bbaf4",
+      "shortSha": "c7afb35",
+      "message": "ci: Ensure PNPM cache directory to avoid cache failure (backport to release-candidate/2.11.x) (#26677)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c7afb3591acb434c4b72cfa1c08ab460451bbaf4"
+    },
+    {
+      "sha": "54d8c65b522a1b2558398cce612cb67a39ecc57e",
+      "shortSha": "54d8c65",
+      "message": "feat: Implement additional checkbox confirmation for quick connect flow (backport to release-candidate/2.11.x) (#26686)\n\nCo-authored-by: Dimitri Lavrenük <20122620+dlavrenuek@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/54d8c65b522a1b2558398cce612cb67a39ecc57e"
+    },
+    {
+      "sha": "ab6791d2d975b7ae316207948ed0fc1b04cce077",
+      "shortSha": "ab6791d",
+      "message": "feat: Add option to hide credential overwrites (backport to release-candidate/2.11.x) (#26679)\n\nCo-authored-by: Jon <jonathan.bennetts@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ab6791d2d975b7ae316207948ed0fc1b04cce077"
+    },
+    {
+      "sha": "7ab53356d631dcd5b402a161e98557a154993455",
+      "shortSha": "7ab5335",
+      "message": "fix(Form Node): Improve custom CSS sanitization (backport to release-candidate/2.11.x) (#26666)\n\nCo-authored-by: Dawid Myslak <dawid.myslak@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/7ab53356d631dcd5b402a161e98557a154993455"
+    },
+    {
+      "sha": "847f64e664fd0f684614ffcccde53cd8a6d113f0",
+      "shortSha": "847f64e",
+      "message": ":rocket: Release 2.11.2 (#26752)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/847f64e664fd0f684614ffcccde53cd8a6d113f0"
+    }
+  ]
+}

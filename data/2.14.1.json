@@ -1,0 +1,71 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/301164536",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/301164536/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/301164536/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.14.1",
+    "id": 301164536,
+    "author": {
+      "login": "Matsuuu",
+      "id": 16068444,
+      "node_id": "MDQ6VXNlcjE2MDY4NDQ0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16068444?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Matsuuu",
+      "html_url": "https://github.com/Matsuuu",
+      "followers_url": "https://api.github.com/users/Matsuuu/followers",
+      "following_url": "https://api.github.com/users/Matsuuu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Matsuuu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Matsuuu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Matsuuu/subscriptions",
+      "organizations_url": "https://api.github.com/users/Matsuuu/orgs",
+      "repos_url": "https://api.github.com/users/Matsuuu/repos",
+      "events_url": "https://api.github.com/users/Matsuuu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Matsuuu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4R82f4",
+    "tag_name": "n8n@2.14.1",
+    "target_commitish": "release/2.14.1",
+    "name": "n8n@2.14.1",
+    "draft": false,
+    "immutable": false,
+    "prerelease": true,
+    "created_at": "2026-03-25T11:22:44Z",
+    "updated_at": "2026-03-25T11:53:47Z",
+    "published_at": "2026-03-25T11:53:47Z",
+    "assets": [],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.14.1",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.14.1",
+    "body": "## [2.14.1](https://github.com/n8n-io/n8n/compare/n8n@2.14.0...n8n@2.14.1) (2026-03-25)",
+    "previousTagName": "n8n@2.14.0"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.14.1](https://github.com/n8n-io/n8n/compare/n8n@2.14.0...n8n@2.14.1) (2026-03-25)",
+        "items": []
+      }
+    ],
+    "allPRs": [],
+    "allSHAs": []
+  },
+  "commits": [
+    {
+      "sha": "661e03eab744bc45f7c609c1f5c4907a6ab4af2b",
+      "shortSha": "661e03e",
+      "message": "chore: Bundle 2026-W9 (backport to release-candidate/2.14.x) (#27536)\n\nCo-authored-by: n8n-assistant[bot] <100856346+n8n-assistant[bot]@users.noreply.github.com>\nCo-authored-by: Matsu <matias.huhta@n8n.io>\nCo-authored-by: Dimitri Lavrenük <20122620+dlavrenuek@users.noreply.github.com>\nCo-authored-by: Charlie Kolb <charlie@n8n.io>\nCo-authored-by: RomanDavydchuk <roman.davydchuk@n8n.io>\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>\nCo-authored-by: Dawid Myslak <dawid.myslak@gmail.com>\nCo-authored-by: Svetoslav Dekov <svetoslav.dekov@n8n.io>\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>\nCo-authored-by: Guillaume Jacquart <jacquart.guillaume@gmail.com>\nCo-authored-by: Sandra Zollner <sandra.zollner@n8n.io>\nCo-authored-by: Milorad FIlipović <milorad@n8n.io>\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>\nCo-authored-by: Ricardo Espinoza <ricardo@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/661e03eab744bc45f7c609c1f5c4907a6ab4af2b"
+    },
+    {
+      "sha": "d6b55a332bce466f91022d1374b04a97b31bc2e0",
+      "shortSha": "d6b55a3",
+      "message": ":rocket: Release 2.14.1 (#27549)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/d6b55a332bce466f91022d1374b04a97b31bc2e0"
+    }
+  ]
+}
