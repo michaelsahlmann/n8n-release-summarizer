@@ -1,0 +1,429 @@
+{
+  "release": {
+    "url": "https://api.github.com/repos/n8n-io/n8n/releases/315009921",
+    "assets_url": "https://api.github.com/repos/n8n-io/n8n/releases/315009921/assets",
+    "upload_url": "https://uploads.github.com/repos/n8n-io/n8n/releases/315009921/assets{?name,label}",
+    "html_url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.18.5",
+    "id": 315009921,
+    "author": {
+      "login": "n8n-assistant[bot]",
+      "id": 100856346,
+      "node_id": "BOT_kgDOBgLyGg",
+      "avatar_url": "https://avatars.githubusercontent.com/in/177217?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/n8n-assistant%5Bbot%5D",
+      "html_url": "https://github.com/apps/n8n-assistant",
+      "followers_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/n8n-assistant%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOC4Q8Qs4SxquB",
+    "tag_name": "n8n@2.18.5",
+    "target_commitish": "release/2.18.5",
+    "name": "n8n@2.18.5",
+    "draft": false,
+    "immutable": false,
+    "prerelease": false,
+    "created_at": "2026-04-28T12:39:21Z",
+    "updated_at": "2026-04-29T05:17:20Z",
+    "published_at": "2026-04-29T05:15:21Z",
+    "assets": [
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/407955649",
+        "id": 407955649,
+        "node_id": "RA_kwDOC4Q8Qs4YUOjB",
+        "name": "sbom-source.cdx.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 7522124,
+        "digest": "sha256:c092ce3d68bfe9670b6db99b32ff9f38fa6f65e4fff3979695c3f560f80bec0d",
+        "download_count": 12,
+        "created_at": "2026-04-29T05:17:19Z",
+        "updated_at": "2026-04-29T05:17:20Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.18.5/sbom-source.cdx.json"
+      },
+      {
+        "url": "https://api.github.com/repos/n8n-io/n8n/releases/assets/407955648",
+        "id": 407955648,
+        "node_id": "RA_kwDOC4Q8Qs4YUOjA",
+        "name": "vex.openvex.json",
+        "label": "",
+        "uploader": {
+          "login": "github-actions[bot]",
+          "id": 41898282,
+          "node_id": "MDM6Qm90NDE4OTgyODI=",
+          "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+          "html_url": "https://github.com/apps/github-actions",
+          "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+          "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+          "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+          "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+          "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+          "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+          "type": "Bot",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "content_type": "application/json",
+        "state": "uploaded",
+        "size": 2708,
+        "digest": "sha256:a2b6a9444b21027742cf4b120f3b6e22d745c9d3a025d766635b6e2304ed41d7",
+        "download_count": 9,
+        "created_at": "2026-04-29T05:17:19Z",
+        "updated_at": "2026-04-29T05:17:19Z",
+        "browser_download_url": "https://github.com/n8n-io/n8n/releases/download/n8n%402.18.5/vex.openvex.json"
+      }
+    ],
+    "tarball_url": "https://api.github.com/repos/n8n-io/n8n/tarball/n8n@2.18.5",
+    "zipball_url": "https://api.github.com/repos/n8n-io/n8n/zipball/n8n@2.18.5",
+    "body": "## [2.18.5](https://github.com/n8n-io/n8n/compare/n8n@2.18.4...n8n@2.18.5) (2026-04-28)\n\n\n### Bug Fixes\n\n* **ai-builder:** Hide and reap intermediate AI-created workflows ([#29344](https://github.com/n8n-io/n8n/issues/29344)) ([1031603](https://github.com/n8n-io/n8n/commit/1031603b0b53a250eea0cf13910b800f534b0a97))\n* **editor:** Constrain InstanceAiView stacking context below sidebar ([#29335](https://github.com/n8n-io/n8n/issues/29335)) ([6508bce](https://github.com/n8n-io/n8n/commit/6508bce89b787d25aa599e85b7be805a6da1432d))\n* **editor:** Disable WF version menu only when all actions are unavailable ([#29326](https://github.com/n8n-io/n8n/issues/29326)) ([263f0b7](https://github.com/n8n-io/n8n/commit/263f0b723e0019d699ebff9fc81dfd27e0d2ebd5))\n* **editor:** Fix NDV not loading parameters panel if refreshed ([#28856](https://github.com/n8n-io/n8n/issues/28856)) ([b6ce410](https://github.com/n8n-io/n8n/commit/b6ce41023625653ec311a55f1a1af8c3a4e6a389))\n* No Credits state for n8n Connect badge ([#29380](https://github.com/n8n-io/n8n/issues/29380)) ([a53fbbf](https://github.com/n8n-io/n8n/commit/a53fbbfc41904bf3e743137f84518034bf77b672))\n\n\n### Features\n\n* Add warning when publishing workflow, if some nodes in it are using ai gateway credentials ([#29174](https://github.com/n8n-io/n8n/issues/29174)) ([acbf598](https://github.com/n8n-io/n8n/commit/acbf59815b91f0b59abb891a6c36a49511426703))\n* In the n8n Connect table on row click open execution related to that usage row ([#29195](https://github.com/n8n-io/n8n/issues/29195)) ([f9b6b58](https://github.com/n8n-io/n8n/commit/f9b6b580107ee80e3f52b5cceef37cbeea8c0861))\n* **OpenAI Node:** Use dynamic model selection for image edit and update analyze model filter ([#29330](https://github.com/n8n-io/n8n/issues/29330)) ([78c37ac](https://github.com/n8n-io/n8n/commit/78c37ac0efd610271c1f42dbcc744cdf66ae7383))",
+    "previousTagName": "n8n@2.19.0"
+  },
+  "parsed": {
+    "sections": [
+      {
+        "title": "[2.18.5](https://github.com/n8n-io/n8n/compare/n8n@2.18.4...n8n@2.18.5) (2026-04-28)",
+        "items": []
+      },
+      {
+        "title": "Bug Fixes",
+        "items": [
+          {
+            "prNumber": 29344,
+            "commitSha": "1031603",
+            "rawText": "**ai-builder:** Hide and reap intermediate AI-created workflows ([#29344](https://github.com/n8n-io/n8n/issues/29344)) ([1031603](https://github.com/n8n-io/n8n/commit/1031603b0b53a250eea0cf13910b800f534b0a97))"
+          },
+          {
+            "prNumber": 29335,
+            "commitSha": "6508bce",
+            "rawText": "**editor:** Constrain InstanceAiView stacking context below sidebar ([#29335](https://github.com/n8n-io/n8n/issues/29335)) ([6508bce](https://github.com/n8n-io/n8n/commit/6508bce89b787d25aa599e85b7be805a6da1432d))"
+          },
+          {
+            "prNumber": 29326,
+            "commitSha": "263f0b7",
+            "rawText": "**editor:** Disable WF version menu only when all actions are unavailable ([#29326](https://github.com/n8n-io/n8n/issues/29326)) ([263f0b7](https://github.com/n8n-io/n8n/commit/263f0b723e0019d699ebff9fc81dfd27e0d2ebd5))"
+          },
+          {
+            "prNumber": 28856,
+            "commitSha": "b6ce410",
+            "rawText": "**editor:** Fix NDV not loading parameters panel if refreshed ([#28856](https://github.com/n8n-io/n8n/issues/28856)) ([b6ce410](https://github.com/n8n-io/n8n/commit/b6ce41023625653ec311a55f1a1af8c3a4e6a389))"
+          },
+          {
+            "prNumber": 29380,
+            "commitSha": "a53fbbf",
+            "rawText": "No Credits state for n8n Connect badge ([#29380](https://github.com/n8n-io/n8n/issues/29380)) ([a53fbbf](https://github.com/n8n-io/n8n/commit/a53fbbfc41904bf3e743137f84518034bf77b672))"
+          }
+        ]
+      },
+      {
+        "title": "Features",
+        "items": [
+          {
+            "prNumber": 29174,
+            "commitSha": "acbf598",
+            "rawText": "Add warning when publishing workflow, if some nodes in it are using ai gateway credentials ([#29174](https://github.com/n8n-io/n8n/issues/29174)) ([acbf598](https://github.com/n8n-io/n8n/commit/acbf59815b91f0b59abb891a6c36a49511426703))"
+          },
+          {
+            "prNumber": 29195,
+            "commitSha": "f9b6b58",
+            "rawText": "In the n8n Connect table on row click open execution related to that usage row ([#29195](https://github.com/n8n-io/n8n/issues/29195)) ([f9b6b58](https://github.com/n8n-io/n8n/commit/f9b6b580107ee80e3f52b5cceef37cbeea8c0861))"
+          },
+          {
+            "prNumber": 29330,
+            "commitSha": "78c37ac",
+            "rawText": "**OpenAI Node:** Use dynamic model selection for image edit and update analyze model filter ([#29330](https://github.com/n8n-io/n8n/issues/29330)) ([78c37ac](https://github.com/n8n-io/n8n/commit/78c37ac0efd610271c1f42dbcc744cdf66ae7383))"
+          }
+        ]
+      }
+    ],
+    "allPRs": [
+      29344,
+      29335,
+      29326,
+      28856,
+      29380,
+      29174,
+      29195,
+      29330
+    ],
+    "allSHAs": [
+      "1031603",
+      "6508bce",
+      "263f0b7",
+      "b6ce410",
+      "a53fbbf",
+      "acbf598",
+      "f9b6b58",
+      "78c37ac"
+    ]
+  },
+  "commits": [
+    {
+      "sha": "1f5291fa5d362188c0dd5b643e03e9294bec668e",
+      "shortSha": "1f5291f",
+      "message": "refactor(core): Move instance AI user settings under actual user settings (no-changelog) (backport to release-candidate/2.18.x) (#28780)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1f5291fa5d362188c0dd5b643e03e9294bec668e"
+    },
+    {
+      "sha": "fc8b015b50c9c8353fe982592c130da32c5a8569",
+      "shortSha": "fc8b015",
+      "message": "fix(core): Generate title once there's enough user context (no-changelog) (backport to release-candidate/2.18.x) (#28789)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/fc8b015b50c9c8353fe982592c130da32c5a8569"
+    },
+    {
+      "sha": "5286afc58ce6ce342bd9429bfe7baaa2fe353779",
+      "shortSha": "5286afc",
+      "message": "feat(core): Include workflow names on instance AI confirmations (no-changelog) (backport to release-candidate/2.18.x) (#28792)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>\nCo-authored-by: Albert Alises <albert.alises@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/5286afc58ce6ce342bd9429bfe7baaa2fe353779"
+    },
+    {
+      "sha": "1a27bb32564c5b300eff9af6dc22093f1451414b",
+      "shortSha": "1a27bb3",
+      "message": "chore: Bundle 2.x (backport to release-candidate/2.18.x) (#28848)\n\nCo-authored-by: n8n-assistant[bot] <100856346+n8n-assistant[bot]@users.noreply.github.com>\nCo-authored-by: Matsu <matias.huhta@n8n.io>\nCo-authored-by: Dawid Myslak <dawid.myslak@gmail.com>\nCo-authored-by: Bernhard Wittmann <bernhard.wittmann@n8n.io>\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>\nCo-authored-by: Dimitri Lavrenük <20122620+dlavrenuek@users.noreply.github.com>\nCo-authored-by: Benjamin Schroth <68321970+schrothbn@users.noreply.github.com>\nCo-authored-by: Danny Martini <danny@n8n.io>\nCo-authored-by: RomanDavydchuk <roman.davydchuk@n8n.io>\nCo-authored-by: Sandra Zollner <sandra.zollner@n8n.io>\nCo-authored-by: Milorad FIlipović <milorad@n8n.io>\nCo-authored-by: Iván Ovejero <ivov.src@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1a27bb32564c5b300eff9af6dc22093f1451414b"
+    },
+    {
+      "sha": "ca0dc1625531e14e5714d2a421f7904f9de09f1e",
+      "shortSha": "ca0dc16",
+      "message": ":rocket: Release 2.18.1 (#28852)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ca0dc1625531e14e5714d2a421f7904f9de09f1e"
+    },
+    {
+      "sha": "eb70651b314141a8a39f17301411c1aa972b6e83",
+      "shortSha": "eb70651",
+      "message": "feat(MiniMax Node): Add standalone MiniMax vendor node (backport to release-candidate/2.18.x) (#28868)\n\nCo-authored-by: Dawid Myslak <dawid.myslak@gmail.com>\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/eb70651b314141a8a39f17301411c1aa972b6e83"
+    },
+    {
+      "sha": "51aa79b3f0476cc8e10df6ea375c28a990b53852",
+      "shortSha": "51aa79b",
+      "message": "fix(ai-builder): Validate merge node connections matches 'numberInputs' parameter (backport to release-candidate/2.18.x) (#28857)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/51aa79b3f0476cc8e10df6ea375c28a990b53852"
+    },
+    {
+      "sha": "089723159e8819fd071e0aafad012442b44f948c",
+      "shortSha": "0897231",
+      "message": "ci: Add explicit registry scope for @n8n packages in dist-tag workflow (no-changelog) (backport to release-candidate/2.18.x) (#28892)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>\nCo-authored-by: Claude Sonnet 4.6 <noreply@anthropic.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/089723159e8819fd071e0aafad012442b44f948c"
+    },
+    {
+      "sha": "f92946ce9a8cbcc1673e9397cceec924a2adcccf",
+      "shortSha": "f92946c",
+      "message": "ci: Use npm registry HTTP API for dist-tag promotion (no-changelog) (backport to release-candidate/2.18.x) (#28934)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>\nCo-authored-by: Claude Sonnet 4.6 <noreply@anthropic.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f92946ce9a8cbcc1673e9397cceec924a2adcccf"
+    },
+    {
+      "sha": "ddd2c45786676e6c01984364645b8d09014a76ef",
+      "shortSha": "ddd2c45",
+      "message": "feat(core): Make sub-agents aware of the current time on instance AI (no-changelog) (backport to release-candidate/2.18.x) (#28858)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/ddd2c45786676e6c01984364645b8d09014a76ef"
+    },
+    {
+      "sha": "c1ab423ab5aa6453744c2d1c2be8041848986b91",
+      "shortSha": "c1ab423",
+      "message": "fix(core):  Fixes user search functionality in ProjectSettings for pr… (backport to release-candidate/2.18.x) (#28948)\n\nCo-authored-by: Sandra Zollner <sandra.zollner@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/c1ab423ab5aa6453744c2d1c2be8041848986b91"
+    },
+    {
+      "sha": "5517cb82c6bf65d5e7ac076ea8aa7ace5d8de691",
+      "shortSha": "5517cb8",
+      "message": ":rocket: Release 2.18.2 (#28954)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/5517cb82c6bf65d5e7ac076ea8aa7ace5d8de691"
+    },
+    {
+      "sha": "3748e511045f9d9eb6ed512f1b56fa77d775cbc8",
+      "shortSha": "3748e51",
+      "message": "ci: Fix urlencoding in set-latest ci script (backport to release-candidate/2.18.x) (#28981)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/3748e511045f9d9eb6ed512f1b56fa77d775cbc8"
+    },
+    {
+      "sha": "474f20d7bdebfd9ccc7a2c6c9b64c88eaa18511d",
+      "shortSha": "474f20d",
+      "message": "chore: Add ai_gateway_credentials flag to nodes graph (backport to release-candidate/2.18.x) (#28999)\n\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/474f20d7bdebfd9ccc7a2c6c9b64c88eaa18511d"
+    },
+    {
+      "sha": "548f90d22258e5aff22b4fd08d7b8eb14ce57147",
+      "shortSha": "548f90d",
+      "message": "feat(Google Gemini Node): Gemini default models update (backport to release-candidate/2.18.x) (#28938)\n\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/548f90d22258e5aff22b4fd08d7b8eb14ce57147"
+    },
+    {
+      "sha": "f32cb56d1431428e69fb797f3524a2fda2dfa39b",
+      "shortSha": "f32cb56",
+      "message": ":rocket: Release 2.18.3 (#29037)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f32cb56d1431428e69fb797f3524a2fda2dfa39b"
+    },
+    {
+      "sha": "436274eabaceadf2f8b70d0bc739dc8c55aa5a8c",
+      "shortSha": "436274e",
+      "message": "fix: Disable \"Get 100 free OpenAI API credits\"  if aiGateway enabled in the license (backport to release-candidate/2.18.x) (#29057)\n\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/436274eabaceadf2f8b70d0bc739dc8c55aa5a8c"
+    },
+    {
+      "sha": "af8d464d61fbeb202683db90c80cabdcd4eb1a25",
+      "shortSha": "af8d464",
+      "message": "fix(editor): Address design feedback for favoriting (no-changelog) (backport to release-candidate/2.18.x) (#29064)\n\nCo-authored-by: Charlie Kolb <charlie@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/af8d464d61fbeb202683db90c80cabdcd4eb1a25"
+    },
+    {
+      "sha": "be3fa9356b6d9accefa25bdb8c7d7e6e91eba77e",
+      "shortSha": "be3fa93",
+      "message": "ci: Change token used for dist-tag updates (backport to release-candidate/2.18.x) (#29077)\n\nCo-authored-by: Matsu <huhta.matias@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/be3fa9356b6d9accefa25bdb8c7d7e6e91eba77e"
+    },
+    {
+      "sha": "88c531af1a0d638c35c5731aab0d616570434bda",
+      "shortSha": "88c531a",
+      "message": "fix(editor): Refresh wallet balance when usage refresh is clicked (backport to release-candidate/2.18.x) (#29080)\n\nCo-authored-by: Dawid Myslak <dawid.myslak@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/88c531af1a0d638c35c5731aab0d616570434bda"
+    },
+    {
+      "sha": "55eb71ba59cd3aad1d0c10db0369447d1e5e17e0",
+      "shortSha": "55eb71b",
+      "message": "fix(core): Improve title generation on instance AI threads (no-changelog) (backport to release-candidate/2.18.x) (#29110)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/55eb71ba59cd3aad1d0c10db0369447d1e5e17e0"
+    },
+    {
+      "sha": "7f1fcade9484688c326cf5c93b753eb898f2eb70",
+      "shortSha": "7f1fcad",
+      "message": "feat(editor): Move computer use toggle to chat sidebar (backport to release-candidate/2.18.x) (#29108)\n\nCo-authored-by: Elias Meire <elias@meire.dev>\nCo-authored-by: Dimitri Lavrenük <20122620+dlavrenuek@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/7f1fcade9484688c326cf5c93b753eb898f2eb70"
+    },
+    {
+      "sha": "57f56d26514012461c1d316a483021b0cca6ee3a",
+      "shortSha": "57f56d2",
+      "message": ":rocket: Release 2.18.4 (#29181)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/57f56d26514012461c1d316a483021b0cca6ee3a"
+    },
+    {
+      "sha": "f9b6b580107ee80e3f52b5cceef37cbeea8c0861",
+      "shortSha": "f9b6b58",
+      "message": "feat: In the n8n Connect table on row click open execution related to that usage row (backport to release-candidate/2.18.x) (#29195)\n\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>\nCo-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f9b6b580107ee80e3f52b5cceef37cbeea8c0861"
+    },
+    {
+      "sha": "acbf59815b91f0b59abb891a6c36a49511426703",
+      "shortSha": "acbf598",
+      "message": "feat: Add warning when publishing workflow, if some nodes in it are using ai gateway credentials (backport to release-candidate/2.18.x) (#29174)\n\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/acbf59815b91f0b59abb891a6c36a49511426703"
+    },
+    {
+      "sha": "f398f537090b76d998fbc4eb180ca96bd5678e35",
+      "shortSha": "f398f53",
+      "message": "fix: Stop persisting client id in session storage to fix duplicate tab problem (no-changelog) (backport to release-candidate/2.18.x) (#29285)\n\nCo-authored-by: Daria <daria.staferova@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/f398f537090b76d998fbc4eb180ca96bd5678e35"
+    },
+    {
+      "sha": "6508bce89b787d25aa599e85b7be805a6da1432d",
+      "shortSha": "6508bce",
+      "message": "fix(editor): Constrain InstanceAiView stacking context below sidebar (backport to release-candidate/2.18.x) (#29335)\n\nCo-authored-by: Charlie Kolb <charlie@n8n.io>\nCo-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/6508bce89b787d25aa599e85b7be805a6da1432d"
+    },
+    {
+      "sha": "263f0b723e0019d699ebff9fc81dfd27e0d2ebd5",
+      "shortSha": "263f0b7",
+      "message": "fix(editor): Disable WF version menu only when all actions are unavailable (backport to release-candidate/2.18.x) (#29326)\n\nCo-authored-by: Daria <daria.staferova@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/263f0b723e0019d699ebff9fc81dfd27e0d2ebd5"
+    },
+    {
+      "sha": "1031603b0b53a250eea0cf13910b800f534b0a97",
+      "shortSha": "1031603",
+      "message": "fix(ai-builder): Hide and reap intermediate AI-created workflows (backport to release-candidate/2.18.x) (#29344)\n\nCo-authored-by: Albert Alises <albert.alises@gmail.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/1031603b0b53a250eea0cf13910b800f534b0a97"
+    },
+    {
+      "sha": "78c37ac0efd610271c1f42dbcc744cdf66ae7383",
+      "shortSha": "78c37ac",
+      "message": "feat(OpenAI Node): Use dynamic model selection for image edit and update analyze model filter (backport to release-candidate/2.18.x) (#29330)\n\nCo-authored-by: Alexander Gekov <40495748+alexander-gekov@users.noreply.github.com>\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/78c37ac0efd610271c1f42dbcc744cdf66ae7383"
+    },
+    {
+      "sha": "b6ce41023625653ec311a55f1a1af8c3a4e6a389",
+      "shortSha": "b6ce410",
+      "message": "fix(editor): Fix NDV not loading parameters panel if refreshed (backport to release-candidate/2.18.x) (#28856)\n\nCo-authored-by: Jaakko Husso <jaakko@n8n.io>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/b6ce41023625653ec311a55f1a1af8c3a4e6a389"
+    },
+    {
+      "sha": "a53fbbfc41904bf3e743137f84518034bf77b672",
+      "shortSha": "a53fbbf",
+      "message": "fix: No Credits state for n8n Connect badge (backport to release-candidate/2.18.x) (#29380)\n\nCo-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/a53fbbfc41904bf3e743137f84518034bf77b672"
+    },
+    {
+      "sha": "963865a1c200856df23ce804cfd08790a9702ba3",
+      "shortSha": "963865a",
+      "message": ":rocket: Release 2.18.5 (#29401)\n\nCo-authored-by: Matsuuu <16068444+Matsuuu@users.noreply.github.com>",
+      "author": "n8n-assistant[bot]",
+      "html_url": "https://github.com/n8n-io/n8n/commit/963865a1c200856df23ce804cfd08790a9702ba3"
+    }
+  ]
+}

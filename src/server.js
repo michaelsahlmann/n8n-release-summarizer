@@ -7,6 +7,7 @@ import { listLocalReleases } from './localReleases.js';
 import { runPipeline } from './pipeline.js';
 import { generateSocialSummary } from './socialSummarize.js';
 import { explainItem } from './explainItem.js';
+import { answerReleaseChat, validateReleaseChatRequest } from './releaseChat.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -191,11 +192,34 @@ app.post('/api/explain-item', async (req, res) => {
   }
 });
 
+// --- POST /api/release-chat ---
+// Answers follow-up questions about a selected release item.
+app.post('/api/release-chat', async (req, res) => {
+  const validation = validateReleaseChatRequest(req.body ?? {});
+  if (validation.error) {
+    return res.status(400).json({ error: validation.error });
+  }
+
+  try {
+    const answer = await answerReleaseChat(validation.value);
+    res.json({ answer });
+  } catch (err) {
+    if (err.statusCode) {
+      return res.status(err.statusCode).json({ error: err.message });
+    }
+    if (/_API_KEY/.test(err.message)) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(502).json({ error: `AI API error: ${err.message}` });
+  }
+});
+
 // --- POST /api/social-summary ---
-// Body: { versions: string[], provider: string, model: string }
+// Body: { versions: string[], provider: string, model: string, userDirection?: string }
 // Reads md files and calls the selected provider to generate a social summary
 app.post('/api/social-summary', async (req, res) => {
-  const { versions, provider, model } = req.body ?? {};
+  const { versions, provider, model, userDirection } = req.body ?? {};
+  const trimmedUserDirection = typeof userDirection === 'string' ? userDirection.trim() : '';
 
   if (!Array.isArray(versions) || versions.length === 0) {
     return res.status(400).json({ error: 'versions must be a non-empty array' });
@@ -230,7 +254,13 @@ app.post('/api/social-summary', async (req, res) => {
   }
 
   try {
-    const summary = await generateSocialSummary(mdContents, versions, provider, model);
+    const summary = await generateSocialSummary(
+      mdContents,
+      versions,
+      provider,
+      model,
+      trimmedUserDirection,
+    );
     res.json({ summary });
   } catch (err) {
     if (/_API_KEY/.test(err.message)) {

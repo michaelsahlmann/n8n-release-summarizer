@@ -4,10 +4,19 @@ const state = {
   provider: "",
   models: [],
   model: "",
+  userDirection: "",
   summary: "",
   summaryMeta: null,
   fetchLog: [],
   fetchResult: [],
+  modelPicker: {
+    open: false,
+    search: "",
+    expandedProvider: "",
+    loadingProvider: "",
+    modelsByProvider: {},
+    errors: {},
+  },
   loading: {
     releases: false,
     models: false,
@@ -26,7 +35,11 @@ const state = {
     data: null,
     loading: false,
     error: "",
-    explanations: {},
+    chats: {},
+    chat: {
+      open: false,
+      activeKey: null,
+    },
   },
 };
 
@@ -36,6 +49,7 @@ const elements = {
   selectionCount: document.getElementById("selection-count"),
   providerSelect: document.getElementById("provider-select"),
   modelSelect: document.getElementById("model-select"),
+  summaryDirection: document.getElementById("summary-direction"),
   modelStatus: document.getElementById("model-status"),
   generateButton: document.getElementById("generate-btn"),
   generateStatus: document.getElementById("generate-status"),
@@ -56,9 +70,30 @@ const elements = {
   modalLoading: document.querySelector("#release-modal .modal-loading"),
   modalError: document.querySelector("#release-modal .modal-error"),
   modalSections: document.querySelector("#release-modal .modal-sections"),
+  releaseChatPanel: document.getElementById("release-chat-panel"),
+  releaseChatTitle: document.getElementById("release-chat-title"),
+  releaseChatItem: document.querySelector("#release-chat-panel .release-chat-item"),
+  releaseChatCloseButton: document.querySelector("#release-chat-panel .release-chat-close-btn"),
+  chatModelPicker: document.getElementById("chat-model-picker"),
+  chatModelPickerButton: document.getElementById("chat-model-picker-btn"),
+  chatModelPickerLabel: document.getElementById("chat-model-picker-label"),
+  chatModelPickerMenu: document.getElementById("chat-model-picker-menu"),
+  chatModelSearch: document.getElementById("chat-model-search"),
+  chatModelOptions: document.getElementById("chat-model-options"),
+  releaseChatStatus: document.getElementById("release-chat-status"),
+  releaseChatMessages: document.getElementById("release-chat-messages"),
+  releaseChatForm: document.getElementById("release-chat-form"),
+  releaseChatInput: document.getElementById("release-chat-input"),
+  releaseChatSend: document.getElementById("release-chat-send"),
 };
 
 let copyResetTimer = null;
+
+const AI_PROVIDER_OPTIONS = [
+  { id: "anthropic", label: "Anthropic" },
+  { id: "openai", label: "OpenAI" },
+  { id: "gemini", label: "Gemini" },
+];
 
 function escapeHtml(value) {
   return value
@@ -174,9 +209,7 @@ function renderReleases() {
   elements.releaseList.innerHTML = markup;
 }
 
-function renderModels() {
-  const select = elements.modelSelect;
-
+function renderModelSelect(select) {
   if (!state.provider) {
     select.innerHTML = '<option value="">Select a provider first</option>';
     select.disabled = true;
@@ -208,6 +241,114 @@ function renderModels() {
     })
     .join("");
   select.disabled = false;
+}
+
+function renderModels() {
+  elements.providerSelect.value = state.provider;
+  renderModelSelect(elements.modelSelect);
+  renderModelPicker();
+}
+
+function getProviderLabel(provider) {
+  return AI_PROVIDER_OPTIONS.find((option) => option.id === provider)?.label || provider;
+}
+
+function getActiveModelLabel() {
+  if (!state.provider || !state.model) {
+    return "Select model";
+  }
+
+  return state.model;
+}
+
+function getPickerModels(provider) {
+  if (provider === state.provider && state.models.length > 0) {
+    state.modelPicker.modelsByProvider[provider] = state.models;
+  }
+
+  return state.modelPicker.modelsByProvider[provider] || [];
+}
+
+function renderModelPicker() {
+  if (!elements.chatModelPickerButton) {
+    return;
+  }
+
+  const needsModel = state.modal.chat.open && !state.modelPicker.open && (!state.provider || !state.model);
+  elements.chatModelPickerLabel.textContent = getActiveModelLabel();
+  elements.chatModelPickerButton.setAttribute("aria-expanded", String(state.modelPicker.open));
+  elements.chatModelPickerButton.classList.toggle("has-selection", Boolean(state.provider && state.model));
+  elements.chatModelPickerButton.classList.toggle("needs-selection", needsModel);
+  elements.chatModelPickerMenu.hidden = !state.modelPicker.open;
+
+  if (document.activeElement !== elements.chatModelSearch) {
+    elements.chatModelSearch.value = state.modelPicker.search;
+  }
+
+  renderModelPickerOptions();
+}
+
+function renderModelPickerOptions() {
+  const search = state.modelPicker.search.trim().toLowerCase();
+  const groups = AI_PROVIDER_OPTIONS.map((provider) => {
+    const isExpanded = state.modelPicker.expandedProvider === provider.id || Boolean(search);
+    const isLoading = state.modelPicker.loadingProvider === provider.id;
+    const error = state.modelPicker.errors[provider.id] || "";
+    const models = getPickerModels(provider.id);
+    const matchingModels = search
+      ? models.filter((modelName) => modelName.toLowerCase().includes(search))
+      : models;
+
+    let body = "";
+    if (isExpanded) {
+      if (isLoading) {
+        body = `<div class="chat-model-row chat-model-row-muted"><span class="inline-loader" aria-hidden="true"></span><span>Loading models...</span></div>`;
+      } else if (error) {
+        body = `<div class="chat-model-row chat-model-row-error">${escapeHtml(error)}</div>`;
+      } else if (models.length === 0) {
+        body = `<div class="chat-model-row chat-model-row-muted">No models loaded yet.</div>`;
+      } else if (matchingModels.length === 0) {
+        body = `<div class="chat-model-row chat-model-row-muted">No matching models.</div>`;
+      } else {
+        body = matchingModels
+          .map((modelName) => {
+            const isSelected = provider.id === state.provider && modelName === state.model;
+            return `
+              <button
+                class="chat-model-option${isSelected ? " is-selected" : ""}"
+                type="button"
+                role="menuitemradio"
+                aria-checked="${isSelected}"
+                data-provider="${provider.id}"
+                data-model="${escapeHtml(modelName)}"
+              >
+                <span class="chat-model-check" aria-hidden="true">${isSelected ? "&#10003;" : ""}</span>
+                <span class="chat-model-name">${escapeHtml(modelName)}</span>
+              </button>
+            `;
+          })
+          .join("");
+      }
+    }
+
+    return `
+      <div class="chat-model-provider">
+        <button
+          class="chat-model-provider-btn${isExpanded ? " is-expanded" : ""}"
+          type="button"
+          data-provider-toggle="${provider.id}"
+          aria-expanded="${isExpanded}"
+        >
+          <span class="chat-model-provider-chevron" aria-hidden="true"></span>
+          <span>${provider.label}</span>
+          ${isLoading ? '<span class="chat-model-provider-state">Loading</span>' : ""}
+        </button>
+        ${body ? `<div class="chat-model-provider-body">${body}</div>` : ""}
+      </div>
+    `;
+  }).join("");
+
+  elements.chatModelOptions.innerHTML = groups;
 }
 
 function renderSummary() {
@@ -402,6 +543,8 @@ async function loadModels(provider) {
 
     state.models = Array.isArray(data.models) ? data.models : [];
     state.model = state.models[0] || "";
+    state.modelPicker.modelsByProvider[provider] = state.models;
+    state.modelPicker.errors[provider] = "";
 
     if (state.models.length === 0) {
       setStatus(elements.modelStatus, "No models were returned for this provider.", "info");
@@ -416,12 +559,127 @@ async function loadModels(provider) {
     state.errors.models = error.message || "Unable to load models";
     state.models = [];
     state.model = "";
+    state.modelPicker.errors[provider] = state.errors.models;
     setStatus(elements.modelStatus, state.errors.models, "error");
   } finally {
     state.loading.models = false;
     renderModels();
     updateGenerateAvailability();
+    renderChat();
+    maybeStartPendingChatExplanation();
   }
+}
+
+async function loadPickerProviderModels(provider) {
+  if (!provider || state.modelPicker.loadingProvider === provider) {
+    return;
+  }
+
+  if (getPickerModels(provider).length > 0) {
+    renderModelPicker();
+    return;
+  }
+
+  state.modelPicker.loadingProvider = provider;
+  state.modelPicker.errors[provider] = "";
+  renderModelPicker();
+
+  try {
+    const response = await fetch(`/api/models?provider=${encodeURIComponent(provider)}`);
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to load models");
+    }
+
+    state.modelPicker.modelsByProvider[provider] = Array.isArray(data.models) ? data.models : [];
+  } catch (error) {
+    state.modelPicker.errors[provider] = error.message || "Unable to load models";
+  } finally {
+    state.modelPicker.loadingProvider = "";
+    renderModelPicker();
+  }
+}
+
+async function selectProvider(provider) {
+  state.provider = provider;
+  state.errors.models = "";
+
+  if (!provider) {
+    state.models = [];
+    state.model = "";
+    renderModels();
+    renderChat();
+    setStatus(elements.modelStatus, "", "");
+    updateGenerateAvailability();
+    return;
+  }
+
+  await loadModels(provider);
+}
+
+function selectModel(model) {
+  state.model = model;
+  if (state.provider && state.models.length > 0) {
+    state.modelPicker.modelsByProvider[state.provider] = state.models;
+  }
+  renderModels();
+  renderChat();
+  updateGenerateAvailability();
+  maybeStartPendingChatExplanation();
+}
+
+function openModelPicker() {
+  state.modelPicker.open = true;
+  if (!state.modelPicker.expandedProvider) {
+    state.modelPicker.expandedProvider = state.provider || "gemini";
+  }
+  renderModelPicker();
+  window.setTimeout(() => elements.chatModelSearch.focus(), 0);
+  void loadPickerProviderModels(state.modelPicker.expandedProvider);
+}
+
+function closeModelPicker() {
+  state.modelPicker.open = false;
+  renderModelPicker();
+}
+
+function toggleModelPicker() {
+  if (state.modelPicker.open) {
+    closeModelPicker();
+  } else {
+    openModelPicker();
+  }
+}
+
+function togglePickerProvider(provider) {
+  if (state.modelPicker.expandedProvider === provider) {
+    state.modelPicker.expandedProvider = "";
+    renderModelPicker();
+    return;
+  }
+
+  state.modelPicker.expandedProvider = provider;
+  renderModelPicker();
+  void loadPickerProviderModels(provider);
+}
+
+function selectChatModel(provider, model) {
+  const models = getPickerModels(provider);
+  state.provider = provider;
+  state.models = models.length > 0 ? models : [model];
+  state.model = model;
+  state.errors.models = "";
+  setStatus(
+    elements.modelStatus,
+    `${getProviderLabel(provider)} model selected from the chat picker.`,
+    "success",
+  );
+  closeModelPicker();
+  renderModels();
+  renderChat();
+  updateGenerateAvailability();
+  maybeStartPendingChatExplanation();
 }
 
 async function handleGenerate() {
@@ -443,6 +701,7 @@ async function handleGenerate() {
   updateGenerateAvailability();
 
   try {
+    const userDirection = state.userDirection.trim();
     const response = await fetch("/api/social-summary", {
       method: "POST",
       headers: {
@@ -452,6 +711,7 @@ async function handleGenerate() {
         versions,
         provider: state.provider,
         model: state.model,
+        userDirection,
       }),
     });
     const data = await response.json();
@@ -583,32 +843,321 @@ elements.releaseList.addEventListener("change", (event) => {
 });
 
 elements.providerSelect.addEventListener("change", async (event) => {
-  const provider = event.target.value;
-  state.provider = provider;
-  state.errors.models = "";
-
-  if (!provider) {
-    state.models = [];
-    state.model = "";
-    renderModels();
-    setStatus(elements.modelStatus, "", "");
-    updateGenerateAvailability();
-    return;
-  }
-
-  await loadModels(provider);
+  await selectProvider(event.target.value);
 });
 
 elements.modelSelect.addEventListener("change", (event) => {
-  state.model = event.target.value;
-  updateGenerateAvailability();
+  selectModel(event.target.value);
+});
+
+elements.summaryDirection.addEventListener("input", (event) => {
+  state.userDirection = event.target.value;
 });
 
 elements.generateButton.addEventListener("click", handleGenerate);
 elements.fetchButton.addEventListener("click", handleFetch);
 elements.copyButton.addEventListener("click", handleCopy);
+elements.releaseChatCloseButton.addEventListener("click", closeReleaseChat);
+elements.chatModelPickerButton.addEventListener("click", (event) => {
+  event.stopPropagation();
+  toggleModelPicker();
+});
+elements.chatModelPickerMenu.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+elements.chatModelSearch.addEventListener("input", (event) => {
+  state.modelPicker.search = event.target.value;
+  renderModelPickerOptions();
+});
+elements.chatModelOptions.addEventListener("click", (event) => {
+  event.stopPropagation();
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+
+  const providerToggle = target.closest("[data-provider-toggle]");
+  if (providerToggle) {
+    togglePickerProvider(providerToggle.dataset.providerToggle);
+    return;
+  }
+
+  const option = target.closest("[data-provider][data-model]");
+  if (option) {
+    selectChatModel(option.dataset.provider, option.dataset.model);
+  }
+});
+elements.releaseChatForm.addEventListener("submit", handleChatSubmit);
+elements.releaseChatInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    elements.releaseChatForm.requestSubmit();
+  }
+});
+document.addEventListener("click", (event) => {
+  if (!state.modelPicker.open) return;
+  const target = event.target;
+  if (target instanceof Element && elements.chatModelPicker.contains(target)) {
+    return;
+  }
+
+  closeModelPicker();
+});
 
 // --- Modal ---
+
+function getChatKey(prNumber, commitSha) {
+  return `${prNumber || "no-pr"}-${commitSha || "no-sha"}`;
+}
+
+function getActiveChat() {
+  const key = state.modal.chat.activeKey;
+  return key ? state.modal.chats[key] : null;
+}
+
+function findModalItemForChat(record) {
+  if (!record) return null;
+  return [...elements.modalSections.querySelectorAll(".modal-item")].find((item) => {
+    const pr = item.dataset.pr ? Number.parseInt(item.dataset.pr, 10) : null;
+    const sha = item.dataset.sha || null;
+    return pr === record.prNumber && sha === record.commitSha;
+  });
+}
+
+function setChatPanelOpen(isOpen) {
+  state.modal.chat.open = isOpen;
+  elements.releaseChatPanel.hidden = !isOpen;
+  elements.modal.dataset.chatOpen = isOpen ? "true" : "false";
+}
+
+function updateActiveChatItemHighlight() {
+  const activeKey = state.modal.chat.open ? state.modal.chat.activeKey : null;
+  elements.modalSections.querySelectorAll(".modal-item").forEach((item) => {
+    const pr = item.dataset.pr ? Number.parseInt(item.dataset.pr, 10) : null;
+    const sha = item.dataset.sha || null;
+    item.classList.toggle("is-chat-active", activeKey === getChatKey(pr, sha));
+  });
+}
+
+function renderChatMessage(message) {
+  const isAssistant = message.role === "assistant";
+  return `
+    <div class="release-chat-message release-chat-message-${isAssistant ? "assistant" : "user"}">
+      <div class="release-chat-message-label">${isAssistant ? "AI" : "You"}</div>
+      <div class="release-chat-message-body">${escapeHtml(message.content)}</div>
+    </div>
+  `;
+}
+
+function renderChatMessages(record) {
+  if (!record) {
+    elements.releaseChatMessages.innerHTML = "";
+    return;
+  }
+
+  const messages = record.messages.map((message) => renderChatMessage(message));
+
+  if (record.loading) {
+    messages.push(`
+      <div class="release-chat-message release-chat-message-assistant">
+        <div class="release-chat-message-label">AI</div>
+        <div class="release-chat-message-body release-chat-loading">
+          <span class="inline-loader" aria-hidden="true"></span>
+          <span>Thinking...</span>
+        </div>
+      </div>
+    `);
+  }
+
+  if (messages.length === 0) {
+    const emptyText = record.error
+      ? "The first explanation could not be generated."
+      : state.provider && state.model
+      ? "Preparing the first explanation..."
+      : "Choose a provider and model to start.";
+    elements.releaseChatMessages.innerHTML = `<div class="release-chat-empty">${emptyText}</div>`;
+    return;
+  }
+
+  elements.releaseChatMessages.innerHTML = messages.join("");
+}
+
+function scrollChatToBottom() {
+  elements.releaseChatMessages.scrollTop = elements.releaseChatMessages.scrollHeight;
+}
+
+function renderChat() {
+  renderModels();
+
+  if (!state.modal.chat.open) {
+    elements.releaseChatPanel.hidden = true;
+    elements.modal.dataset.chatOpen = "false";
+    updateActiveChatItemHighlight();
+    return;
+  }
+
+  elements.releaseChatPanel.hidden = false;
+  elements.modal.dataset.chatOpen = "true";
+
+  const record = getActiveChat();
+  if (!record) {
+    elements.releaseChatTitle.textContent = "Ask about this change";
+    elements.releaseChatItem.textContent = "";
+    renderChatMessages(null);
+    setStatus(elements.releaseChatStatus, "", "");
+    elements.releaseChatInput.disabled = true;
+    elements.releaseChatSend.disabled = true;
+    return;
+  }
+
+  elements.releaseChatTitle.textContent = "Ask about this change";
+  elements.releaseChatItem.textContent = [
+    record.component,
+    record.prNumber ? `PR #${record.prNumber}` : "",
+    record.commitSha || "",
+  ].filter(Boolean).join(" · ") || record.description;
+
+  renderChatMessages(record);
+
+  if (state.loading.models) {
+    setStatus(elements.releaseChatStatus, "Loading models...", "loading");
+  } else if (state.errors.models) {
+    setStatus(elements.releaseChatStatus, state.errors.models, "error");
+  } else if (!state.provider || !state.model) {
+    setStatus(elements.releaseChatStatus, "", "");
+  } else if (record.error) {
+    setStatus(elements.releaseChatStatus, record.error, "error");
+  } else {
+    setStatus(elements.releaseChatStatus, "", "");
+  }
+
+  const inputDisabled = record.loading || !state.provider || !state.model;
+  elements.releaseChatInput.disabled = inputDisabled;
+  elements.releaseChatSend.disabled = inputDisabled;
+  elements.releaseChatForm.setAttribute("aria-busy", record.loading ? "true" : "false");
+  setButtonLoading(elements.releaseChatSend, record.loading);
+  updateActiveChatItemHighlight();
+}
+
+async function startInitialExplanation(record) {
+  if (!record || record.loading || !record.pendingInitial || !state.provider || !state.model) {
+    return;
+  }
+
+  record.pendingInitial = false;
+  record.loading = true;
+  record.error = "";
+
+  const button = findModalItemForChat(record)?.querySelector(".modal-explain-btn");
+  if (button) setButtonLoading(button, true);
+  renderChat();
+
+  try {
+    const res = await fetch("/api/explain-item", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        version: state.modal.version,
+        prNumber: record.prNumber || null,
+        commitSha: record.commitSha || null,
+        provider: state.provider,
+        model: state.model,
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to generate explanation");
+
+    record.messages = [{ role: "assistant", content: data.explanation || "" }];
+  } catch (err) {
+    record.error = err.message || "Failed to generate explanation";
+    record.pendingInitial = true;
+  } finally {
+    record.loading = false;
+    if (button) setButtonLoading(button, false);
+    renderChat();
+    scrollChatToBottom();
+  }
+}
+
+function maybeStartPendingChatExplanation() {
+  const record = getActiveChat();
+  if (record?.pendingInitial) {
+    void startInitialExplanation(record);
+  }
+}
+
+function openReleaseChatForItem(prNumber, commitSha, itemEl) {
+  const key = getChatKey(prNumber, commitSha);
+  if (!state.modal.chats[key]) {
+    state.modal.chats[key] = {
+      prNumber,
+      commitSha,
+      component: itemEl.dataset.component || "",
+      description: itemEl.dataset.description || "Selected change",
+      messages: [],
+      pendingInitial: true,
+      loading: false,
+      error: "",
+    };
+  }
+
+  state.modal.chat.activeKey = key;
+  setChatPanelOpen(true);
+  renderChat();
+  maybeStartPendingChatExplanation();
+}
+
+function closeReleaseChat() {
+  setChatPanelOpen(false);
+  state.modal.chat.activeKey = null;
+  state.modelPicker.open = false;
+  renderChat();
+}
+
+async function handleChatSubmit(event) {
+  event.preventDefault();
+
+  const record = getActiveChat();
+  if (!record || record.loading) return;
+
+  if (!state.provider || !state.model) {
+    setStatus(elements.releaseChatStatus, "Choose a provider and model first.", "info");
+    return;
+  }
+
+  const question = elements.releaseChatInput.value.trim();
+  if (!question) return;
+
+  record.messages.push({ role: "user", content: question });
+  record.error = "";
+  record.loading = true;
+  elements.releaseChatInput.value = "";
+  renderChat();
+  scrollChatToBottom();
+
+  try {
+    const res = await fetch("/api/release-chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        version: state.modal.version,
+        prNumber: record.prNumber || null,
+        commitSha: record.commitSha || null,
+        provider: state.provider,
+        model: state.model,
+        messages: record.messages.slice(-20),
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to answer question");
+
+    record.messages.push({ role: "assistant", content: data.answer || "" });
+  } catch (err) {
+    record.error = err.message || "Failed to answer question";
+  } finally {
+    record.loading = false;
+    renderChat();
+    scrollChatToBottom();
+  }
+}
 
 function renderModalItem(item) {
   const prUrl = item.prNumber ? `https://github.com/n8n-io/n8n/issues/${item.prNumber}` : null;
@@ -618,7 +1167,13 @@ function renderModalItem(item) {
     : "";
 
   return `
-    <div class="modal-item" data-pr="${item.prNumber || ""}" data-sha="${item.commitSha || ""}">
+    <div
+      class="modal-item"
+      data-pr="${item.prNumber || ""}"
+      data-sha="${item.commitSha || ""}"
+      data-component="${escapeHtml(item.component || "")}"
+      data-description="${escapeHtml(item.description)}"
+    >
       <div class="modal-item-header">
         ${componentHtml}
         <span class="modal-item-description">${escapeHtml(item.description)}</span>
@@ -631,7 +1186,6 @@ function renderModalItem(item) {
           <span class="button-label">AI Explain</span>
         </button>
       </div>
-      <div class="modal-item-explanation" hidden></div>
     </div>
   `;
 }
@@ -704,10 +1258,17 @@ async function openModal(version) {
   state.modal.data = null;
   state.modal.loading = true;
   state.modal.error = "";
-  state.modal.explanations = {};
+  state.modal.chats = {};
+  state.modal.chat = {
+    open: false,
+    activeKey: null,
+  };
+  state.modelPicker.open = false;
+  state.modelPicker.search = "";
 
   elements.modal.hidden = false;
   document.body.style.overflow = "hidden";
+  renderChat();
   renderModal();
 
   try {
@@ -725,57 +1286,16 @@ async function openModal(version) {
 
 function closeModal() {
   state.modal.open = false;
+  state.modal.chats = {};
+  state.modal.chat = {
+    open: false,
+    activeKey: null,
+  };
+  state.modelPicker.open = false;
+  state.modelPicker.search = "";
   elements.modal.hidden = true;
   document.body.style.overflow = "";
-}
-
-async function handleExplainItem(prNumber, commitSha, button, itemEl) {
-  const key = `${prNumber}-${commitSha}`;
-  const explanationEl = itemEl.querySelector(".modal-item-explanation");
-
-  // Toggle visibility if already explained
-  if (state.modal.explanations[key]?.text) {
-    explanationEl.hidden = !explanationEl.hidden;
-    return;
-  }
-
-  // Check that provider/model are selected
-  if (!state.provider || !state.model) {
-    explanationEl.hidden = false;
-    explanationEl.textContent = "Select a provider and model in the Summary Studio panel first.";
-    explanationEl.dataset.state = "info";
-    return;
-  }
-
-  setButtonLoading(button, true);
-  explanationEl.hidden = false;
-  explanationEl.textContent = "Generating explanation...";
-  explanationEl.dataset.state = "loading";
-
-  try {
-    const res = await fetch("/api/explain-item", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        version: state.modal.version,
-        prNumber: prNumber || null,
-        commitSha: commitSha || null,
-        provider: state.provider,
-        model: state.model,
-      }),
-    });
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || "Failed to generate explanation");
-
-    state.modal.explanations[key] = { text: data.explanation };
-    explanationEl.textContent = data.explanation;
-    explanationEl.dataset.state = "success";
-  } catch (err) {
-    explanationEl.textContent = err.message;
-    explanationEl.dataset.state = "error";
-  } finally {
-    setButtonLoading(button, false);
-  }
+  renderChat();
 }
 
 // Open the release modal when any non-checkbox part of a row is clicked
@@ -804,6 +1324,11 @@ elements.modal.addEventListener("click", (event) => {
 
 // Close modal on Escape key
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.modelPicker.open) {
+    closeModelPicker();
+    return;
+  }
+
   if (event.key === "Escape" && state.modal.open) {
     closeModal();
   }
@@ -828,7 +1353,7 @@ elements.modalSections.addEventListener("click", (event) => {
   const item = btn.closest(".modal-item");
   const pr = item.dataset.pr ? parseInt(item.dataset.pr, 10) : null;
   const sha = item.dataset.sha || null;
-  handleExplainItem(pr, sha, btn, item);
+  openReleaseChatForItem(pr, sha, item);
 });
 
 renderSelectionCount();
