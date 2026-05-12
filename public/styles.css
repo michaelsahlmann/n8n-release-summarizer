@@ -100,6 +100,14 @@ code {
   margin-bottom: 1.1rem;
 }
 
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
 .hero-kicker,
 .panel-kicker {
   margin: 0 0 0.3rem;
@@ -108,6 +116,26 @@ code {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent-deep);
+}
+
+.hero-top .hero-kicker {
+  margin-bottom: 0;
+}
+
+.settings-trigger {
+  min-height: 2.25rem;
+  padding: 0.42rem 0.75rem;
+  font-size: 0.84rem;
+}
+
+.settings-trigger-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .hero-copy {
@@ -370,6 +398,10 @@ code {
     opacity var(--ease);
 }
 
+.status-message[hidden] {
+  display: none;
+}
+
 .status-message[data-state="info"],
 .status-message[data-state="loading"] {
   color: var(--info);
@@ -387,6 +419,25 @@ code {
   color: var(--error);
   border-color: rgba(182, 66, 52, 0.18);
   background: var(--error-soft);
+}
+
+.status-action-btn {
+  margin-left: 0.45rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.status-action-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .control-grid {
@@ -414,6 +465,7 @@ code {
 }
 
 input[type="number"],
+input[type="password"],
 select,
 textarea {
   width: 100%;
@@ -430,6 +482,7 @@ textarea {
 }
 
 input[type="number"]:focus-visible,
+input[type="password"]:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 .button:focus-visible {
@@ -440,7 +493,8 @@ textarea:focus-visible,
 
 select:disabled,
 textarea:disabled,
-input[type="number"]:disabled {
+input[type="number"]:disabled,
+input[type="password"]:disabled {
   color: var(--text-soft);
   background: rgba(246, 239, 232, 0.9);
   cursor: not-allowed;
@@ -821,6 +875,99 @@ input[type="number"]:disabled {
   background: rgba(34, 28, 24, 0.5);
   backdrop-filter: blur(4px);
   animation: fade-in 0.2s ease;
+}
+
+.settings-dialog {
+  width: min(680px, calc(100% - 2rem));
+  max-height: calc(100vh - 3rem);
+  display: flex;
+}
+
+.settings-modal-overlay .modal-header {
+  padding: 0.9rem 1rem 0.65rem;
+}
+
+.settings-modal-overlay .modal-body {
+  padding: 0.55rem 1rem 1rem;
+}
+
+.settings-modal-overlay .modal-date {
+  margin-top: 0.18rem;
+}
+
+.settings-modal-overlay .modal-title {
+  font-size: 1.2rem;
+}
+
+.settings-body {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.api-key-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.settings-placeholder {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 5rem;
+  padding: 1rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.54);
+}
+
+.api-key-item {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.api-key-item-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.api-key-item h3 {
+  margin: 0;
+  font-size: 0.96rem;
+  letter-spacing: -0.01em;
+}
+
+.api-key-field input {
+  min-height: 2.35rem;
+  padding: 0.48rem 0.72rem;
+}
+
+.api-key-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.api-key-message {
+  margin: 0;
+  padding: 0.52rem 0.65rem;
+  border: 1px solid rgba(91, 111, 138, 0.14);
+  border-radius: var(--radius-sm);
+  color: var(--info);
+  background: var(--info-soft);
+  font-size: 0.82rem;
+}
+
+.api-key-message[data-state="error"] {
+  color: var(--error);
+  border-color: rgba(182, 66, 52, 0.18);
+  background: var(--error-soft);
 }
 
 .modal-dialog-shell {

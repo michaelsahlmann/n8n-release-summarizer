@@ -1,30 +1,9 @@
 import Anthropic from '@anthropic-ai/sdk';
 import OpenAI from 'openai';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { AI_PROVIDERS, getApiKey } from './apiKeySettings.js';
 
-export const AI_PROVIDERS = new Set(['anthropic', 'openai', 'gemini']);
-
-function getApiKey(provider) {
-  if (provider === 'anthropic') {
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) throw new Error('ANTHROPIC_API_KEY is not set. Add it to your .env file.');
-    return apiKey;
-  }
-
-  if (provider === 'openai') {
-    const apiKey = process.env.OPENAI_API_KEY;
-    if (!apiKey) throw new Error('OPENAI_API_KEY is not set. Add it to your .env file.');
-    return apiKey;
-  }
-
-  if (provider === 'gemini') {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) throw new Error('GEMINI_API_KEY is not set. Add it to your .env file.');
-    return apiKey;
-  }
-
-  throw new Error(`Unknown provider: ${provider}. Must be 'anthropic', 'openai', or 'gemini'.`);
-}
+export { AI_PROVIDERS };
 
 function normalizeMessages(messages) {
   return messages.map((message) => ({

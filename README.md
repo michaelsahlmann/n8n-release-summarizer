@@ -22,7 +22,21 @@ Install dependencies:
 npm install
 ```
 
-Copy the example environment file:
+Run the local web app:
+
+```bash
+npm run server
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+Use **Settings** in the top-right corner to add your Anthropic, OpenAI, or Gemini API keys. The app saves them locally and does not show the saved key back in the browser.
+
+If you prefer editing a file manually, copy the example environment file:
 
 ```bash
 cp .env.example .env
@@ -51,18 +65,6 @@ Fetch a specific number of new releases:
 
 ```bash
 npm start -- --count 10
-```
-
-Run the local web app:
-
-```bash
-npm run server
-```
-
-Then open:
-
-```text
-http://localhost:3000
 ```
 
 ## Testing

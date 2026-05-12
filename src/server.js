@@ -8,6 +8,8 @@ import { runPipeline } from './pipeline.js';
 import { generateSocialSummary } from './socialSummarize.js';
 import { explainItem } from './explainItem.js';
 import { answerReleaseChat, validateReleaseChatRequest } from './releaseChat.js';
+import { getApiKeyStatuses, isApiKeyError, persistApiKey } from './apiKeySettings.js';
+import { fetchProviderModels, testProviderApiKey } from './providerModels.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -36,63 +38,64 @@ app.get('/api/releases', async (req, res) => {
   }
 });
 
+// --- GET /api/settings ---
+// Returns API-key status only. Secret values are never returned to the browser.
+app.get('/api/settings', (req, res) => {
+  res.json(getApiKeyStatuses());
+});
+
+// --- PUT /api/settings/api-keys ---
+// Body: { provider: string, apiKey?: string }
+// Saves or removes the selected provider key and updates process.env immediately.
+app.put('/api/settings/api-keys', async (req, res) => {
+  const { provider, apiKey } = req.body ?? {};
+  try {
+    const settings = await persistApiKey(provider, apiKey);
+    res.json({ ok: true, ...settings });
+  } catch (err) {
+    res.status(400).json({ ok: false, error: err.message });
+  }
+});
+
+// --- POST /api/settings/api-keys/test ---
+// Body: { provider: string, apiKey: string }
+// Tests the entered key without saving it.
+app.post('/api/settings/api-keys/test', async (req, res) => {
+  const { provider, apiKey } = req.body ?? {};
+  try {
+    const result = await testProviderApiKey(provider, apiKey);
+    res.json({ ok: true, ...result });
+  } catch (err) {
+    if (err.code === 'API_KEY_MISSING') {
+      return res.status(400).json({ ok: false, status: 'missing', error: err.message });
+    }
+    if (err.code === 'API_KEY_INVALID') {
+      return res.status(400).json({ ok: false, status: 'invalid', error: err.message });
+    }
+    if (err.statusCode === 400) {
+      return res.status(400).json({ ok: false, status: 'invalid', error: err.message });
+    }
+    res.status(502).json({ ok: false, status: 'invalid', error: err.message });
+  }
+});
+
 // --- GET /api/models?provider=X ---
 // Returns a sorted list of model IDs for the given provider
 app.get('/api/models', async (req, res) => {
   const provider = req.query.provider;
 
-  if (provider === 'anthropic') {
-    const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) return res.status(400).json({ error: 'ANTHROPIC_API_KEY not set' });
-    try {
-      const r = await fetch('https://api.anthropic.com/v1/models', {
-        headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
-      });
-      const data = await r.json();
-      const models = (data.data || []).map((m) => m.id).sort();
-      return res.json({ models });
-    } catch (err) {
-      return res.status(502).json({ error: `Anthropic API error: ${err.message}` });
+  try {
+    const models = await fetchProviderModels(provider);
+    return res.json({ models });
+  } catch (err) {
+    if (isApiKeyError(err)) {
+      return res.status(400).json({ error: err.message });
     }
-  }
-
-  if (provider === 'openai') {
-    const apiKey = process.env.OPENAI_API_KEY;
-    if (!apiKey) return res.status(400).json({ error: 'OPENAI_API_KEY not set' });
-    try {
-      const r = await fetch('https://api.openai.com/v1/models', {
-        headers: { Authorization: `Bearer ${apiKey}` },
-      });
-      const data = await r.json();
-      const models = (data.data || [])
-        .map((m) => m.id)
-        .filter((id) => id.startsWith('gpt-') || id.startsWith('o1') || id.startsWith('o3'))
-        .sort();
-      return res.json({ models });
-    } catch (err) {
-      return res.status(502).json({ error: `OpenAI API error: ${err.message}` });
+    if (err.code === 'API_KEY_INVALID') {
+      return res.status(400).json({ error: err.message });
     }
+    return res.status(err.statusCode === 400 ? 400 : 502).json({ error: err.message });
   }
-
-  if (provider === 'gemini') {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) return res.status(400).json({ error: 'GEMINI_API_KEY not set' });
-    try {
-      const r = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`
-      );
-      const data = await r.json();
-      const models = (data.models || [])
-        .filter((m) => (m.supportedGenerationMethods || []).includes('generateContent'))
-        .map((m) => m.name.replace('models/', ''))
-        .sort();
-      return res.json({ models });
-    } catch (err) {
-      return res.status(502).json({ error: `Gemini API error: ${err.message}` });
-    }
-  }
-
-  return res.status(400).json({ error: `Unknown provider: ${provider}` });
 });
 
 // --- POST /api/fetch ---
@@ -185,8 +188,8 @@ app.post('/api/explain-item', async (req, res) => {
     const explanation = await explainItem(version, prNumber || null, commitSha || null, provider, model);
     res.json({ explanation });
   } catch (err) {
-    if (/_API_KEY/.test(err.message)) {
-      return res.status(500).json({ error: err.message });
+    if (isApiKeyError(err)) {
+      return res.status(400).json({ error: err.message });
     }
     res.status(502).json({ error: `AI API error: ${err.message}` });
   }
@@ -207,8 +210,8 @@ app.post('/api/release-chat', async (req, res) => {
     if (err.statusCode) {
       return res.status(err.statusCode).json({ error: err.message });
     }
-    if (/_API_KEY/.test(err.message)) {
-      return res.status(500).json({ error: err.message });
+    if (isApiKeyError(err)) {
+      return res.status(400).json({ error: err.message });
     }
     res.status(502).json({ error: `AI API error: ${err.message}` });
   }
@@ -263,8 +266,8 @@ app.post('/api/social-summary', async (req, res) => {
     );
     res.json({ summary });
   } catch (err) {
-    if (/_API_KEY/.test(err.message)) {
-      return res.status(500).json({ error: err.message });
+    if (isApiKeyError(err)) {
+      return res.status(400).json({ error: err.message });
     }
     res.status(502).json({ error: `AI API error: ${err.message}` });
   }

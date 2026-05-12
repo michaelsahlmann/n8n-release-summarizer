@@ -17,6 +17,21 @@ const state = {
     modelsByProvider: {},
     errors: {},
   },
+  settings: {
+    open: false,
+    loaded: false,
+    loading: false,
+    savingProvider: "",
+    testingProvider: "",
+    apiKeys: {},
+    values: {
+      anthropic: "",
+      openai: "",
+      gemini: "",
+    },
+    errors: {},
+    messages: {},
+  },
   loading: {
     releases: false,
     models: false,
@@ -62,6 +77,11 @@ const elements = {
   summaryText: document.getElementById("summary-text"),
   copyButton: document.getElementById("copy-btn"),
   summaryStatus: document.getElementById("summary-status"),
+  settingsOpenButton: document.getElementById("settings-open-btn"),
+  settingsModal: document.getElementById("settings-modal"),
+  settingsCloseButton: document.querySelector("#settings-modal .settings-close-btn"),
+  settingsStatus: document.getElementById("settings-status"),
+  apiKeyList: document.getElementById("api-key-list"),
   modal: document.getElementById("release-modal"),
   modalTitle: document.querySelector("#release-modal .modal-title"),
   modalDate: document.querySelector("#release-modal .modal-date"),
@@ -95,6 +115,8 @@ const AI_PROVIDER_OPTIONS = [
   { id: "gemini", label: "Gemini" },
 ];
 
+const SAVED_API_KEY_MASK = "saved-api-key";
+
 function escapeHtml(value) {
   return value
     .replaceAll("&", "&amp;")
@@ -114,6 +136,16 @@ function setStatus(element, message, type = "") {
   }
 }
 
+function setModelApiKeyPrompt(provider) {
+  const label = getProviderLabel(provider);
+  elements.modelStatus.innerHTML = `
+    <span>Add the ${escapeHtml(label)} API key to load models.</span>
+    <button class="status-action-btn" type="button" data-open-settings>Open Settings</button>
+  `;
+  elements.modelStatus.hidden = false;
+  elements.modelStatus.dataset.state = "info";
+}
+
 function setButtonLoading(button, isLoading) {
   button.dataset.loading = isLoading ? "true" : "false";
   if (isLoading) {
@@ -130,10 +162,14 @@ function renderSelectionCount() {
 }
 
 function updateGenerateAvailability() {
+  const keyReady =
+    Boolean(state.provider) &&
+    (!state.settings.loaded || hasProviderApiKey(state.provider));
   const canGenerate =
     state.selectedVersions.size > 0 &&
     Boolean(state.provider) &&
     Boolean(state.model) &&
+    keyReady &&
     !state.loading.models &&
     !state.loading.generate &&
     !state.loading.releases;
@@ -216,6 +252,12 @@ function renderModelSelect(select) {
     return;
   }
 
+  if (providerNeedsApiKey(state.provider)) {
+    select.innerHTML = '<option value="">API key needed</option>';
+    select.disabled = true;
+    return;
+  }
+
   if (state.loading.models) {
     select.innerHTML = '<option value="">Loading models...</option>';
     select.disabled = true;
@@ -251,6 +293,22 @@ function renderModels() {
 
 function getProviderLabel(provider) {
   return AI_PROVIDER_OPTIONS.find((option) => option.id === provider)?.label || provider;
+}
+
+function getProviderApiKeyStatus(provider) {
+  return state.settings.apiKeys[provider] || {
+    label: getProviderLabel(provider),
+    configured: false,
+    status: "missing",
+  };
+}
+
+function hasProviderApiKey(provider) {
+  return getProviderApiKeyStatus(provider).configured === true;
+}
+
+function providerNeedsApiKey(provider) {
+  return Boolean(provider) && state.settings.loaded && !hasProviderApiKey(provider);
 }
 
 function getActiveModelLabel() {
@@ -349,6 +407,72 @@ function renderModelPickerOptions() {
   }).join("");
 
   elements.chatModelOptions.innerHTML = groups;
+}
+
+function renderSettings() {
+  if (!elements.apiKeyList) {
+    return;
+  }
+
+  if (state.settings.loading && !state.settings.loaded) {
+    elements.apiKeyList.innerHTML = `
+      <div class="settings-placeholder">
+        <span class="inline-loader" aria-hidden="true"></span>
+        <span>Loading API key status...</span>
+      </div>
+    `;
+    return;
+  }
+
+  elements.apiKeyList.innerHTML = AI_PROVIDER_OPTIONS.map((provider) => {
+    const enteredValue = state.settings.values[provider.id] || "";
+    const message = state.settings.errors[provider.id] || state.settings.messages[provider.id] || "";
+    const isSaving = state.settings.savingProvider === provider.id;
+    const isTesting = state.settings.testingProvider === provider.id;
+    const isBusy = Boolean(state.settings.savingProvider || state.settings.testingProvider);
+    const configured = hasProviderApiKey(provider.id);
+    const fieldValue = enteredValue || (configured ? SAVED_API_KEY_MASK : "");
+    const canTest = Boolean(enteredValue.trim()) || configured;
+    const placeholder = configured
+      ? `Paste a new ${provider.label} API key`
+      : `Paste ${provider.label} API key`;
+
+    return `
+      <div class="api-key-item" data-provider="${provider.id}">
+        <div class="api-key-item-header">
+          <h3>${provider.label}</h3>
+        </div>
+        <label class="field api-key-field" for="api-key-${provider.id}">
+          <input
+            id="api-key-${provider.id}"
+            class="api-key-input"
+            data-provider="${provider.id}"
+            data-masked="${configured && !enteredValue ? "true" : "false"}"
+            type="password"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="${provider.label} API key"
+            value="${escapeHtml(fieldValue)}"
+            placeholder="${escapeHtml(placeholder)}"
+          >
+        </label>
+        <div class="api-key-actions">
+          <button class="button button-secondary button-small api-key-save-btn" type="button" data-provider="${provider.id}" ${enteredValue.trim() && !isBusy ? "" : "disabled"} data-loading="${isSaving ? "true" : "false"}">
+            <span class="button-loader" aria-hidden="true"></span>
+            <span class="button-label">Save</span>
+          </button>
+          <button class="button button-ghost button-small api-key-test-btn" type="button" data-provider="${provider.id}" ${canTest && !isBusy ? "" : "disabled"} data-loading="${isTesting ? "true" : "false"}">
+            <span class="button-loader" aria-hidden="true"></span>
+            <span class="button-label">Test</span>
+          </button>
+          <button class="button button-ghost button-small api-key-remove-btn" type="button" data-provider="${provider.id}" ${configured && !isBusy ? "" : "disabled"}>
+            <span class="button-label">Remove</span>
+          </button>
+        </div>
+        <p class="api-key-message" data-state="${state.settings.errors[provider.id] ? "error" : "info"}" ${message ? "" : "hidden"}>${escapeHtml(message)}</p>
+      </div>
+    `;
+  }).join("");
 }
 
 function renderSummary() {
@@ -478,6 +602,189 @@ function renderFetchDetails() {
   container.hidden = false;
 }
 
+function applySettings(data) {
+  state.settings.apiKeys = data?.apiKeys || {};
+  state.settings.loaded = true;
+
+  if (state.provider && providerNeedsApiKey(state.provider)) {
+    state.models = [];
+    state.model = "";
+    delete state.modelPicker.modelsByProvider[state.provider];
+  }
+}
+
+async function loadSettings(options = {}) {
+  state.settings.loading = true;
+  if (!options.silent) {
+    setStatus(elements.settingsStatus, "Loading API key status...", "loading");
+  }
+  renderSettings();
+
+  try {
+    const response = await fetch("/api/settings");
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to load settings");
+    }
+
+    applySettings(data);
+    if (!options.silent) {
+      setStatus(elements.settingsStatus, "", "");
+    }
+  } catch (error) {
+    setStatus(elements.settingsStatus, error.message || "Unable to load settings", "error");
+  } finally {
+    state.settings.loading = false;
+    renderSettings();
+    renderModels();
+    if (state.provider && providerNeedsApiKey(state.provider)) {
+      setModelApiKeyPrompt(state.provider);
+    }
+    updateGenerateAvailability();
+  }
+}
+
+function openSettings() {
+  state.settings.open = true;
+  elements.settingsModal.hidden = false;
+  document.body.style.overflow = "hidden";
+  renderSettings();
+}
+
+function closeSettings() {
+  state.settings.open = false;
+  elements.settingsModal.hidden = true;
+  if (!state.modal.open) {
+    document.body.style.overflow = "";
+  }
+}
+
+async function saveApiKey(provider) {
+  const apiKey = (state.settings.values[provider] || "").trim();
+  if (!apiKey) {
+    state.settings.errors[provider] = "Enter an API key first.";
+    delete state.settings.messages[provider];
+    renderSettings();
+    return;
+  }
+
+  state.settings.savingProvider = provider;
+  delete state.settings.errors[provider];
+  delete state.settings.messages[provider];
+  renderSettings();
+
+  try {
+    const response = await fetch("/api/settings/api-keys", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ provider, apiKey }),
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to save API key");
+    }
+
+    applySettings(data);
+    state.settings.values[provider] = "";
+    state.settings.messages[provider] = `${getProviderLabel(provider)} key saved.`;
+    setStatus(elements.settingsStatus, `${getProviderLabel(provider)} key saved.`, "success");
+
+    if (state.provider === provider) {
+      await loadModels(provider);
+      if (state.errors.models) {
+        state.settings.errors[provider] = state.errors.models;
+        delete state.settings.messages[provider];
+        setStatus(elements.settingsStatus, state.errors.models, "error");
+      }
+    }
+  } catch (error) {
+    state.settings.errors[provider] = error.message || "Unable to save API key";
+  } finally {
+    state.settings.savingProvider = "";
+    renderSettings();
+    renderModels();
+    updateGenerateAvailability();
+  }
+}
+
+async function testApiKey(provider) {
+  const apiKey = (state.settings.values[provider] || "").trim();
+  if (!apiKey && !hasProviderApiKey(provider)) {
+    state.settings.errors[provider] = "Enter an API key first.";
+    delete state.settings.messages[provider];
+    renderSettings();
+    return;
+  }
+
+  state.settings.testingProvider = provider;
+  delete state.settings.errors[provider];
+  delete state.settings.messages[provider];
+  renderSettings();
+
+  try {
+    const response = await fetch("/api/settings/api-keys/test", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ provider, apiKey }),
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "API key test failed");
+    }
+
+    const modelCount = Number.isInteger(data.modelCount) ? data.modelCount : 0;
+    state.settings.messages[provider] = modelCount > 0
+      ? `Key works. ${modelCount} model${modelCount === 1 ? "" : "s"} found.`
+      : "Key works, but no models were returned.";
+  } catch (error) {
+    state.settings.errors[provider] = error.message || "API key test failed";
+  } finally {
+    state.settings.testingProvider = "";
+    renderSettings();
+  }
+}
+
+async function removeApiKey(provider) {
+  state.settings.savingProvider = provider;
+  delete state.settings.errors[provider];
+  delete state.settings.messages[provider];
+  renderSettings();
+
+  try {
+    const response = await fetch("/api/settings/api-keys", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ provider, apiKey: "" }),
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to remove API key");
+    }
+
+    applySettings(data);
+    state.settings.values[provider] = "";
+    state.settings.messages[provider] = `${getProviderLabel(provider)} key removed.`;
+    delete state.modelPicker.modelsByProvider[provider];
+
+    if (state.provider === provider) {
+      state.models = [];
+      state.model = "";
+      setModelApiKeyPrompt(provider);
+    }
+  } catch (error) {
+    state.settings.errors[provider] = error.message || "Unable to remove API key";
+  } finally {
+    state.settings.savingProvider = "";
+    renderSettings();
+    renderModels();
+    updateGenerateAvailability();
+  }
+}
+
 async function loadReleases() {
   state.loading.releases = true;
   state.errors.releases = "";
@@ -530,6 +837,16 @@ async function loadModels(provider) {
   state.models = [];
   state.model = "";
   renderModels();
+
+  if (providerNeedsApiKey(provider)) {
+    state.loading.models = false;
+    setModelApiKeyPrompt(provider);
+    renderModels();
+    updateGenerateAvailability();
+    renderChat();
+    return;
+  }
+
   setStatus(elements.modelStatus, "Loading available models...", "loading");
   updateGenerateAvailability();
 
@@ -560,7 +877,11 @@ async function loadModels(provider) {
     state.models = [];
     state.model = "";
     state.modelPicker.errors[provider] = state.errors.models;
-    setStatus(elements.modelStatus, state.errors.models, "error");
+    if (state.errors.models.startsWith("Add the ")) {
+      setModelApiKeyPrompt(provider);
+    } else {
+      setStatus(elements.modelStatus, state.errors.models, "error");
+    }
   } finally {
     state.loading.models = false;
     renderModels();
@@ -572,6 +893,12 @@ async function loadModels(provider) {
 
 async function loadPickerProviderModels(provider) {
   if (!provider || state.modelPicker.loadingProvider === provider) {
+    return;
+  }
+
+  if (providerNeedsApiKey(provider)) {
+    state.modelPicker.errors[provider] = `Add the ${getProviderLabel(provider)} API key in Settings.`;
+    renderModelPicker();
     return;
   }
 
@@ -1298,6 +1625,82 @@ function closeModal() {
   renderChat();
 }
 
+elements.settingsOpenButton.addEventListener("click", () => {
+  openSettings();
+});
+
+elements.settingsCloseButton.addEventListener("click", () => {
+  closeSettings();
+});
+
+elements.settingsModal.addEventListener("click", (event) => {
+  if (event.target === elements.settingsModal) {
+    closeSettings();
+  }
+});
+
+elements.apiKeyList.addEventListener("input", (event) => {
+  const input = event.target.closest(".api-key-input");
+  if (!input) return;
+
+  const provider = input.dataset.provider;
+  state.settings.values[provider] = input.value;
+  input.dataset.masked = "false";
+  delete state.settings.errors[provider];
+  delete state.settings.messages[provider];
+  const row = input.closest(".api-key-item");
+  row.querySelector(".api-key-save-btn").disabled = !input.value.trim();
+  row.querySelector(".api-key-test-btn").disabled = !input.value.trim() && !hasProviderApiKey(provider);
+  const message = row.querySelector(".api-key-message");
+  message.hidden = true;
+  message.textContent = "";
+});
+
+elements.apiKeyList.addEventListener("focusin", (event) => {
+  const input = event.target.closest(".api-key-input");
+  if (!input || input.dataset.masked !== "true") return;
+
+  input.value = "";
+  input.dataset.masked = "false";
+});
+
+elements.apiKeyList.addEventListener("focusout", (event) => {
+  const input = event.target.closest(".api-key-input");
+  if (!input) return;
+
+  const provider = input.dataset.provider;
+  if (!input.value.trim() && hasProviderApiKey(provider)) {
+    input.value = SAVED_API_KEY_MASK;
+    input.dataset.masked = "true";
+  }
+});
+
+elements.apiKeyList.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-provider]");
+  if (!button) return;
+
+  const provider = button.dataset.provider;
+  if (button.classList.contains("api-key-save-btn")) {
+    void saveApiKey(provider);
+    return;
+  }
+
+  if (button.classList.contains("api-key-test-btn")) {
+    void testApiKey(provider);
+    return;
+  }
+
+  if (button.classList.contains("api-key-remove-btn")) {
+    void removeApiKey(provider);
+  }
+});
+
+elements.modelStatus.addEventListener("click", (event) => {
+  if (event.target.closest("[data-open-settings]")) {
+    openSettings();
+  }
+});
+
 // Open the release modal when any non-checkbox part of a row is clicked
 elements.releaseList.addEventListener("click", (event) => {
   const target = event.target;
@@ -1329,6 +1732,11 @@ document.addEventListener("keydown", (event) => {
     return;
   }
 
+  if (event.key === "Escape" && state.settings.open) {
+    closeSettings();
+    return;
+  }
+
   if (event.key === "Escape" && state.modal.open) {
     closeModal();
   }
@@ -1357,8 +1765,10 @@ elements.modalSections.addEventListener("click", (event) => {
 });
 
 renderSelectionCount();
+renderSettings();
 renderModels();
 renderSummary();
 renderFetchDetails();
 updateGenerateAvailability();
+void loadSettings({ silent: true });
 void loadReleases();

@@ -9,7 +9,16 @@
 <body>
   <div class="page-shell">
     <header class="hero">
-      <p class="hero-kicker">Release Intelligence</p>
+      <div class="hero-top">
+        <p class="hero-kicker">Release Intelligence</p>
+        <button id="settings-open-btn" class="button button-ghost settings-trigger" type="button">
+          <svg class="settings-trigger-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z"></path>
+            <path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a1.9 1.9 0 0 1 0 2.7 1.9 1.9 0 0 1-2.7 0l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a1.9 1.9 0 0 1-3.8 0v-.2a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a1.9 1.9 0 0 1-2.7 0 1.9 1.9 0 0 1 0-2.7l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a1.9 1.9 0 0 1 0-3.8h.2a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a1.9 1.9 0 0 1 0-2.7 1.9 1.9 0 0 1 2.7 0l.1.1a1.6 1.6 0 0 0 1.8.3h.1a1.6 1.6 0 0 0 1-1.5V3a1.9 1.9 0 0 1 3.8 0v.2a1.6 1.6 0 0 0 1 1.5h.1a1.6 1.6 0 0 0 1.8-.3l.1-.1a1.9 1.9 0 0 1 2.7 0 1.9 1.9 0 0 1 0 2.7l-.1.1a1.6 1.6 0 0 0-.3 1.8v.1a1.6 1.6 0 0 0 1.5 1h.2a1.9 1.9 0 0 1 0 3.8h-.2a1.6 1.6 0 0 0-1.5 1Z"></path>
+          </svg>
+          <span class="button-label">Settings</span>
+        </button>
+      </div>
       <div class="hero-copy">
         <div>
           <h1>Turn n8n release notes into polished social content.</h1>
@@ -145,6 +154,27 @@
         </section>
       </aside>
     </main>
+
+    <div id="settings-modal" class="modal-overlay settings-modal-overlay" hidden aria-modal="true" role="dialog" aria-labelledby="settings-title">
+      <div class="settings-dialog">
+        <div class="modal-container">
+          <div class="modal-header">
+            <div>
+              <p class="panel-kicker">Settings</p>
+              <h2 id="settings-title" class="modal-title">API keys</h2>
+              <p class="modal-date">Add keys here so the app can load models and generate summaries.</p>
+            </div>
+            <button class="button button-ghost settings-close-btn" type="button" aria-label="Close settings">
+              <span class="button-label">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body settings-body">
+            <div id="settings-status" class="status-message" aria-live="polite" hidden></div>
+            <div id="api-key-list" class="api-key-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="release-modal" class="modal-overlay" hidden aria-modal="true" role="dialog" aria-labelledby="modal-title">
       <div class="modal-dialog-shell">
