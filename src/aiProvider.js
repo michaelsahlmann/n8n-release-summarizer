@@ -5,6 +5,16 @@ import { AI_PROVIDERS, getApiKey } from './apiKeySettings.js';
 
 export { AI_PROVIDERS };
 
+const openaiClients = new Map();
+
+function getOpenAIClient(provider, baseURL) {
+  const key = `${provider}:${baseURL || 'default'}`;
+  if (!openaiClients.has(key)) {
+    openaiClients.set(key, new OpenAI({ apiKey: getApiKey(provider), baseURL }));
+  }
+  return openaiClients.get(key);
+}
+
 function normalizeMessages(messages) {
   return messages.map((message) => ({
     role: message.role,
@@ -51,7 +61,7 @@ export async function generateAIText({
   }
 
   if (provider === 'openai') {
-    const client = new OpenAI({ apiKey: getApiKey(provider) });
+    const client = getOpenAIClient(provider);
     const res = await client.chat.completions.create({
       model,
       max_tokens: maxTokens,
@@ -64,7 +74,7 @@ export async function generateAIText({
   }
 
   if (provider === 'groq') {
-    const client = new OpenAI({ apiKey: getApiKey(provider), baseURL: 'https://api.groq.com/openai/v1' });
+    const client = getOpenAIClient(provider, 'https://api.groq.com/openai/v1');
     const res = await client.chat.completions.create({
       model,
       max_tokens: maxTokens,

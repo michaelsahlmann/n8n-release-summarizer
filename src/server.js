@@ -29,15 +29,25 @@ const SAFE_VERSION = /^[\w.\-]+$/;
 
 // --- GET /api/releases ---
 // Returns locally cached release summaries (newest first)
-// Optional query: ?limit=N to cap the number of results
+// Optional query: ?limit=N to cap the number of results (0 returns empty, max 100)
+const MAX_RELEASE_LIMIT = 100;
+
 app.get('/api/releases', async (req, res) => {
   try {
-    const limit = parseInt(req.query.limit, 10);
-    let versions = await listLocalReleases();
-    if (!isNaN(limit) && limit > 0) {
-      versions = versions.slice(0, limit);
+    const versions = await listLocalReleases();
+    const rawLimit = req.query.limit;
+
+    if (rawLimit === undefined || rawLimit === null || rawLimit === '') {
+      return res.json({ versions });
     }
-    res.json({ versions });
+
+    const limit = parseInt(rawLimit, 10);
+    if (isNaN(limit) || limit < 0) {
+      return res.json({ versions });
+    }
+
+    const capped = Math.min(limit, MAX_RELEASE_LIMIT);
+    res.json({ versions: versions.slice(0, capped) });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
