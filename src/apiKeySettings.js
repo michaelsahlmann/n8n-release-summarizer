@@ -12,6 +12,7 @@ export const API_KEY_PROVIDERS = [
   { id: 'anthropic', label: 'Anthropic', envName: 'ANTHROPIC_API_KEY' },
   { id: 'openai', label: 'OpenAI', envName: 'OPENAI_API_KEY' },
   { id: 'gemini', label: 'Gemini', envName: 'GEMINI_API_KEY' },
+  { id: 'groq', label: 'Groq', envName: 'GROQ_API_KEY' },
 ];
 
 export const AI_PROVIDERS = new Set(API_KEY_PROVIDERS.map((provider) => provider.id));
@@ -19,7 +20,7 @@ export const AI_PROVIDERS = new Set(API_KEY_PROVIDERS.map((provider) => provider
 function getProviderConfig(provider) {
   const config = API_KEY_PROVIDERS.find((item) => item.id === provider);
   if (!config) {
-    throw new Error(`Unknown provider: ${provider}. Must be 'anthropic', 'openai', or 'gemini'.`);
+    throw new Error(`Unknown provider: ${provider}. Must be 'anthropic', 'openai', 'gemini', or 'groq'.`);
   }
   return config;
 }

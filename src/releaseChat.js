@@ -62,7 +62,7 @@ export function validateReleaseChatRequest(body) {
 
   const provider = body?.provider;
   if (!provider || !AI_PROVIDERS.has(provider)) {
-    return { error: "provider must be 'anthropic', 'openai', or 'gemini'." };
+    return { error: "provider must be 'anthropic', 'openai', 'gemini', or 'groq'." };
   }
 
   const model = body?.model;

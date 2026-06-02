@@ -34,7 +34,7 @@ export async function generateAIText({
   maxTokens = 1024,
 }) {
   if (!AI_PROVIDERS.has(provider)) {
-    throw new Error(`Unknown provider: ${provider}. Must be 'anthropic', 'openai', or 'gemini'.`);
+    throw new Error(`Unknown provider: ${provider}. Must be 'anthropic', 'openai', 'gemini', or 'groq'.`);
   }
 
   const normalizedMessages = normalizeMessages(messages);
@@ -52,6 +52,19 @@ export async function generateAIText({
 
   if (provider === 'openai') {
     const client = new OpenAI({ apiKey: getApiKey(provider) });
+    const res = await client.chat.completions.create({
+      model,
+      max_tokens: maxTokens,
+      messages: [
+        ...(system ? [{ role: 'system', content: system }] : []),
+        ...normalizedMessages,
+      ],
+    });
+    return res.choices?.[0]?.message?.content ?? '';
+  }
+
+  if (provider === 'groq') {
+    const client = new OpenAI({ apiKey: getApiKey(provider), baseURL: 'https://api.groq.com/openai/v1' });
     const res = await client.chat.completions.create({
       model,
       max_tokens: maxTokens,

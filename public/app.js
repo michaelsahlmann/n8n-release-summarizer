@@ -28,6 +28,7 @@ const state = {
       anthropic: "",
       openai: "",
       gemini: "",
+      groq: "",
     },
     errors: {},
     messages: {},
@@ -113,6 +114,7 @@ const AI_PROVIDER_OPTIONS = [
   { id: "anthropic", label: "Anthropic" },
   { id: "openai", label: "OpenAI" },
   { id: "gemini", label: "Gemini" },
+  { id: "groq", label: "Groq" },
 ];
 
 const SAVED_API_KEY_MASK = "saved-api-key";
@@ -793,7 +795,7 @@ async function loadReleases() {
   updateGenerateAvailability();
 
   try {
-    const response = await fetch("/api/releases");
+    const response = await fetch("/api/releases?limit=5");
     const data = await response.json();
 
     if (!response.ok) {

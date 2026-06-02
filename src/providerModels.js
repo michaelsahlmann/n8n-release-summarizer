@@ -68,6 +68,16 @@ export async function fetchProviderModels(provider, options = {}) {
       .sort();
   }
 
+  if (provider === 'groq') {
+    const response = await fetchImpl('https://api.groq.com/openai/v1/models', {
+      headers: { Authorization: `Bearer ${apiKey}` },
+    });
+    const data = await fetchJson(response, provider);
+    return (data.data || [])
+      .map((model) => model.id)
+      .sort();
+  }
+
   return [];
 }
 

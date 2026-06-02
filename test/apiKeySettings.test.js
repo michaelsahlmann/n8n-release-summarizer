@@ -10,7 +10,7 @@ import {
 } from '../src/apiKeySettings.js';
 import { fetchProviderModels, testProviderApiKey } from '../src/providerModels.js';
 
-const API_ENV_NAMES = ['ANTHROPIC_API_KEY', 'OPENAI_API_KEY', 'GEMINI_API_KEY'];
+const API_ENV_NAMES = ['ANTHROPIC_API_KEY', 'OPENAI_API_KEY', 'GEMINI_API_KEY', 'GROQ_API_KEY'];
 
 function snapshotApiEnv() {
   return Object.fromEntries(API_ENV_NAMES.map((name) => [name, process.env[name]]));

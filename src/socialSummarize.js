@@ -37,7 +37,7 @@ export function buildSocialSummaryPrompt(template, mdContents, versions, userDir
  *
  * @param {string[]} mdContents  Array of markdown strings, one per release
  * @param {string[]} versions    Matching version labels (same order as mdContents)
- * @param {string}   provider    'anthropic' | 'openai' | 'gemini'
+ * @param {string}   provider    'anthropic' | 'openai' | 'gemini' | 'groq'
  * @param {string}   model       Model ID to use
  * @param {string}   userDirection Optional user-provided focus direction
  * @returns {Promise<string>}    Plain-text summary suitable for newsletter/social
